@@ -103,7 +103,7 @@ The installer adds an `include` directive to your `~/.XCompose`, preserving any 
 Clone like previous step. Add this line to your `~/.XCompose`:
 
 ```bash
-include "$HOME/.xcompose-stem/XCompose"
+include "%H/.xcompose-stem/XCompose"
 ```
 
 If `~/.XCompose` doesn't exist, create it:
@@ -113,7 +113,7 @@ If `~/.XCompose` doesn't exist, create it:
 include "%L"
 
 # Include xcompose-stem
-include "$HOME/.xcompose-stem/XCompose"
+include "%H/.xcompose-stem/XCompose"
 ```
 
 ### Activation

@@ -14,7 +14,6 @@ set -e
 # original configuration.
 
 XCOMPOSE_FILE="$HOME/.XCompose"
-BACKUP_FILE="$HOME/.XCompose.backup.$(date +%Y%m%d_%H%M%S)"
 
 # Colors for output
 RED='\033[0;31m'
@@ -39,26 +38,56 @@ if ! grep -q "include.*xcompose-stem.*XCompose" "$XCOMPOSE_FILE" 2>/dev/null; th
     exit 0
 fi
 
-# Backup existing file
-echo -e "Creating backup: ${BACKUP_FILE}"
-cp "$XCOMPOSE_FILE" "$BACKUP_FILE"
+# Find the most recent pre-installation backup
+INSTALL_BACKUP=$(ls -t "$HOME"/.XCompose.backup.* 2>/dev/null | head -1)
 
-# Remove xcompose-stem lines (only the include and related comments)
-echo "Removing xcompose-stem from ~/.XCompose..."
-# Remove the comment line above the include
-sed -i '/^# xcompose-stem - STEM symbols for technical writing$/d' "$XCOMPOSE_FILE"
-# Remove the GitHub URL comment
-sed -i '\|^# https://github.com/phil-bowens/xcompose-stem$|d' "$XCOMPOSE_FILE"
-# Remove the actual include line
-sed -i '\|^include.*xcompose-stem.*XCompose"$|d' "$XCOMPOSE_FILE"
+if [ -n "$INSTALL_BACKUP" ]; then
+    echo -e "${YELLOW}Found backup from installation:${NC} $(basename "$INSTALL_BACKUP")"
+    echo ""
+    read -p "Restore from this backup? (Y/n): " -n 1 -r
+    echo ""
 
-# Remove excess empty lines that might have been left behind
-sed -i '/^$/N;/^\n$/D' "$XCOMPOSE_FILE"
+    if [[ ! $REPLY =~ ^[Nn]$ ]]; then
+        # Restore from backup
+        cp "$INSTALL_BACKUP" "$XCOMPOSE_FILE"
+        echo -e "${GREEN}✓ Restored from backup!${NC}"
+        echo "Your original ~/.XCompose has been restored."
+    else
+        # Manual removal
+        UNINSTALL_BACKUP="$HOME/.XCompose.backup.uninstall.$(date +%Y%m%d_%H%M%S)"
+        echo -e "Creating backup: ${UNINSTALL_BACKUP}"
+        cp "$XCOMPOSE_FILE" "$UNINSTALL_BACKUP"
 
-echo -e "${GREEN}✓ Uninstallation complete!${NC}"
+        # Remove xcompose-stem lines
+        echo "Removing xcompose-stem from ~/.XCompose..."
+        sed -i '/^# xcompose-stem - STEM symbols for technical writing$/d' "$XCOMPOSE_FILE"
+        sed -i '\|^# https://github.com/phil-bowens/xcompose-stem$|d' "$XCOMPOSE_FILE"
+        sed -i '\|^include.*xcompose-stem.*XCompose"$|d' "$XCOMPOSE_FILE"
+        sed -i '/^$/N;/^\n$/D' "$XCOMPOSE_FILE"
+
+        echo -e "${GREEN}✓ Removed xcompose-stem lines${NC}"
+        echo -e "Backup saved: ${UNINSTALL_BACKUP}"
+    fi
+else
+    # No backup found - do manual removal
+    echo -e "${YELLOW}No installation backup found.${NC}"
+    UNINSTALL_BACKUP="$HOME/.XCompose.backup.uninstall.$(date +%Y%m%d_%H%M%S)"
+    echo -e "Creating backup: ${UNINSTALL_BACKUP}"
+    cp "$XCOMPOSE_FILE" "$UNINSTALL_BACKUP"
+
+    # Remove xcompose-stem lines
+    echo "Removing xcompose-stem from ~/.XCompose..."
+    sed -i '/^# xcompose-stem - STEM symbols for technical writing$/d' "$XCOMPOSE_FILE"
+    sed -i '\|^# https://github.com/phil-bowens/xcompose-stem$|d' "$XCOMPOSE_FILE"
+    sed -i '\|^include.*xcompose-stem.*XCompose"$|d' "$XCOMPOSE_FILE"
+    sed -i '/^$/N;/^\n$/D' "$XCOMPOSE_FILE"
+
+    echo -e "${GREEN}✓ Removed xcompose-stem lines${NC}"
+    echo -e "Backup saved: ${UNINSTALL_BACKUP}"
+fi
+
 echo ""
-echo "xcompose-stem has been removed from ~/.XCompose"
-echo -e "Backup saved: ${BACKUP_FILE}"
+echo -e "${GREEN}✓ Uninstallation complete!${NC}"
 echo ""
 
 echo -e "${BLUE}Reloading XCompose...${NC}"
@@ -77,6 +106,8 @@ fi
 echo ""
 echo "Your previous Compose sequences should still work."
 echo ""
-echo -e "${YELLOW}Note:${NC} You can restore your previous config with:"
-echo "  cp $BACKUP_FILE ~/.XCompose"
+if [ -n "$INSTALL_BACKUP" ]; then
+    echo -e "${YELLOW}Note:${NC} If needed, you can find backups in your home directory:"
+    echo "  ls -lt ~/.XCompose.backup.*"
+fi
 echo ""
