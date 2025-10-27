@@ -218,9 +218,9 @@ If a symbol has directional or logical opposites, both are included.
 Three Python tools ensure correctness:
 
 ```bash
-./tools/validate_xcompose.py XCompose       # Conflict detection & syntax validation
-./tools/audit_xcompose_design.py XCompose   # Design quality analysis
-./tools/generate_xcompose_docs.py XCompose --all  # Generate all documentation
+tools/validate_xcompose.py XCompose       # Conflict detection & syntax validation
+tools/audit_xcompose_design.py XCompose   # Design quality analysis
+tools/generate_xcompose_docs.py XCompose --all  # Generate all documentation
 ```
 
 See [tools/README.md](tools/README.md) for detailed usage.
@@ -246,7 +246,9 @@ Works via XWayland compatibility layer. Some compositors may have quirks.
 ### Alternatives for Other Platforms
 
 **macOS:** Use Karabiner-Elements or system text replacements
+
 **Windows:** Use AutoHotkey or WinCompose
+
 **All platforms:** IDE snippets (VS Code, JetBrains), Espanso (cross-platform), Vim digraphs
 
 ---
@@ -327,10 +329,6 @@ Free to use, modify, and redistribute.
 
 ## Acknowledgments
 
-**Author:** Phil Bowens
 **Built with:** Claude Code (Anthropic AI), Grok (xAI), ChatGPT (OpenAI)
+
 **Inspired by:** LaTeX notation, Vim digraphs, standard XCompose conventions, Unicode standards
-
----
-
-**Development:** See [CLAUDE.md](CLAUDE.md) for architecture and design decisions.
