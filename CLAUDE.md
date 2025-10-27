@@ -136,7 +136,11 @@ make audit
 # 4. Regenerate documentation
 make docs
 
-# 5. Commit atomically
+# 5. (Optional) Check against system defaults
+make check-defaults
+# Review: uniqueness %, overlaps, conflicts
+
+# 6. Commit atomically
 git add XCompose docs/*
 git commit -m "Add X, fix Y, update docs"
 ```
@@ -195,6 +199,7 @@ make all  # Runs validate + audit + docs
 - [ ] All validation passes
 - [ ] Documentation is comprehensive and up-to-date
 - [ ] CI pipeline passes
+- [ ] `check_system_defaults.py` shows high uniqueness (>70%)
 - [ ] Version tagged in git
 
 ---

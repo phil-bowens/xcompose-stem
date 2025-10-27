@@ -24,7 +24,7 @@
 #
 ################################################################################
 
-.PHONY: help validate audit docs all clean test install uninstall
+.PHONY: help validate audit docs all clean test install uninstall check-defaults
 
 # Configuration
 XCOMPOSE_FILE := XCompose
@@ -32,6 +32,7 @@ PYTHON := python3
 VALIDATOR := tools/validate_xcompose.py
 AUDITOR := tools/audit_xcompose_design.py
 GENERATOR := tools/generate_xcompose_docs.py
+CHECKER := tools/check_system_defaults.py
 DOCS_DIR := docs
 
 help:  ## Show this help message
@@ -54,6 +55,10 @@ validate:  ## Validate XCompose file for conflicts and errors
 audit:  ## Run design quality audit
 	@echo "==> Running design audit..."
 	@$(PYTHON) $(AUDITOR) $(XCOMPOSE_FILE)
+
+check-defaults:  ## Compare against system defaults (informational)
+	@echo "==> Comparing against system defaults..."
+	@$(PYTHON) $(CHECKER) $(XCOMPOSE_FILE)
 
 docs:  ## Generate all documentation (HTML, JSON, Markdown, checklist)
 	@echo "==> Generating documentation..."
@@ -102,3 +107,7 @@ watch:  ## Watch XCompose file and auto-regenerate docs (requires entr)
 	@echo "Watching $(XCOMPOSE_FILE) for changes..."
 	@echo "Press Ctrl+C to stop"
 	@echo $(XCOMPOSE_FILE) | entr -c make docs
+
+.PHONY: list-locales
+list-locales:  ## List all available system Compose files
+	@$(PYTHON) $(CHECKER) --list-locales

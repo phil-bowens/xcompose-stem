@@ -9,6 +9,7 @@ This directory contains tools for validating, auditing, and documenting XCompose
 | `validate_xcompose.py` | Syntax & conflict validation | Required before every commit |
 | `audit_xcompose_design.py` | Design quality analysis | Recommended for major changes |
 | `generate_xcompose_docs.py` | Documentation generation | Run after XCompose changes |
+| `check_system_defaults.py` | Compare against system defaults | Recommended before release |
 | `auto_tag_xcompose.py` | Bulk comment tagging | One-time or migration tool |
 
 ---
@@ -109,6 +110,49 @@ This directory contains tools for validating, auditing, and documenting XCompose
 - `--checklist` - Testing checklist only
 - `--stats` - Show statistics
 - `--output-dir DIR` - Specify output directory
+
+---
+
+## check_system_defaults.py
+
+**Purpose**: Compares custom XCompose sequences against system defaults to identify overlaps, conflicts, and unique additions.
+
+**Usage**:
+```bash
+# Basic comparison
+./tools/check_system_defaults.py XCompose
+
+# Verbose output with all sequences
+./tools/check_system_defaults.py XCompose --verbose
+
+# Generate documentation notes for README
+./tools/check_system_defaults.py XCompose --notes
+
+# List all available system Compose files
+./tools/check_system_defaults.py --list-locales
+
+# Compare against specific locale
+./tools/check_system_defaults.py XCompose --system-file /usr/share/X11/locale/el_GR.UTF-8/Compose
+```
+
+**Identifies**:
+- **Overlaps**: Sequences producing same output as system (redundant but harmless)
+- **Conflicts**: Sequences overriding system defaults (intentional customization)
+- **Unique additions**: Sequences not in system defaults 
+
+**Multi-Platform Features**:
+- Auto-detects user's current locale
+- Falls back to common locales (en_US.UTF-8, C)
+- Lists all available system Compose files
+- Supports comparing against any locale
+
+**Output**: Analysis report with statistics, value assessment, and recommendations.
+
+**Use cases**:
+- Before public release (verify uniqueness)
+- Multi-platform testing (check against different locales)
+- Documentation generation (explain overrides)
+- Quality assessment (measure value-add)
 
 ---
 
