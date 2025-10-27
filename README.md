@@ -5,15 +5,18 @@
 XCompose configuration providing hundreds of keyboard shortcuts for mathematical notation, Greek letters, arrows, and scientific typography.
 
 **Platform:** Linux with X11 or Wayland + XCompose support
+
 **Use case:** Technical writing in any application (browser, Discord, terminal, editors)
-**Status:** Active development — mappings may change before v1.0
+
+**Status:** Active development — mappings can and will change before v1.0
+
 **License:** MIT
 
 ---
 
 ## Overview
 
-This is a personal XCompose configuration, maintained for my own use and shared as a reference implementation. It provides systematic keyboard shortcuts for Unicode symbols commonly used in STEM fields, optimized for plain text workflows
+This is a personal XCompose configuration, maintained for my own use and shared as a reference implementation. It provides systematic keyboard shortcuts for Unicode symbols commonly used in STEM fields, optimized for plain text workflows. 
 
 ---
 
