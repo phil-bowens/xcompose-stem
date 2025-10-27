@@ -1,0 +1,36 @@
+name: Validate XCompose
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Validate XCompose syntax
+      run: make validate
+
+    - name: Run design audit
+      run: make test
+
+    - name: Check documentation is up to date
+      run: make check-docs
+    
+    - name: Summary
+      if: success()
+      run: |
+        echo "✅ All validations passed!"
+        echo "✅ XCompose file is valid"
+        echo "✅ Design quality checks passed"
+        echo "✅ Documentation is up to date"

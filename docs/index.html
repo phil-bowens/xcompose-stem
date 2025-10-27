@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>xcompose-stem - XCompose configuration for STEM symbols on Linux</title>
+    <meta name="title" content="xcompose-stem - XCompose configuration for STEM symbols on Linux">
+    <meta name="description" content="Type mathematical symbols, Greek letters, arrows, and scientific notation directly in any Linux application. Hundreds of keyboard shortcuts for Unicode STEM symbols using the Compose key. Zero conflicts, systematic design.">
+    <meta name="keywords" content="XCompose, Linux, STEM, Unicode, keyboard shortcuts, mathematical symbols, Greek letters, compose key, X11, Wayland, mathematical notation, LaTeX alternative, scientific typography, arrows, calculus symbols, set theory, logic symbols, subscripts, superscripts, IPA phonetics, box drawing, technical writing, math input, symbol reference, keyboard configuration, input method">
+    <meta name="author" content="Phil Bowens">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://phil-bowens.github.io/xcompose-stem/">
+    <meta property="og:title" content="xcompose-stem - XCompose configuration for STEM symbols on Linux">
+    <meta property="og:description" content="Type mathematical symbols, Greek letters, arrows, and scientific notation directly in any Linux application. Hundreds of keyboard shortcuts for Unicode STEM symbols using the Compose key.">
+    <meta property="og:site_name" content="xcompose-stem">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://phil-bowens.github.io/xcompose-stem/">
+    <meta name="twitter:title" content="xcompose-stem - XCompose configuration for STEM symbols on Linux">
+    <meta name="twitter:description" content="Type mathematical symbols, Greek letters, arrows, and scientific notation directly in any Linux application. Hundreds of keyboard shortcuts for Unicode STEM symbols using the Compose key.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://phil-bowens.github.io/xcompose-stem/">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(to bottom, #fafafa 0%, #f5f5f5 100%);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .header .tagline {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+
+        .header .links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .header .links a {
+            padding: 0.65rem 1.3rem;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .header .links a:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .header .links a.primary {
+            background: white;
+            color: #667eea;
+            border-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .links a.primary:hover {
+            background: #f8f8f8;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .content {
+            background: white;
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .content h2 {
+            color: #667eea;
+            margin-bottom: 1.25rem;
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+        }
+
+        .content code {
+            background: #f0f0f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #667eea;
+        }
+
+        .content a {
+            color: #667eea;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(102, 126, 234, 0.3);
+            transition: border-color 0.2s;
+        }
+
+        .content a:hover {
+            border-bottom-color: #667eea;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat .number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .stat .label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            margin-top: 3rem;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        footer a {
+            color: #a8b8ff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: #c5d1ff;
+        }
+
+        .symbol-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .symbol-category {
+            background: white;
+            border-radius: 8px;
+            padding: 1.25rem;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-left: 3px solid #667eea;
+        }
+
+        .symbol-category:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+
+        .category-name {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .category-symbols {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            line-height: 1.9;
+            font-family: 'DejaVu Sans', 'Noto Sans', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-desc {
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .footer-stats {
+            font-size: 0.8em;
+            opacity: 0.7;
+            margin-top: 0.5rem;
+        }
+
+        .install-steps {
+            margin: 1.5rem 0;
+        }
+
+        .step {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content code {
+            display: block;
+            background: #f8f8f8;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #2c3e50;
+            overflow-x: auto;
+        }
+
+        .example-keys {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 2;
+        }
+
+        kbd {
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 0.2rem 0.5rem;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.85rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            transition: transform 0.1s, box-shadow 0.1s;
+            cursor: default;
+        }
+
+        kbd:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        .example-keys .sep {
+            color: #999;
+            font-weight: 300;
+        }
+
+        .example-keys .becomes {
+            color: #667eea;
+            font-weight: 600;
+            margin: 0 0.5rem;
+        }
+
+        .example-keys .result {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .latex {
+            font-family: "Computer Modern", "Latin Modern", serif;
+            font-style: italic;
+            letter-spacing: 0.05em;
+        }
+
+        .latex sup {
+            font-size: 0.7em;
+            vertical-align: 0.5em;
+        }
+
+        .latex sub {
+            font-size: 0.7em;
+            vertical-align: -0.2em;
+        }
+
+        .callout {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-left: 4px solid #667eea;
+            padding: 1rem 1.25rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+        }
+
+        .callout strong {
+            color: #667eea;
+        }
+
+        .callout a {
+            font-weight: 600;
+        }
+
+
+        .symbol-category {
+            cursor: pointer;
+        }
+
+        .category-symbols {
+            user-select: all;
+        }
+
+        .content a {
+            font-weight: 500;
+        }
+
+        .problem-list {
+            background: #fafafa;
+            border-radius: 6px;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .problem-list ul {
+            margin-left: 0;
+            list-style: none;
+        }
+
+        .problem-list li::before {
+            content: "✗ ";
+            color: #e74c3c;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>xcompose-stem</h1>
+        <div class="tagline">Because copying ∞ from Google or whatever is ridiculous</div>
+
+        <div class="links">
+            <a href="xcompose_reference.html" class="primary">Symbol Reference</a>
+            <a href="https://github.com/phil-bowens/xcompose-stem">GitHub Repository</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>The Problem</h2>
+            <p>
+                Linux has excellent Unicode support, but typing math symbols is a mess. Your options are:
+            </p>
+            <div class="problem-list">
+                <ul>
+                    <li>Copy/paste from Google (tedious, breaks flow)</li>
+                    <li>Use Character Map apps (slow, can't remember where anything is)</li>
+                    <li>Install <span class="latex">L<sup>A</sup>T<sub>E</sub>X</span> and render everything (overkill for a quick email)</li>
+                    <li>Memorize Unicode codepoints (lol no)</li>
+                </ul>
+            </div>
+            <p>
+                The Compose key is the elegant solution, but existing XCompose configs have issues:
+            </p>
+            <div class="problem-list">
+                <ul>
+                    <li>Huge symbol sets (47,000+ sequences) — impossible to memorize</li>
+                    <li>No conflict validation — sequences that shadow each other</li>
+                    <li>Not <a href="https://omarchy.org" style="color: #667eea; text-decoration: none;">Omarchy</a>-aware — collide with built-in emoji shortcuts</li>
+                    <li>Kitchen-sink approach — everything for everyone, usable by no one</li>
+                </ul>
+            </div>
+
+            <h2>The Solution</h2>
+            <p>
+                xcompose-stem is a <strong>curated, validated</strong> XCompose configuration focused on STEM symbols.
+                Hundreds of sequences instead of thousands. Type symbols directly in any application without needing a <span class="latex">L<sup>A</sup>T<sub>E</sub>X</span> renderer.
+            </p>
+            <div class="example-keys">
+                <kbd>⎄</kbd> <kbd>h</kbd> <kbd>8</kbd> <span class="becomes">becomes</span> <span class="result">∞</span>
+            </div>
+            <div class="example-keys">
+                <kbd>⎄</kbd> <kbd>h</kbd> <kbd>i</kbd> <kbd>t</kbd> <span class="becomes">becomes</span> <span class="result">∫</span>
+            </div>
+            <p><strong>Key differentiators:</strong></p>
+            <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li><strong>Systematic prefixes</strong> (<code>h</code> for math, <code>g</code> for Greek) make sequences learnable</li>
+                <li><strong>Dual access patterns</strong> (visual shortcuts + mnemonics) fit your workflow</li>
+                <li><strong>Automated validation</strong> ensures zero conflicts</li>
+                <li><strong><a href="https://omarchy.org" style="color: #667eea; text-decoration: none;">Omarchy</a>-friendly</strong> by design — deliberately avoids emoji shortcut collisions</li>
+            </ul>
+
+            <div class="callout" style="background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%); border-left-color: #ff9800;">
+                <strong style="color: #f57c00;">⚠️ Work in Progress</strong><br>
+                This project is actively developed. Mappings may change, be added, or be removed until version 1.0 is released.
+            </div>
+
+            <h2>What's a Compose Key?</h2>
+            <p>
+                The Compose key (represented by the <kbd>⎄</kbd> symbol) lets you type Unicode symbols by pressing key combinations.
+                Think of it like a shift key for symbols:
+            </p>
+            <div class="example-keys">
+                <kbd>⎄</kbd> <kbd>g</kbd> <kbd>a</kbd> <span class="becomes">becomes</span> <span class="result">α</span>
+            </div>
+            <div class="example-keys">
+                <kbd>Shift</kbd> <kbd>1</kbd> <span class="becomes">becomes</span> <span class="result">!</span>
+            </div>
+            <p>
+                Same concept, different symbols.
+            </p>
+            <p>
+                Most Linux desktop environments support it natively, though you'll have to enable it (see <a href="#quick-start">Quick Start</a> below).
+            </p>
+
+            <div class="callout">
+                <strong>Using <a href="https://omarchy.org" style="color: #667eea; text-decoration: none;">Omarchy Linux</a>?</strong> You're all set! Caps Lock is already your Compose key.
+                Just install xcompose-stem and start typing. Press <kbd>Super</kbd> <kbd>K</kbd> to see all <a href="https://omarchy.org" style="color: #667eea; text-decoration: none;">Omarchy</a> hotkeys.
+            </div>
+
+            <h2>Symbol Categories</h2>
+            <div class="symbol-showcase">
+                <div class="symbol-category">
+                    <div class="category-name">Mathematical Symbols</div>
+                    <div class="category-symbols">∫ ∂ ∇ ∞ ≈ ≠ ≤ ≥ ± × ÷ √ ∑ ∏ ⊕ ⊗</div>
+                    <div class="category-desc">Calculus, algebra, and mathematical operators</div>
+                </div>
+
+                <div class="symbol-category">
+                    <div class="category-name">Greek Letters</div>
+                    <div class="category-symbols">α β γ δ ε ζ η θ λ μ π ρ σ τ φ ψ ω Γ Δ Θ Λ Π Σ Φ Ψ Ω</div>
+                    <div class="category-desc">Complete lowercase and uppercase Greek alphabet</div>
+                </div>
+
+                <div class="symbol-category">
+                    <div class="category-name">Arrows</div>
+                    <div class="category-symbols">→ ← ↑ ↓ ↔ ⇒ ⇐ ⇔ ↦ ⟶ ⟹ ⇀ ↼ ⟲ ⟳</div>
+                    <div class="category-desc">All directions, double arrows, and mathematical arrows</div>
+                </div>
+
+                <div class="symbol-category">
+                    <div class="category-name">Set Theory & Logic</div>
+                    <div class="category-symbols">∈ ∉ ⊂ ⊃ ⊆ ⊇ ∪ ∩ ∅ ∧ ∨ ¬ ∀ ∃ ⊤ ⊥ ⊢ ⊨</div>
+                    <div class="category-desc">Set membership, logical operators, and quantifiers</div>
+                </div>
+
+                <div class="symbol-category">
+                    <div class="category-name">Subscripts & Superscripts</div>
+                    <div class="category-symbols">x₀ x₁ x₂ x₃ xₙ | x⁰ x¹ x² x³ xⁿ</div>
+                    <div class="category-desc">Numeric subscripts and superscripts for notation</div>
+                </div>
+
+                <div class="symbol-category">
+                    <div class="category-name">Special Symbols</div>
+                    <div class="category-symbols">° ′ ″ ‴ ℏ Å ‰ † ‡ § ¶ © ® ™</div>
+                    <div class="category-desc">Degrees, primes, scientific notation, and typography</div>
+                </div>
+            </div>
+
+            <h2 id="quick-start">Quick Start</h2>
+            <div class="install-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Clone the repository</div>
+                        <code>git clone https://github.com/phil-bowens/xcompose-stem.git ~/.xcompose-stem</code>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Run the installer</div>
+                        <code>cd ~/.xcompose-stem && ./install.sh</code>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Start typing symbols</div>
+                        <div class="example-keys">
+                            <kbd>⎄</kbd> <kbd>g</kbd> <kbd>a</kbd> <span class="becomes">becomes</span> <span class="result">α</span>
+                        </div>
+                        <div class="example-keys">
+                            <kbd>⎄</kbd> <kbd>h</kbd> <kbd>8</kbd> <span class="becomes">becomes</span> <span class="result">∞</span>
+                        </div>
+                        <div class="example-keys">
+                            <kbd>⎄</kbd> <kbd>-</kbd> <kbd>&gt;</kbd> <span class="becomes">becomes</span> <span class="result">→</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>
+                See the <a href="https://github.com/phil-bowens/xcompose-stem#installation">installation guide</a>
+                for detailed instructions and platform-specific setup.
+            </p>
+
+            <h2>Documentation</h2>
+            <ul>
+                <li><a href="xcompose_reference.html">Interactive Symbol Reference</a> - Browse and search all sequences</li>
+                <li><a href="https://github.com/phil-bowens/xcompose-stem/blob/master/README.md">README</a> - Installation and usage</li>
+                <li><a href="https://github.com/phil-bowens/xcompose-stem/blob/master/CONTRIBUTING.md">Contributing Guide</a> - How to contribute</li>
+                <li><a href="https://github.com/phil-bowens/xcompose-stem/blob/master/CLAUDE.md">Developer Documentation</a> - Architecture and design</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            Copyright © 2025 Phil Bowens •
+            <a href="https://github.com/phil-bowens/xcompose-stem/blob/master/LICENSE">MIT License</a>
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.9em;">
+            <a href="https://github.com/phil-bowens/xcompose-stem">GitHub</a> •
+            <a href="https://github.com/phil-bowens/xcompose-stem/issues">Issues</a> •
+            <a href="https://github.com/phil-bowens/xcompose-stem/blob/master/CONTRIBUTING.md">Contributing</a>
+        </p>
+    </footer>
+</body>
+</html>
