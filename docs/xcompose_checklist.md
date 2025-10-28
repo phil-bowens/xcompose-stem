@@ -357,7 +357,7 @@ Instructions: Test each sequence and check the box when verified.
 - [ ] `underscore v` → **ᵥ** — Subscript v
 - [ ] `underscore x` → **ₓ** — Subscript x
 
-## TYPOGRAPHY & SPACING (prefix: visual)
+## TYPOGRAPHY & SPACING (iconic shortcuts)
 
 - [ ] `h minus` → **−** — True minus sign (math)
 - [ ] `period period period` → **…** — Ellipsis
@@ -376,7 +376,7 @@ Instructions: Test each sequence and check the box when verified.
 - [ ] `h m e` → **↯** — Downwards zigzag arrow (merge conflict)
 - [ ] `minus b` → **‑** — Non-breaking hyphen
 
-## SMART QUOTES (prefix: visual)
+## SMART QUOTES (iconic shortcuts)
 
 - [ ] `quotedbl less` → **“** — Left double quotation mark
 - [ ] `greater quotedbl` → **”** — Right double quotation mark
@@ -389,7 +389,7 @@ Instructions: Test each sequence and check the box when verified.
 - [ ] `less comma` → **‹** — Single left-pointing angle quotation mark
 - [ ] `greater comma` → **›** — Single right-pointing angle quotation mark
 
-## INTERNATIONAL PUNCTUATION (prefix: visual)
+## INTERNATIONAL PUNCTUATION (iconic shortcuts)
 
 - [ ] `exclam exclam` → **¡** — Inverted exclamation mark (Spanish)
 - [ ] `question question` → **¿** — Inverted question mark (Spanish)
@@ -403,7 +403,7 @@ Instructions: Test each sequence and check the box when verified.
 - [ ] `i tilde n` → **ñ** — n tilde
 - [ ] `i diaeresis u` → **ü** — u diaeresis
 
-## UNITS & MEASUREMENTS (prefix: h, visual)
+## UNITS & MEASUREMENTS (prefix: h, iconic)
 
 - [ ] `parenleft parenright` → **°** — Degree sign
 - [ ] `o C` → **°C** — Degrees Celsius (composed sequence)
@@ -423,7 +423,7 @@ Instructions: Test each sequence and check the box when verified.
 - [ ] `h k e t` → **⟩** — Mathematical right angle bracket (ket)
 - [ ] `h at` → **⚛** — Atom symbol
 
-## CHEMISTRY (prefix: h, visual)
+## CHEMISTRY (prefix: h, iconic)
 
 - [ ] `bar equal greater` → **⇌** — Equilibrium arrow
 - [ ] `minus bar minus` → **↽** — Leftwards harpoon with barb downwards (reversible reaction left)
@@ -432,7 +432,7 @@ Instructions: Test each sequence and check the box when verified.
 - [ ] `h c h l` → **↽** — Chemistry harpoon left (mnemonic: chl)
 - [ ] `h c h r` → **⇁** — Chemistry harpoon right (mnemonic: chr)
 
-## ASTRONOMY (prefix: h, visual)
+## ASTRONOMY (prefix: h, iconic)
 
 - [ ] `h asterisk b` → **★** — Black star
 - [ ] `h asterisk w` → **☆** — White star
@@ -602,7 +602,7 @@ Instructions: Test each sequence and check the box when verified.
 - [ ] `c f` → **₣** — French franc (mnemonic: cf)
 - [ ] `c x` → **¤** — Generic currency (mnemonic: cx)
 
-## LEGAL / DOCUMENT SYMBOLS (prefix: visual)
+## LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)
 
 - [ ] `C C` → **©** — Copyright sign
 - [ ] `R R` → **®** — Registered trademark sign

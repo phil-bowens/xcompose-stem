@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-xcompose-stem: Documentation Generator
+XCompose-STEM: Documentation Generator
 
 Parses XCompose files and generates various output formats:
 - Interactive HTML reference (tiling WM optimized)
@@ -11,7 +11,7 @@ Parses XCompose files and generates various output formats:
 This script serves as the central documentation generator from the XCompose
 configuration file, treating it as the single source of truth.
 
-Part of xcompose-stem - Keyboard shortcuts for STEM symbols on Linux
+Part of XCompose-STEM - Easy Unicode Symbols on Linux for STEM Professionals
 
 Copyright (c) 2025 Phil Bowens
 Repository: https://github.com/phil-bowens/xcompose-stem
@@ -175,9 +175,9 @@ class MarkdownTableGenerator:
         self.parser = parser
 
     def classify_sequence(self, keys: List[str]) -> str:
-        """Classify a sequence as 'ascii', 'mnemonic', or 'variant'."""
+        """Classify a sequence as 'ascii' (iconic) or 'mnemonic'."""
         if not keys:
-            return 'variant'
+            return 'mnemonic'
 
         # Check if it's a mnemonic (starts with common prefixes)
         prefix_keys = {'h', 'g', 'k', 'b', 'p', 'u', 'i', 'c'}
@@ -198,7 +198,7 @@ class MarkdownTableGenerator:
         if len(keys) <= 5 and all(k in ascii_keys or k in single_chars for k in keys):
             return 'ascii'
 
-        return 'variant'
+        return 'mnemonic'
 
     def format_keys_compact(self, keys: List[str]) -> str:
         """Format keys in a compact, readable way for table display."""
@@ -251,15 +251,18 @@ class MarkdownTableGenerator:
                 f.write(f"## {category}\n\n")
 
                 # Group sequences by symbol (to collect all ways to type each symbol)
-                symbol_map = defaultdict(lambda: {'ascii': [], 'mnemonic': [], 'variant': [],
+                symbol_map = defaultdict(lambda: {'ascii': [], 'mnemonic': [],
                                                     'codepoint': None, 'comment': None})
 
                 for seq in sequences:
                     # Use explicit tag if available, otherwise auto-classify
                     if seq.tag:
                         classification = seq.tag.lower()
-                        # Map tags to our internal names
-                        tag_map = {'visual': 'ascii', 'mnem': 'mnemonic', 'alt': 'variant'}
+                        # Map tags to our internal names for display
+                        tag_map = {
+                            'iconic': 'ascii',
+                            'mnemonic': 'mnemonic'
+                        }
                         classification = tag_map.get(classification, classification)
                     else:
                         classification = self.classify_sequence(seq.keys)
@@ -283,8 +286,8 @@ class MarkdownTableGenerator:
                         f.write(f"### {subcat}\n\n")
 
                     # Table header with style
-                    f.write("| Symbol | Code | ASCII | Mnemonic | Variants | Description |\n")
-                    f.write("|:------:|:----:|:------|:---------|:---------|:------------|\n")
+                    f.write("| Symbol | Code | Iconic | Mnemonic | Description |\n")
+                    f.write("|:------:|:----:|:-------|:---------|:------------|\n")
 
                     # Get unique symbols in order of appearance
                     seen_symbols = set()
@@ -300,10 +303,9 @@ class MarkdownTableGenerator:
                         code_col = info['codepoint'] if info['codepoint'] else '-'
                         ascii_col = '<br>'.join(f"`{s}`" for s in info['ascii']) if info['ascii'] else '-'
                         mnemonic_col = '<br>'.join(f"`{s}`" for s in info['mnemonic']) if info['mnemonic'] else '-'
-                        variant_col = '<br>'.join(f"`{s}`" for s in info['variant']) if info['variant'] else '-'
                         desc_col = info['comment'] if info['comment'] else ''
 
-                        f.write(f"| {symbol_col} | {code_col} | {ascii_col} | {mnemonic_col} | {variant_col} | {desc_col} |\n")
+                        f.write(f"| {symbol_col} | {code_col} | {ascii_col} | {mnemonic_col} | {desc_col} |\n")
 
                     f.write("\n")
 
@@ -313,8 +315,8 @@ class MarkdownTableGenerator:
             f.write("## Legend\n\n")
             f.write("- **Symbol**: The Unicode character produced\n")
             f.write("- **Code**: Unicode codepoint in hexadecimal\n")
-            f.write("- **ASCII**: Visual shortcuts using punctuation (e.g., `->`, `<=`, `!=`)\n")
-            f.write("- **Mnemonic**: Letter-based sequences with prefixes:\n")
+            f.write("- **Iconic**: Sequences that visually resemble the output (e.g., `->`, `<=`, `!=`)\n")
+            f.write("- **Mnemonic**: Letter-based sequences with systematic prefixes:\n")
             f.write("  - `h` = Higher math/logic/sets/calculus\n")
             f.write("  - `g` = Greek letters\n")
             f.write("  - `k` = Keyboard/UI symbols\n")
@@ -323,7 +325,6 @@ class MarkdownTableGenerator:
             f.write("  - `u` = Music notation\n")
             f.write("  - `c` = Currency\n")
             f.write("  - `i` = International diacritics\n")
-            f.write("- **Variants**: Alternative sequences (less common patterns)\n")
             f.write("- **Description**: Explanation of symbol meaning/usage\n\n")
 
             f.write("---\n\n")
@@ -394,19 +395,19 @@ class HTMLGenerator:
             'MATH / LOGIC / SETS  (prefix: h)',
             'GREEK LETTERS  (prefix: g)',
             'SUPERSCRIPTS & SUBSCRIPTS (prefix: ^ _)',
-            'TYPOGRAPHY & SPACING (prefix: visual)',
-            'SMART QUOTES (prefix: visual)',
+            'TYPOGRAPHY & SPACING (iconic shortcuts)',
+            'SMART QUOTES (iconic shortcuts)',
             # Common (weekly use)
-            'UNITS & MEASUREMENTS (prefix: h, visual)',
-            'INTERNATIONAL PUNCTUATION (prefix: visual)',
+            'UNITS & MEASUREMENTS (prefix: h, iconic)',
+            'INTERNATIONAL PUNCTUATION (iconic shortcuts)',
             'UI SYMBOLS & SHAPES (prefix: k)',
             'HIGHER LOGIC / CATEGORY THEORY / LONG ARROWS  (prefix: h)',
             # Occasional (monthly use)
             'CURRENCY (prefix: c)',
-            'LEGAL / DOCUMENT SYMBOLS (prefix: visual)',
+            'LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)',
             # Specialized (field-dependent)
-            'CHEMISTRY (prefix: h, visual)',
-            'ASTRONOMY (prefix: h, visual)',
+            'CHEMISTRY (prefix: h, iconic)',
+            'ASTRONOMY (prefix: h, iconic)',
             'BOX-DRAWING (prefix: b)',
             'INTERNATIONAL DIACRITICS (prefix: i)',
             'IPA (prefix: p)',
@@ -433,9 +434,9 @@ class HTMLGenerator:
         return sorted(categories.items(), key=sort_key)
 
     def classify_sequence(self, keys: List[str]) -> str:
-        """Classify a sequence as 'ascii', 'mnemonic', or 'variant'."""
+        """Classify a sequence as 'ascii' (iconic) or 'mnemonic'."""
         if not keys:
-            return 'variant'
+            return 'mnemonic'
 
         # Check if it's a mnemonic (starts with common prefixes)
         prefix_keys = {'h', 'g', 'k', 'b', 'p', 'u', 'i', 'c'}
@@ -456,7 +457,7 @@ class HTMLGenerator:
         if len(keys) <= 5 and all(k in ascii_keys or k in single_chars for k in keys):
             return 'ascii'
 
-        return 'variant'
+        return 'mnemonic'
 
     def format_sequence_visual(self, keys: List[str]) -> str:
         """Convert key names to visual representation."""
@@ -495,7 +496,7 @@ class HTMLGenerator:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xcompose-stem Symbol Reference</title>
+    <title>XCompose-STEM Symbol Reference</title>
     <style>
         * {{ box-sizing: border-box; }}
 
@@ -691,7 +692,6 @@ class HTMLGenerator:
 
         .badge-ascii {{ background: #e3f2fd; color: #1976d2; }}
         .badge-mnemonic {{ background: #f3e5f5; color: #7b1fa2; }}
-        .badge-variant {{ background: #fff3e0; color: #f57c00; }}
 
         .category {{
             background: var(--bg-card);
@@ -889,12 +889,6 @@ class HTMLGenerator:
             border: 1px solid #e1bee7;
         }}
 
-        .sequence-variant {{
-            background: #fff3e0;
-            color: #e65100;
-            border: 1px solid #ffe0b2;
-        }}
-
         .symbol {{
             font-size: 1.8em;
             font-weight: bold;
@@ -918,9 +912,9 @@ class HTMLGenerator:
 
         .sequences-cell {{
             display: flex;
-            flex-wrap: wrap;
-            gap: 2px;
+            flex-direction: column;
             align-items: flex-start;
+            gap: 3px;
         }}
 
         /* Responsive breakpoints for tiling WMs */
@@ -1014,19 +1008,15 @@ class HTMLGenerator:
     </div>
 
     <div class="legend">
-        <h3>Types</h3>
+        <h3>Sequence Types</h3>
         <div class="legend-grid">
             <div class="legend-item">
-                <span class="legend-badge badge-ascii">VIS</span>
-                <span>Visual</span>
+                <span class="legend-badge badge-ascii">ICON</span>
+                <span>Iconic (visually resembles output)</span>
             </div>
             <div class="legend-item">
-                <span class="legend-badge badge-mnemonic">MNE</span>
-                <span>Mnemonic</span>
-            </div>
-            <div class="legend-item">
-                <span class="legend-badge badge-variant">ALT</span>
-                <span>Variant</span>
+                <span class="legend-badge badge-mnemonic">MNEM</span>
+                <span>Mnemonic (abbreviation-based)</span>
             </div>
         </div>
     </div>
@@ -1043,7 +1033,7 @@ class HTMLGenerator:
             html += f'            <h2>{self.format_heading(category)}</h2>\n'
 
             # Group sequences by symbol (to collect all ways to type each symbol)
-            symbol_map = defaultdict(lambda: {'ascii': [], 'mnemonic': [], 'variant': [],
+            symbol_map = defaultdict(lambda: {'ascii': [], 'mnemonic': [],
                                                'codepoint': None, 'comment': None,
                                                'subcategory': None})
 
@@ -1051,8 +1041,11 @@ class HTMLGenerator:
                 # Use explicit tag if available, otherwise auto-classify
                 if seq.tag:
                     classification = seq.tag.lower()
-                    # Map tags to our internal names
-                    tag_map = {'visual': 'ascii', 'mnem': 'mnemonic', 'alt': 'variant'}
+                    # Map tags to our internal names for display
+                    tag_map = {
+                        'iconic': 'ascii',
+                        'mnemonic': 'mnemonic'
+                    }
                     classification = tag_map.get(classification, classification)
                 else:
                     classification = self.classify_sequence(seq.keys)
@@ -1081,9 +1074,8 @@ class HTMLGenerator:
                 html += '                <table>\n'
                 html += '                    <thead><tr>\n'
                 html += '                        <th>Symbol</th>\n'
-                html += '                        <th>ASCII</th>\n'
+                html += '                        <th>Iconic</th>\n'
                 html += '                        <th>Mnemonic</th>\n'
-                html += '                        <th>Variants</th>\n'
                 html += '                        <th>Description</th>\n'
                 html += '                    </tr></thead>\n'
                 html += '                    <tbody>\n'
@@ -1094,7 +1086,7 @@ class HTMLGenerator:
                     codepoint_display = f"U+{info['codepoint']}" if info['codepoint'] else ""
 
                     # Collect all sequences for search
-                    all_sequences = info['ascii'] + info['mnemonic'] + info['variant']
+                    all_sequences = info['ascii'] + info['mnemonic']
                     search_text = f"{symbol} {' '.join(all_sequences)} {comment}".lower()
 
                     html += f'                        <tr tabindex="0" class="symbol-row" data-symbol="{symbol}" data-search="{search_text}">\n'
@@ -1106,7 +1098,7 @@ class HTMLGenerator:
                         html += f'                                <span class="codepoint">{codepoint_display}</span>\n'
                     html += f'                            </td>\n'
 
-                    # ASCII column
+                    # Iconic column
                     html += f'                            <td>\n'
                     if info['ascii']:
                         html += f'                                <div class="sequences-cell">\n'
@@ -1128,17 +1120,6 @@ class HTMLGenerator:
                         html += f'                                <span style="color: #adb5bd;">—</span>\n'
                     html += f'                            </td>\n'
 
-                    # Variants column
-                    html += f'                            <td>\n'
-                    if info['variant']:
-                        html += f'                                <div class="sequences-cell">\n'
-                        for seq in info['variant']:
-                            html += f'                                    <span class="sequence sequence-variant">{seq}</span>\n'
-                        html += f'                                </div>\n'
-                    else:
-                        html += f'                                <span style="color: #adb5bd;">—</span>\n'
-                    html += f'                            </td>\n'
-
                     # Description column
                     html += f'                            <td><span class="comment">{comment}</span></td>\n'
                     html += f'                        </tr>\n'
@@ -1155,7 +1136,7 @@ class HTMLGenerator:
 
 """
         html += f"""    <footer style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; text-align: center; padding: 1.5rem; margin-top: 2.5rem; box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05); border-radius: 6px;">
-        <a href="index.html" style="color: #a8b8ff; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#c5d1ff'" onmouseout="this.style.color='#a8b8ff'">xcompose-stem</a> <span style="opacity: 0.7;">• {stats['total_sequences']} sequences • {unique_symbols} symbols • {stats['total_categories']} categories</span>
+        <a href="index.html" style="color: #a8b8ff; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#c5d1ff'" onmouseout="this.style.color='#a8b8ff'">XCompose-STEM</a> <span style="opacity: 0.7;">• {stats['total_sequences']} sequences • {unique_symbols} symbols • {stats['total_categories']} categories</span>
     </footer>
 
 """

@@ -1,6 +1,6 @@
 ################################################################################
-# Makefile for xcompose-stem
-# Part of xcompose-stem - Keyboard shortcuts for STEM symbols on Linux
+# Makefile for XCompose-STEM
+# Part of XCompose-STEM - Easy Unicode Symbols on Linux for STEM Professionals
 #
 # Copyright (c) 2025 Phil Bowens
 # Repository: https://github.com/phil-bowens/xcompose-stem
@@ -24,7 +24,7 @@
 #
 ################################################################################
 
-.PHONY: help validate audit docs all clean test install uninstall check-defaults
+.PHONY: help validate audit docs all clean test install uninstall check-defaults comparison-table
 
 # Configuration
 XCOMPOSE_FILE := XCompose
@@ -36,7 +36,7 @@ CHECKER := tools/check_system_defaults.py
 DOCS_DIR := docs
 
 help:  ## Show this help message
-	@echo "xcompose-stem - Makefile targets"
+	@echo "XCompose-STEM - Makefile targets"
 	@echo ""
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
 		awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2}'
@@ -59,6 +59,10 @@ audit:  ## Run design quality audit
 check-defaults:  ## Compare against system defaults (informational)
 	@echo "==> Comparing against system defaults..."
 	@$(PYTHON) $(CHECKER) $(XCOMPOSE_FILE)
+
+comparison-table:  ## Generate comparison table (saves to docs/xcompose_comparison.md)
+	@echo "==> Generating comparison table..."
+	@$(PYTHON) $(CHECKER) $(XCOMPOSE_FILE) --table --output $(DOCS_DIR)/xcompose_comparison.md
 
 docs:  ## Generate all documentation (HTML, JSON, Markdown, checklist)
 	@echo "==> Generating documentation..."

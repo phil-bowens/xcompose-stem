@@ -10,20 +10,20 @@
         "MATH / LOGIC / SETS  (prefix: h)",
         "HIGHER LOGIC / CATEGORY THEORY / LONG ARROWS  (prefix: h)",
         "SUPERSCRIPTS & SUBSCRIPTS (prefix: ^ _)",
-        "TYPOGRAPHY & SPACING (prefix: visual)",
-        "SMART QUOTES (prefix: visual)",
-        "INTERNATIONAL PUNCTUATION (prefix: visual)",
+        "TYPOGRAPHY & SPACING (iconic shortcuts)",
+        "SMART QUOTES (iconic shortcuts)",
+        "INTERNATIONAL PUNCTUATION (iconic shortcuts)",
         "INTERNATIONAL DIACRITICS (prefix: i)",
-        "UNITS & MEASUREMENTS (prefix: h, visual)",
-        "CHEMISTRY (prefix: h, visual)",
-        "ASTRONOMY (prefix: h, visual)",
+        "UNITS & MEASUREMENTS (prefix: h, iconic)",
+        "CHEMISTRY (prefix: h, iconic)",
+        "ASTRONOMY (prefix: h, iconic)",
         "IPA (prefix: p)",
         "CALLIGRAPHIC / FRAKTUR (prefix: k)",
         "UI SYMBOLS & SHAPES (prefix: k)",
         "BOX-DRAWING (prefix: b)",
         "MUSIC SYMBOLS (prefix: u)",
         "CURRENCY (prefix: c)",
-        "LEGAL / DOCUMENT SYMBOLS (prefix: visual)"
+        "LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)"
       ],
       "unique_prefixes": 53,
       "top_prefixes": [
@@ -4261,9 +4261,9 @@
       "symbol": "−",
       "codepoint": "2212",
       "comment": "True minus sign (math)",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "h minus − True minus sign (math) TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "h minus − True minus sign (math) TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4275,9 +4275,9 @@
       "symbol": "…",
       "codepoint": "2026",
       "comment": "Ellipsis",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "period period period … Ellipsis TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "period period period … Ellipsis TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4289,9 +4289,9 @@
       "symbol": "⋮",
       "codepoint": "22EE",
       "comment": "Vertical ellipsis",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "period period bar ⋮ Vertical ellipsis TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "period period bar ⋮ Vertical ellipsis TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4302,9 +4302,9 @@
       "symbol": " ",
       "codepoint": "00A0",
       "comment": "Non-breaking space (NBSP)",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "space b   Non-breaking space (NBSP) TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "space b   Non-breaking space (NBSP) TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4315,9 +4315,9 @@
       "symbol": " ",
       "codepoint": "2009",
       "comment": "Thin space",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "space t   Thin space TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "space t   Thin space TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4328,9 +4328,9 @@
       "symbol": " ",
       "codepoint": "202F",
       "comment": "Narrow no-break space",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "space B   Narrow no-break space TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "space B   Narrow no-break space TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4341,9 +4341,9 @@
       "symbol": " ",
       "codepoint": "200A",
       "comment": "Hair space",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "space h   Hair space TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "space h   Hair space TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4354,9 +4354,9 @@
       "symbol": " ",
       "codepoint": "2007",
       "comment": "Figure space (tabular)",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "space 7   Figure space (tabular) TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "space 7   Figure space (tabular) TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4367,9 +4367,9 @@
       "symbol": " ",
       "codepoint": "2008",
       "comment": "Punctuation space",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "space 8   Punctuation space TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "space 8   Punctuation space TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4380,9 +4380,9 @@
       "symbol": "‌",
       "codepoint": "200C",
       "comment": "Zero width non-joiner (ZWNJ)",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "space z ‌ Zero width non-joiner (ZWNJ) TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "space z ‌ Zero width non-joiner (ZWNJ) TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4393,9 +4393,9 @@
       "symbol": "‍",
       "codepoint": "200D",
       "comment": "Zero width joiner (ZWJ)",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "space Z ‍ Zero width joiner (ZWJ) TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "space Z ‍ Zero width joiner (ZWJ) TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4407,9 +4407,9 @@
       "symbol": "–",
       "codepoint": "2013",
       "comment": "En dash (for ranges)",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "minus minus period – En dash (for ranges) TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "minus minus period – En dash (for ranges) TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4421,9 +4421,9 @@
       "symbol": "—",
       "codepoint": "2014",
       "comment": "Em dash (for breaks)",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "minus minus minus — Em dash (for breaks) TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "minus minus minus — Em dash (for breaks) TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4435,9 +4435,9 @@
       "symbol": "",
       "codepoint": "E0A0",
       "comment": "Git branch symbol (Powerline, font-dependent)",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "h g i  Git branch symbol (Powerline, font-dependent) TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "h g i  Git branch symbol (Powerline, font-dependent) TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4449,9 +4449,9 @@
       "symbol": "↯",
       "codepoint": "21AF",
       "comment": "Downwards zigzag arrow (merge conflict)",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "h m e ↯ Downwards zigzag arrow (merge conflict) TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "h m e ↯ Downwards zigzag arrow (merge conflict) TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4462,9 +4462,9 @@
       "symbol": "‑",
       "codepoint": "2011",
       "comment": "Non-breaking hyphen",
-      "category": "TYPOGRAPHY & SPACING (prefix: visual)",
+      "category": "TYPOGRAPHY & SPACING (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "minus b ‑ Non-breaking hyphen TYPOGRAPHY & SPACING (prefix: visual)"
+      "searchable": "minus b ‑ Non-breaking hyphen TYPOGRAPHY & SPACING (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4475,9 +4475,9 @@
       "symbol": "“",
       "codepoint": "201C",
       "comment": "Left double quotation mark",
-      "category": "SMART QUOTES (prefix: visual)",
+      "category": "SMART QUOTES (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "quotedbl less “ Left double quotation mark SMART QUOTES (prefix: visual)"
+      "searchable": "quotedbl less “ Left double quotation mark SMART QUOTES (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4488,9 +4488,9 @@
       "symbol": "”",
       "codepoint": "201D",
       "comment": "Right double quotation mark",
-      "category": "SMART QUOTES (prefix: visual)",
+      "category": "SMART QUOTES (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "greater quotedbl ” Right double quotation mark SMART QUOTES (prefix: visual)"
+      "searchable": "greater quotedbl ” Right double quotation mark SMART QUOTES (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4501,9 +4501,9 @@
       "symbol": "‘",
       "codepoint": "2018",
       "comment": "Left single quotation mark",
-      "category": "SMART QUOTES (prefix: visual)",
+      "category": "SMART QUOTES (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "apostrophe less ‘ Left single quotation mark SMART QUOTES (prefix: visual)"
+      "searchable": "apostrophe less ‘ Left single quotation mark SMART QUOTES (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4514,9 +4514,9 @@
       "symbol": "’",
       "codepoint": "2019",
       "comment": "Right single quotation mark",
-      "category": "SMART QUOTES (prefix: visual)",
+      "category": "SMART QUOTES (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "greater apostrophe ’ Right single quotation mark SMART QUOTES (prefix: visual)"
+      "searchable": "greater apostrophe ’ Right single quotation mark SMART QUOTES (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4527,9 +4527,9 @@
       "symbol": "„",
       "codepoint": "201E",
       "comment": "Double low-9 quotation mark (German/Eastern European)",
-      "category": "SMART QUOTES (prefix: visual)",
+      "category": "SMART QUOTES (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "comma quotedbl „ Double low-9 quotation mark (German/Eastern European) SMART QUOTES (prefix: visual)"
+      "searchable": "comma quotedbl „ Double low-9 quotation mark (German/Eastern European) SMART QUOTES (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4540,9 +4540,9 @@
       "symbol": "‚",
       "codepoint": "201A",
       "comment": "Single low-9 quotation mark (German/Eastern European)",
-      "category": "SMART QUOTES (prefix: visual)",
+      "category": "SMART QUOTES (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "comma apostrophe ‚ Single low-9 quotation mark (German/Eastern European) SMART QUOTES (prefix: visual)"
+      "searchable": "comma apostrophe ‚ Single low-9 quotation mark (German/Eastern European) SMART QUOTES (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4554,9 +4554,9 @@
       "symbol": "«",
       "codepoint": "00AB",
       "comment": "Left-pointing double angle quotation mark",
-      "category": "SMART QUOTES (prefix: visual)",
+      "category": "SMART QUOTES (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "less less quotedbl « Left-pointing double angle quotation mark SMART QUOTES (prefix: visual)"
+      "searchable": "less less quotedbl « Left-pointing double angle quotation mark SMART QUOTES (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4568,9 +4568,9 @@
       "symbol": "»",
       "codepoint": "00BB",
       "comment": "Right-pointing double angle quotation mark",
-      "category": "SMART QUOTES (prefix: visual)",
+      "category": "SMART QUOTES (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "greater greater quotedbl » Right-pointing double angle quotation mark SMART QUOTES (prefix: visual)"
+      "searchable": "greater greater quotedbl » Right-pointing double angle quotation mark SMART QUOTES (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4581,9 +4581,9 @@
       "symbol": "‹",
       "codepoint": "2039",
       "comment": "Single left-pointing angle quotation mark",
-      "category": "SMART QUOTES (prefix: visual)",
+      "category": "SMART QUOTES (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "less comma ‹ Single left-pointing angle quotation mark SMART QUOTES (prefix: visual)"
+      "searchable": "less comma ‹ Single left-pointing angle quotation mark SMART QUOTES (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4594,9 +4594,9 @@
       "symbol": "›",
       "codepoint": "203A",
       "comment": "Single right-pointing angle quotation mark",
-      "category": "SMART QUOTES (prefix: visual)",
+      "category": "SMART QUOTES (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "greater comma › Single right-pointing angle quotation mark SMART QUOTES (prefix: visual)"
+      "searchable": "greater comma › Single right-pointing angle quotation mark SMART QUOTES (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4607,9 +4607,9 @@
       "symbol": "¡",
       "codepoint": "00A1",
       "comment": "Inverted exclamation mark (Spanish)",
-      "category": "INTERNATIONAL PUNCTUATION (prefix: visual)",
+      "category": "INTERNATIONAL PUNCTUATION (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "exclam exclam ¡ Inverted exclamation mark (Spanish) INTERNATIONAL PUNCTUATION (prefix: visual)"
+      "searchable": "exclam exclam ¡ Inverted exclamation mark (Spanish) INTERNATIONAL PUNCTUATION (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4620,9 +4620,9 @@
       "symbol": "¿",
       "codepoint": "00BF",
       "comment": "Inverted question mark (Spanish)",
-      "category": "INTERNATIONAL PUNCTUATION (prefix: visual)",
+      "category": "INTERNATIONAL PUNCTUATION (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "question question ¿ Inverted question mark (Spanish) INTERNATIONAL PUNCTUATION (prefix: visual)"
+      "searchable": "question question ¿ Inverted question mark (Spanish) INTERNATIONAL PUNCTUATION (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4633,9 +4633,9 @@
       "symbol": "№",
       "codepoint": "2116",
       "comment": "Numero sign (Cyrillic/European)",
-      "category": "INTERNATIONAL PUNCTUATION (prefix: visual)",
+      "category": "INTERNATIONAL PUNCTUATION (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "N o № Numero sign (Cyrillic/European) INTERNATIONAL PUNCTUATION (prefix: visual)"
+      "searchable": "N o № Numero sign (Cyrillic/European) INTERNATIONAL PUNCTUATION (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4646,9 +4646,9 @@
       "symbol": "‽",
       "codepoint": "203D",
       "comment": "Interrobang",
-      "category": "INTERNATIONAL PUNCTUATION (prefix: visual)",
+      "category": "INTERNATIONAL PUNCTUATION (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "question exclam ‽ Interrobang INTERNATIONAL PUNCTUATION (prefix: visual)"
+      "searchable": "question exclam ‽ Interrobang INTERNATIONAL PUNCTUATION (iconic shortcuts)"
     },
     {
       "keys": [
@@ -4715,9 +4715,9 @@
       "symbol": "°",
       "codepoint": "00B0",
       "comment": "Degree sign",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "parenleft parenright ° Degree sign UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "parenleft parenright ° Degree sign UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4728,9 +4728,9 @@
       "symbol": "°C",
       "codepoint": null,
       "comment": "Degrees Celsius (composed sequence)",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "o C °C Degrees Celsius (composed sequence) UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "o C °C Degrees Celsius (composed sequence) UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4741,9 +4741,9 @@
       "symbol": "°F",
       "codepoint": null,
       "comment": "Degrees Fahrenheit (composed sequence)",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "o F °F Degrees Fahrenheit (composed sequence) UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "o F °F Degrees Fahrenheit (composed sequence) UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4755,9 +4755,9 @@
       "symbol": "℃",
       "codepoint": "2103",
       "comment": "Degree Celsius symbol",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h d C ℃ Degree Celsius symbol UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "h d C ℃ Degree Celsius symbol UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4769,9 +4769,9 @@
       "symbol": "℉",
       "codepoint": "2109",
       "comment": "Degree Fahrenheit symbol",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h d F ℉ Degree Fahrenheit symbol UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "h d F ℉ Degree Fahrenheit symbol UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4782,9 +4782,9 @@
       "symbol": "′",
       "codepoint": "2032",
       "comment": "Prime (feet, derivatives, coordinates)",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h apostrophe ′ Prime (feet, derivatives, coordinates) UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "h apostrophe ′ Prime (feet, derivatives, coordinates) UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4796,9 +4796,9 @@
       "symbol": "″",
       "codepoint": "2033",
       "comment": "Double prime (inches, 2nd derivative)",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h 2 apostrophe ″ Double prime (inches, 2nd derivative) UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "h 2 apostrophe ″ Double prime (inches, 2nd derivative) UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4810,9 +4810,9 @@
       "symbol": "‴",
       "codepoint": "2034",
       "comment": "Triple prime (3rd derivative)",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h 3 apostrophe ‴ Triple prime (3rd derivative) UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "h 3 apostrophe ‴ Triple prime (3rd derivative) UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4824,9 +4824,9 @@
       "symbol": "⁗",
       "codepoint": "2057",
       "comment": "Quadruple prime (4th derivative)",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h 4 apostrophe ⁗ Quadruple prime (4th derivative) UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "h 4 apostrophe ⁗ Quadruple prime (4th derivative) UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4837,9 +4837,9 @@
       "symbol": "‵",
       "codepoint": "2035",
       "comment": "Reversed prime (backticks = backwards)",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "grave grave ‵ Reversed prime (backticks = backwards) UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "grave grave ‵ Reversed prime (backticks = backwards) UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4851,9 +4851,9 @@
       "symbol": "Å",
       "codepoint": "00C5",
       "comment": "Angstrom sign",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h A a Å Angstrom sign UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "h A a Å Angstrom sign UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4864,9 +4864,9 @@
       "symbol": "Ω",
       "codepoint": "03A9",
       "comment": "Ohm (Greek Omega capital)",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h O Ω Ohm (Greek Omega capital) UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "h O Ω Ohm (Greek Omega capital) UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4877,9 +4877,9 @@
       "symbol": "‰",
       "codepoint": "2030",
       "comment": "Per mille sign",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h percent ‰ Per mille sign UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "h percent ‰ Per mille sign UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4892,9 +4892,9 @@
       "symbol": "ℏ",
       "codepoint": "210F",
       "comment": "Hbar (Planck constant over 2pi)",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h b a r ℏ Hbar (Planck constant over 2pi) UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "h b a r ℏ Hbar (Planck constant over 2pi) UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4907,9 +4907,9 @@
       "symbol": "⟨",
       "codepoint": "27E8",
       "comment": "Mathematical left angle bracket (bra)",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h b r a ⟨ Mathematical left angle bracket (bra) UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "h b r a ⟨ Mathematical left angle bracket (bra) UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4922,9 +4922,9 @@
       "symbol": "⟩",
       "codepoint": "27E9",
       "comment": "Mathematical right angle bracket (ket)",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h k e t ⟩ Mathematical right angle bracket (ket) UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "h k e t ⟩ Mathematical right angle bracket (ket) UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4935,9 +4935,9 @@
       "symbol": "⚛",
       "codepoint": "269B",
       "comment": "Atom symbol",
-      "category": "UNITS & MEASUREMENTS (prefix: h, visual)",
+      "category": "UNITS & MEASUREMENTS (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h at ⚛ Atom symbol UNITS & MEASUREMENTS (prefix: h, visual)"
+      "searchable": "h at ⚛ Atom symbol UNITS & MEASUREMENTS (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4949,9 +4949,9 @@
       "symbol": "⇌",
       "codepoint": "21CC",
       "comment": "Equilibrium arrow",
-      "category": "CHEMISTRY (prefix: h, visual)",
+      "category": "CHEMISTRY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "bar equal greater ⇌ Equilibrium arrow CHEMISTRY (prefix: h, visual)"
+      "searchable": "bar equal greater ⇌ Equilibrium arrow CHEMISTRY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4963,9 +4963,9 @@
       "symbol": "↽",
       "codepoint": "21BD",
       "comment": "Leftwards harpoon with barb downwards (reversible reaction left)",
-      "category": "CHEMISTRY (prefix: h, visual)",
+      "category": "CHEMISTRY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "minus bar minus ↽ Leftwards harpoon with barb downwards (reversible reaction left) CHEMISTRY (prefix: h, visual)"
+      "searchable": "minus bar minus ↽ Leftwards harpoon with barb downwards (reversible reaction left) CHEMISTRY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4977,9 +4977,9 @@
       "symbol": "⇁",
       "codepoint": "21C1",
       "comment": "Rightwards harpoon with barb downwards (reversible reaction right)",
-      "category": "CHEMISTRY (prefix: h, visual)",
+      "category": "CHEMISTRY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "bar minus greater ⇁ Rightwards harpoon with barb downwards (reversible reaction right) CHEMISTRY (prefix: h, visual)"
+      "searchable": "bar minus greater ⇁ Rightwards harpoon with barb downwards (reversible reaction right) CHEMISTRY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -4992,9 +4992,9 @@
       "symbol": "⇌",
       "codepoint": "21CC",
       "comment": "Equilibrium arrow (mnemonic: ceq)",
-      "category": "CHEMISTRY (prefix: h, visual)",
+      "category": "CHEMISTRY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h c e q ⇌ Equilibrium arrow (mnemonic: ceq) CHEMISTRY (prefix: h, visual)"
+      "searchable": "h c e q ⇌ Equilibrium arrow (mnemonic: ceq) CHEMISTRY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -5007,9 +5007,9 @@
       "symbol": "↽",
       "codepoint": "21BD",
       "comment": "Chemistry harpoon left (mnemonic: chl)",
-      "category": "CHEMISTRY (prefix: h, visual)",
+      "category": "CHEMISTRY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h c h l ↽ Chemistry harpoon left (mnemonic: chl) CHEMISTRY (prefix: h, visual)"
+      "searchable": "h c h l ↽ Chemistry harpoon left (mnemonic: chl) CHEMISTRY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -5022,9 +5022,9 @@
       "symbol": "⇁",
       "codepoint": "21C1",
       "comment": "Chemistry harpoon right (mnemonic: chr)",
-      "category": "CHEMISTRY (prefix: h, visual)",
+      "category": "CHEMISTRY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h c h r ⇁ Chemistry harpoon right (mnemonic: chr) CHEMISTRY (prefix: h, visual)"
+      "searchable": "h c h r ⇁ Chemistry harpoon right (mnemonic: chr) CHEMISTRY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -5036,9 +5036,9 @@
       "symbol": "★",
       "codepoint": "2605",
       "comment": "Black star",
-      "category": "ASTRONOMY (prefix: h, visual)",
+      "category": "ASTRONOMY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h asterisk b ★ Black star ASTRONOMY (prefix: h, visual)"
+      "searchable": "h asterisk b ★ Black star ASTRONOMY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -5050,9 +5050,9 @@
       "symbol": "☆",
       "codepoint": "2606",
       "comment": "White star",
-      "category": "ASTRONOMY (prefix: h, visual)",
+      "category": "ASTRONOMY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h asterisk w ☆ White star ASTRONOMY (prefix: h, visual)"
+      "searchable": "h asterisk w ☆ White star ASTRONOMY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -5064,9 +5064,9 @@
       "symbol": "☉",
       "codepoint": "2609",
       "comment": "Sun symbol",
-      "category": "ASTRONOMY (prefix: h, visual)",
+      "category": "ASTRONOMY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h S u ☉ Sun symbol ASTRONOMY (prefix: h, visual)"
+      "searchable": "h S u ☉ Sun symbol ASTRONOMY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -5078,9 +5078,9 @@
       "symbol": "♁",
       "codepoint": "2641",
       "comment": "Earth symbol (Terra)",
-      "category": "ASTRONOMY (prefix: h, visual)",
+      "category": "ASTRONOMY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h T e ♁ Earth symbol (Terra) ASTRONOMY (prefix: h, visual)"
+      "searchable": "h T e ♁ Earth symbol (Terra) ASTRONOMY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -5092,9 +5092,9 @@
       "symbol": "♂",
       "codepoint": "2642",
       "comment": "Mars symbol",
-      "category": "ASTRONOMY (prefix: h, visual)",
+      "category": "ASTRONOMY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h M a ♂ Mars symbol ASTRONOMY (prefix: h, visual)"
+      "searchable": "h M a ♂ Mars symbol ASTRONOMY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -5106,9 +5106,9 @@
       "symbol": "♀",
       "codepoint": "2640",
       "comment": "Venus symbol",
-      "category": "ASTRONOMY (prefix: h, visual)",
+      "category": "ASTRONOMY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h V e ♀ Venus symbol ASTRONOMY (prefix: h, visual)"
+      "searchable": "h V e ♀ Venus symbol ASTRONOMY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -5120,9 +5120,9 @@
       "symbol": "♃",
       "codepoint": "2643",
       "comment": "Jupiter symbol",
-      "category": "ASTRONOMY (prefix: h, visual)",
+      "category": "ASTRONOMY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h J u ♃ Jupiter symbol ASTRONOMY (prefix: h, visual)"
+      "searchable": "h J u ♃ Jupiter symbol ASTRONOMY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -5134,9 +5134,9 @@
       "symbol": "♄",
       "codepoint": "2644",
       "comment": "Saturn symbol",
-      "category": "ASTRONOMY (prefix: h, visual)",
+      "category": "ASTRONOMY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h S a ♄ Saturn symbol ASTRONOMY (prefix: h, visual)"
+      "searchable": "h S a ♄ Saturn symbol ASTRONOMY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -5148,9 +5148,9 @@
       "symbol": "☽",
       "codepoint": "263D",
       "comment": "First quarter moon",
-      "category": "ASTRONOMY (prefix: h, visual)",
+      "category": "ASTRONOMY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h m 1 ☽ First quarter moon ASTRONOMY (prefix: h, visual)"
+      "searchable": "h m 1 ☽ First quarter moon ASTRONOMY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -5162,9 +5162,9 @@
       "symbol": "☾",
       "codepoint": "263E",
       "comment": "Last quarter moon",
-      "category": "ASTRONOMY (prefix: h, visual)",
+      "category": "ASTRONOMY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h m 3 ☾ Last quarter moon ASTRONOMY (prefix: h, visual)"
+      "searchable": "h m 3 ☾ Last quarter moon ASTRONOMY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -5176,9 +5176,9 @@
       "symbol": "☊",
       "codepoint": "260A",
       "comment": "Ascending node (up/ascending)",
-      "category": "ASTRONOMY (prefix: h, visual)",
+      "category": "ASTRONOMY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h asciicircum n ☊ Ascending node (up/ascending) ASTRONOMY (prefix: h, visual)"
+      "searchable": "h asciicircum n ☊ Ascending node (up/ascending) ASTRONOMY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -5191,9 +5191,9 @@
       "symbol": "☋",
       "codepoint": "260B",
       "comment": "Descending node (down/vv)",
-      "category": "ASTRONOMY (prefix: h, visual)",
+      "category": "ASTRONOMY (prefix: h, iconic)",
       "subcategory": null,
-      "searchable": "h v v n ☋ Descending node (down/vv) ASTRONOMY (prefix: h, visual)"
+      "searchable": "h v v n ☋ Descending node (down/vv) ASTRONOMY (prefix: h, iconic)"
     },
     {
       "keys": [
@@ -7061,9 +7061,9 @@
       "symbol": "©",
       "codepoint": "00A9",
       "comment": "Copyright sign",
-      "category": "LEGAL / DOCUMENT SYMBOLS (prefix: visual)",
+      "category": "LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "C C © Copyright sign LEGAL / DOCUMENT SYMBOLS (prefix: visual)"
+      "searchable": "C C © Copyright sign LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)"
     },
     {
       "keys": [
@@ -7074,9 +7074,9 @@
       "symbol": "®",
       "codepoint": "00AE",
       "comment": "Registered trademark sign",
-      "category": "LEGAL / DOCUMENT SYMBOLS (prefix: visual)",
+      "category": "LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "R R ® Registered trademark sign LEGAL / DOCUMENT SYMBOLS (prefix: visual)"
+      "searchable": "R R ® Registered trademark sign LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)"
     },
     {
       "keys": [
@@ -7087,9 +7087,9 @@
       "symbol": "™",
       "codepoint": "2122",
       "comment": "Trademark sign (TM abbreviation)",
-      "category": "LEGAL / DOCUMENT SYMBOLS (prefix: visual)",
+      "category": "LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "T M ™ Trademark sign (TM abbreviation) LEGAL / DOCUMENT SYMBOLS (prefix: visual)"
+      "searchable": "T M ™ Trademark sign (TM abbreviation) LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)"
     },
     {
       "keys": [
@@ -7100,9 +7100,9 @@
       "symbol": "§",
       "codepoint": "00A7",
       "comment": "Section sign",
-      "category": "LEGAL / DOCUMENT SYMBOLS (prefix: visual)",
+      "category": "LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "S S § Section sign LEGAL / DOCUMENT SYMBOLS (prefix: visual)"
+      "searchable": "S S § Section sign LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)"
     },
     {
       "keys": [
@@ -7113,9 +7113,9 @@
       "symbol": "¶",
       "codepoint": "00B6",
       "comment": "Pilcrow sign (paragraph mark)",
-      "category": "LEGAL / DOCUMENT SYMBOLS (prefix: visual)",
+      "category": "LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "P P ¶ Pilcrow sign (paragraph mark) LEGAL / DOCUMENT SYMBOLS (prefix: visual)"
+      "searchable": "P P ¶ Pilcrow sign (paragraph mark) LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)"
     },
     {
       "keys": [
@@ -7126,9 +7126,9 @@
       "symbol": "†",
       "codepoint": "2020",
       "comment": "Dagger (footnote)",
-      "category": "LEGAL / DOCUMENT SYMBOLS (prefix: visual)",
+      "category": "LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "D D † Dagger (footnote) LEGAL / DOCUMENT SYMBOLS (prefix: visual)"
+      "searchable": "D D † Dagger (footnote) LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)"
     },
     {
       "keys": [
@@ -7139,9 +7139,9 @@
       "symbol": "‡",
       "codepoint": "2021",
       "comment": "Double dagger (footnote)",
-      "category": "LEGAL / DOCUMENT SYMBOLS (prefix: visual)",
+      "category": "LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)",
       "subcategory": null,
-      "searchable": "F F ‡ Double dagger (footnote) LEGAL / DOCUMENT SYMBOLS (prefix: visual)"
+      "searchable": "F F ‡ Double dagger (footnote) LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)"
     }
   ],
   "categories": {
@@ -10109,7 +10109,7 @@
         "comment": "Subscript x"
       }
     ],
-    "TYPOGRAPHY & SPACING (prefix: visual)": [
+    "TYPOGRAPHY & SPACING (iconic shortcuts)": [
       {
         "keys": [
           "h",
@@ -10261,7 +10261,7 @@
         "comment": "Non-breaking hyphen"
       }
     ],
-    "SMART QUOTES (prefix: visual)": [
+    "SMART QUOTES (iconic shortcuts)": [
       {
         "keys": [
           "quotedbl",
@@ -10355,7 +10355,7 @@
         "comment": "Single right-pointing angle quotation mark"
       }
     ],
-    "INTERNATIONAL PUNCTUATION (prefix: visual)": [
+    "INTERNATIONAL PUNCTUATION (iconic shortcuts)": [
       {
         "keys": [
           "exclam",
@@ -10435,7 +10435,7 @@
         "comment": "u diaeresis"
       }
     ],
-    "UNITS & MEASUREMENTS (prefix: h, visual)": [
+    "UNITS & MEASUREMENTS (prefix: h, iconic)": [
       {
         "keys": [
           "parenleft",
@@ -10602,7 +10602,7 @@
         "comment": "Atom symbol"
       }
     ],
-    "CHEMISTRY (prefix: h, visual)": [
+    "CHEMISTRY (prefix: h, iconic)": [
       {
         "keys": [
           "bar",
@@ -10667,7 +10667,7 @@
         "comment": "Chemistry harpoon right (mnemonic: chr)"
       }
     ],
-    "ASTRONOMY (prefix: h, visual)": [
+    "ASTRONOMY (prefix: h, iconic)": [
       {
         "keys": [
           "h",
@@ -12111,7 +12111,7 @@
         "comment": "Generic currency (mnemonic: cx)"
       }
     ],
-    "LEGAL / DOCUMENT SYMBOLS (prefix: visual)": [
+    "LEGAL / DOCUMENT SYMBOLS (iconic shortcuts)": [
       {
         "keys": [
           "C",

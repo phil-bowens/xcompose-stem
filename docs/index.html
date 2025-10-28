@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>xcompose-stem - XCompose configuration for STEM symbols on Linux</title>
-    <meta name="title" content="xcompose-stem - XCompose configuration for STEM symbols on Linux">
+    <title>XCompose-STEM - XCompose configuration for STEM symbols on Linux</title>
+    <meta name="title" content="XCompose-STEM - XCompose configuration for STEM symbols on Linux">
     <meta name="description" content="Type mathematical symbols, Greek letters, arrows, and scientific notation directly in any Linux application. Hundreds of keyboard shortcuts for Unicode STEM symbols using the Compose key. Zero conflicts, systematic design.">
     <meta name="keywords" content="XCompose, Linux, STEM, Unicode, keyboard shortcuts, mathematical symbols, Greek letters, compose key, X11, Wayland, mathematical notation, LaTeX alternative, scientific typography, arrows, calculus symbols, set theory, logic symbols, subscripts, superscripts, IPA phonetics, box drawing, technical writing, math input, symbol reference, keyboard configuration, input method">
     <meta name="author" content="Phil Bowens">
@@ -14,14 +14,14 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://phil-bowens.github.io/xcompose-stem/">
-    <meta property="og:title" content="xcompose-stem - XCompose configuration for STEM symbols on Linux">
+    <meta property="og:title" content="XCompose-STEM - XCompose configuration for STEM symbols on Linux">
     <meta property="og:description" content="Type mathematical symbols, Greek letters, arrows, and scientific notation directly in any Linux application. Hundreds of keyboard shortcuts for Unicode STEM symbols using the Compose key.">
-    <meta property="og:site_name" content="xcompose-stem">
+    <meta property="og:site_name" content="XCompose-STEM">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="https://phil-bowens.github.io/xcompose-stem/">
-    <meta name="twitter:title" content="xcompose-stem - XCompose configuration for STEM symbols on Linux">
+    <meta name="twitter:title" content="XCompose-STEM - XCompose configuration for STEM symbols on Linux">
     <meta name="twitter:description" content="Type mathematical symbols, Greek letters, arrows, and scientific notation directly in any Linux application. Hundreds of keyboard shortcuts for Unicode STEM symbols using the Compose key.">
 
     <!-- Canonical URL -->
@@ -386,7 +386,7 @@
             background: #fafafa;
             border-radius: 6px;
             padding: 1rem 1.5rem;
-            margin: 1rem 0;
+            margin: 1rem 0 0 0;
         }
 
         .problem-list ul {
@@ -404,8 +404,8 @@
 </head>
 <body>
     <div class="header">
-        <h1>xcompose-stem</h1>
-        <div class="tagline">Because copying ∞ from Google or whatever is ridiculous</div>
+        <h1>XCompose-STEM</h1>
+        <div class="tagline">Easy Unicode Symbols on Linux for STEM Professionals</div>
 
         <div class="links">
             <a href="xcompose_reference.html" class="primary">Symbol Reference</a>
@@ -417,32 +417,51 @@
         <div class="content">
             <h2>The Problem</h2>
             <p>
-                Linux has excellent Unicode support, but typing math symbols is a mess. Your options are:
+                Linux has excellent Unicode support, but typing math symbols is a mess. It might seem that your options are:
             </p>
             <div class="problem-list">
                 <ul>
-                    <li>Copy/paste from Google (tedious, breaks flow)</li>
+                    <li>Copy/paste from editors or Google (tedious, breaks flow)</li>
                     <li>Use Character Map apps (slow, can't remember where anything is)</li>
                     <li>Install <span class="latex">L<sup>A</sup>T<sub>E</sub>X</span> and render everything (overkill for a quick email)</li>
                     <li>Memorize Unicode codepoints (lol no)</li>
                 </ul>
             </div>
             <p>
-                The Compose key is the elegant solution, but existing XCompose configs have issues:
+                Fortunately, most modern distributions of Linux ship with <a href="https://man.archlinux.org/man/XCompose.5.en">XCompose</a>, a subsystem of X11 that allows you to define a <strong>Compose</strong> key, which we'll represent by the <kbd>⎄</kbd> symbol. 
+            </p>
+            <p>
+                When activated, this key lets you type Unicode (or any other!) symbols by pressing additional key combinations. Think of it like a shift key for symbols:
+            </p>
+            <div class="example-keys">
+                <kbd>Shift</kbd> <kbd>1</kbd> <span class="becomes">becomes</span> <span class="result">!</span>
+            </div>
+            <div class="example-keys">
+                <kbd>⎄</kbd> <kbd>g</kbd> <kbd>a</kbd> <span class="becomes">becomes</span> <span class="result">α</span>
+            </div>
+            <p>
+                Same concept, different symbols.
+            </p>
+            <p>
+                Most Linux desktop environments support assigning a <strong>Compose</strong> key, though you'll likely have to set one up first (see <a href="#quick-start">Quick Start</a> below).
+            </p>
+            <p>
+                Even after assigning <kbd>⎄</kbd>, chances are you'll still need to configure key sequences. Some systems have defaults, but they aren't well documented. There are also other configs from other users out there in the wild that you can check out. 
+</p><p>Still, I encountered some issues:
             </p>
             <div class="problem-list">
                 <ul>
-                    <li>Huge symbol sets (47,000+ sequences) — impossible to memorize</li>
-                    <li>No conflict validation — sequences that shadow each other</li>
-                    <li>Not <a href="https://omarchy.org" style="color: #667eea; text-decoration: none;">Omarchy</a>-aware — collide with built-in emoji shortcuts</li>
-                    <li>Kitchen-sink approach — everything for everyone, usable by no one</li>
+                    <li>As I pointed out, most Linux distros don't have the greatest defaults</li>
+                    <li>Custom projects have huge symbol sets which are impossible to memorize</li>
+                    <li>Many have no conflict validation — sequences that shadow each other</li>
+                    <li>None are <a href="https://omarchy.org" style="color: #667eea; text-decoration: none;">Omarchy</a>-aware — they collide with built-in emoji shortcuts that I want to preserve</li>
+                    <li>The result is the typical kitchen-sink approach — everything for everyone, usable by no one</li>
                 </ul>
             </div>
-
-            <h2>The Solution</h2>
+            <h2>My Solution</h2>
             <p>
-                xcompose-stem is a <strong>curated, validated</strong> XCompose configuration focused on STEM symbols.
-                Hundreds of sequences instead of thousands. Type symbols directly in any application without needing a <span class="latex">L<sup>A</sup>T<sub>E</sub>X</span> renderer.
+                What's already out there didn't quite fit my needs, so I put together <a href="https://github.com/phil-bowens/xcompose-stem">XCompose-STEM</a> a <strong>curated, validated</strong> <a href="https://raw.githubusercontent.com/phil-bowens/xcompose-stem/refs/heads/master/XCompose">XCompose configuration</a> focused on STEM symbols.
+                The idea is to reduce the problem set to hundreds of sequences instead of thousands. Easier to search, easier to memorize. Now I can type symbols directly and easily in any Linux application without needing a <span class="latex">L<sup>A</sup>T<sub>E</sub>X</span> renderer.
             </p>
             <div class="example-keys">
                 <kbd>⎄</kbd> <kbd>h</kbd> <kbd>8</kbd> <span class="becomes">becomes</span> <span class="result">∞</span>
@@ -450,44 +469,20 @@
             <div class="example-keys">
                 <kbd>⎄</kbd> <kbd>h</kbd> <kbd>i</kbd> <kbd>t</kbd> <span class="becomes">becomes</span> <span class="result">∫</span>
             </div>
-            <p><strong>Key differentiators:</strong></p>
+            <p><strong>Key features:</strong></p>
             <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
-                <li><strong>Systematic prefixes</strong> (<code>h</code> for math, <code>g</code> for Greek) make sequences learnable</li>
-                <li><strong>Dual access patterns</strong> (visual shortcuts + mnemonics) fit your workflow</li>
+                <li><strong>Systematic prefixes</strong> (for example, <code>h</code> for math, <code>g</code> for Greek) make sequences learnable</li>
+                <li><strong>Dual access patterns</strong> (iconic & mnemonic) for learning and to fit your workflow</li>
                 <li><strong>Automated validation</strong> ensures zero conflicts</li>
                 <li><strong><a href="https://omarchy.org" style="color: #667eea; text-decoration: none;">Omarchy</a>-friendly</strong> by design — deliberately avoids emoji shortcut collisions</li>
             </ul>
 
+            <p>
+                I also put together some tools to help with the design of the key sequences, validation of config, and generate helpful documentation like the <a href="xcompose_reference.html">Symbol Reference</a>. 
+            </p>
             <div class="callout" style="background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%); border-left-color: #ff9800;">
                 <strong style="color: #f57c00;">⚠️ Work in Progress</strong><br>
                 This project is actively developed. Mappings may change, be added, or be removed until version 1.0 is released.
-            </div>
-            <h2>What Symbols Can I Type?</h2>
-            <p>
-                See for yourself in in the <a href="xcompose_reference.html">Symbol Reference</a>. 
-            </p>
-
-            <h2>What's a Compose Key?</h2>
-            <p>
-                The Compose key (represented by the <kbd>⎄</kbd> symbol) lets you type Unicode symbols by pressing key combinations.
-                Think of it like a shift key for symbols:
-            </p>
-            <div class="example-keys">
-                <kbd>⎄</kbd> <kbd>g</kbd> <kbd>a</kbd> <span class="becomes">becomes</span> <span class="result">α</span>
-            </div>
-            <div class="example-keys">
-                <kbd>Shift</kbd> <kbd>1</kbd> <span class="becomes">becomes</span> <span class="result">!</span>
-            </div>
-            <p>
-                Same concept, different symbols.
-            </p>
-            <p>
-                Most Linux desktop environments support it natively, though you'll have to enable it (see <a href="#quick-start">Quick Start</a> below).
-            </p>
-
-            <div class="callout">
-                <strong>Using <a href="https://omarchy.org" style="color: #667eea; text-decoration: none;">Omarchy Linux</a>?</strong> You're all set! Caps Lock is already your Compose key.
-                Just install xcompose-stem and start typing. Press <kbd>Super</kbd> <kbd>K</kbd> to see all <a href="https://omarchy.org" style="color: #667eea; text-decoration: none;">Omarchy</a> hotkeys.
             </div>
 
             <h2>Symbol Categories</h2>
@@ -532,6 +527,15 @@
             <h2 id="quick-start">Quick Start</h2>
             <div class="install-steps">
                 <div class="step">
+                    <div class="step-number">0</div>
+                    <div class="step-content">
+                        <div class="step-title">Assign a <strong>Compose</strong> key</div>
+                        <p>You'll need to look up how to do this on your distro. </p>
+                        <p><strong>Note:</strong> It's already <kbd>CAPS</kbd> on <a href="https://omarchy.org">Omarchy</a>, if you're interested in trying something new.</p>
+                    </div>
+                </div>
+
+                <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <div class="step-title">Clone the repository</div>
@@ -543,7 +547,7 @@
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <div class="step-title">Run the installer</div>
-                        <code>cd ~/.xcompose-stem && ./install.sh</code>
+                        <code>cd ~/.xcompose-stem && make install</code>
                     </div>
                 </div>
 
@@ -570,7 +574,7 @@
 
             <h2>Documentation</h2>
             <ul>
-                <li><a href="xcompose_reference.html">Interactive Symbol Reference</a> - Browse and search all sequences</li>
+                <li><a href="xcompose_reference.html">Symbol Reference</a> - Browse and search all sequences</li>
                 <li><a href="https://github.com/phil-bowens/xcompose-stem/blob/master/README.md">README</a> - Installation and usage</li>
                 <li><a href="https://github.com/phil-bowens/xcompose-stem/blob/master/CONTRIBUTING.md">Contributing Guide</a> - How to contribute</li>
                 <li><a href="https://github.com/phil-bowens/xcompose-stem/blob/master/CLAUDE.md">Developer Documentation</a> - Architecture and design</li>

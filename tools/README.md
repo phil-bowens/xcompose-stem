@@ -119,7 +119,7 @@ This directory contains tools for validating, auditing, and documenting XCompose
 
 **Usage**:
 ```bash
-# Basic comparison
+# Basic comparison report
 ./tools/check_system_defaults.py XCompose
 
 # Verbose output with all sequences
@@ -127,6 +127,15 @@ This directory contains tools for validating, auditing, and documenting XCompose
 
 # Generate documentation notes for README
 ./tools/check_system_defaults.py XCompose --notes
+
+# Generate comparison table (markdown, csv, or tsv)
+./tools/check_system_defaults.py XCompose --table
+./tools/check_system_defaults.py XCompose --table --format csv
+./tools/check_system_defaults.py XCompose --table --format tsv
+
+# Save table to file
+./tools/check_system_defaults.py XCompose --table --output docs/xcompose_comparison.md
+./tools/check_system_defaults.py XCompose --table --format csv --output comparison.csv
 
 # List all available system Compose files
 ./tools/check_system_defaults.py --list-locales
@@ -138,7 +147,7 @@ This directory contains tools for validating, auditing, and documenting XCompose
 **Identifies**:
 - **Overlaps**: Sequences producing same output as system (redundant but harmless)
 - **Conflicts**: Sequences overriding system defaults (intentional customization)
-- **Unique additions**: Sequences not in system defaults 
+- **Unique additions**: Sequences not in system defaults
 
 **Multi-Platform Features**:
 - Auto-detects user's current locale
@@ -146,13 +155,22 @@ This directory contains tools for validating, auditing, and documenting XCompose
 - Lists all available system Compose files
 - Supports comparing against any locale
 
-**Output**: Analysis report with statistics, value assessment, and recommendations.
+**Output Formats**:
+- **Report** (default): Analysis with statistics, value assessment, and recommendations
+- **Table** (--table): Detailed comparison table with columns:
+  - Character
+  - Codepoint
+  - Custom Sequence(s)
+  - System Sequence(s)
+  - Status (Unique, Overlap, Override, Available in System)
+- **Formats**: Markdown (default), CSV, or TSV
 
 **Use cases**:
 - Before public release (verify uniqueness)
 - Multi-platform testing (check against different locales)
 - Documentation generation (explain overrides)
 - Quality assessment (measure value-add)
+- Side-by-side comparison of custom vs system sequences
 
 ---
 
@@ -170,9 +188,8 @@ This directory contains tools for validating, auditing, and documenting XCompose
 ```
 
 **Tags**:
-- `[VISUAL]` - Visual/ASCII shortcuts
-- `[MNEM]` - Mnemonic letter sequences  
-- `[ALT]` - Alternative patterns
+- `[ICONIC]` - Sequences that visually resemble their output
+- `[MNEMONIC]` - Sequences based on linguistic/semantic associations
 
 **Use cases**:
 - Initial setup of type tagging system

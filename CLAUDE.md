@@ -1,4 +1,4 @@
-# xcompose-stem - Developer Documentation
+# XCompose-STEM - Developer Documentation
 
 **Architecture, design decisions, and development guide for maintainers**
 
@@ -58,15 +58,16 @@ The `XCompose` file is the **only** authoritative source. All documentation is g
 
 Comment format includes type tags:
 ```
-<Multi_key> <minus> <greater> : "→" U2192  # [VISUAL] Rightwards arrow
-<Multi_key> <h> <rarrow> : "→" U2192       # [MNEM] Rightwards arrow
-<Multi_key> <g> <a> : "α" U03B1            # [MNEM] Greek small letter alpha
+<Multi_key> <minus> <greater> : "→" U2192  # [ICONIC] Rightwards arrow
+<Multi_key> <h> <rarrow> : "→" U2192       # [MNEMONIC] Rightwards arrow
+<Multi_key> <g> <a> : "α" U03B1            # [MNEMONIC] Greek small letter alpha
 ```
 
-Type tags:
-- `[VISUAL]` - Visual/ASCII shortcuts that look like the output
-- `[MNEM]` - Mnemonic letter sequences with systematic prefixes
-- `[ALT]` - Alternative patterns or edge cases
+Type tags (based on Peircean semiotics):
+- `[ICONIC]` - Sequences that visually resemble their output (self-documenting, language-independent)
+- `[MNEMONIC]` - Sequences based on linguistic/semantic associations (abbreviations, systematic prefixes)
+
+See `docs/taxonomy-refinement-proposal.md` for the theoretical foundation and rationale.
 
 #### 2. Dual Access Pattern
 Frequently-used symbols should have **both**:

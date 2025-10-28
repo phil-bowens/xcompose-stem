@@ -1,6 +1,6 @@
-# xcompose-stem
+# XCompose-STEM
 
-**Keyboard shortcuts for STEM symbols on Linux**
+**Easy Unicode Symbols on Linux for STEM Professionals**
 
 XCompose configuration providing hundreds of keyboard shortcuts for mathematical notation, Greek letters, arrows, and scientific typography.
 
@@ -27,7 +27,7 @@ This is a personal XCompose configuration, maintained for my own use and shared 
 - **Systematic prefixes** - `h`=math, `g`=Greek, `k`=keyboard, `p`=IPA, `b`=box-drawing
 - **Complete symbol families** - All directional variants (arrows, inequalities, set relations)
 - **Quality tooling** - Automated validation, design audits, multi-format documentation
-- **Type-tagged sequences** - Every sequence classified as [VISUAL], [MNEM], or [ALT]
+- **Type-tagged sequences** - Every sequence classified as [ICONIC] or [MNEMONIC]
 - **Frequency-optimized** - Common symbols get shorter sequences
 - **LaTeX-inspired ergonomics** - `_` for subscripts (like LaTeX), `__` for macrons
 
@@ -291,7 +291,7 @@ Settings → Keyboard → Layout → Options → Compose key position
 **Testing your Compose key:**
 Try typing `Compose + -> ` (Compose, then minus, then greater-than). You should get: →
 
-If it works, you're ready to use xcompose-stem!
+If it works, you're ready to use XCompose-STEM!
 
 ---
 

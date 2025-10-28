@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-xcompose-stem: Auto-Tagger
+XCompose-STEM: Auto-Tagger
 
-Automatically adds type tags ([VISUAL], [MNEM], [ALT]) to comments in the
+Automatically adds type tags ([ICONIC], [MNEMONIC]) to comments in the
 XCompose file based on sequence patterns. Manual review recommended after running.
 
-Part of xcompose-stem - Keyboard shortcuts for STEM symbols on Linux
+Part of XCompose-STEM - Easy Unicode Symbols on Linux for STEM Professionals
 
 Copyright (c) 2025 Phil Bowens
 Repository: https://github.com/phil-bowens/xcompose-stem
@@ -18,16 +18,16 @@ from pathlib import Path
 
 
 def classify_sequence(keys):
-    """Classify a sequence as VISUAL, MNEM, or ALT."""
+    """Classify a sequence as ICONIC or MNEMONIC based on visual vs semantic patterns."""
     if not keys:
-        return 'ALT'
+        return 'MNEMONIC'
 
     # Check if it's a mnemonic (starts with common prefixes)
     prefix_keys = {'h', 'g', 'k', 'b', 'p', 'u', 'i', 'c'}
     if keys[0] in prefix_keys:
-        return 'MNEM'
+        return 'MNEMONIC'
 
-    # Check if it's a visual shortcut (2-5 chars, common punctuation)
+    # Check if it's an iconic shortcut (2-5 chars, common punctuation that visually resembles output)
     ascii_keys = {
         'minus', 'greater', 'less', 'equal', 'exclam', 'asciitilde',
         'asciicircum', 'bar', 'plus', 'asterisk', 'slash', 'colon',
@@ -38,9 +38,9 @@ def classify_sequence(keys):
     single_chars = set('0123456789')
 
     if len(keys) <= 5 and all(k in ascii_keys or k in single_chars for k in keys):
-        return 'VISUAL'
+        return 'ICONIC'
 
-    return 'ALT'
+    return 'MNEMONIC'
 
 
 def auto_tag_file(filepath, dry_run=False):
@@ -55,10 +55,10 @@ def auto_tag_file(filepath, dry_run=False):
         lines = f.readlines()
 
     modified_lines = []
-    changes = {'VISUAL': 0, 'MNEM': 0, 'ALT': 0, 'already_tagged': 0}
+    changes = {'ICONIC': 0, 'MNEMONIC': 0, 'already_tagged': 0}
 
     sequence_pattern = re.compile(r'^(<Multi_key>(?:\s+<[^>]+>)+)\s*:\s*"([^"]+)"')
-    tag_pattern = re.compile(r'#\s*\[(VISUAL|MNEM|ALT)\]')
+    tag_pattern = re.compile(r'#\s*\[(ICONIC|MNEMONIC)\]')
 
     for line in lines:
         stripped = line.strip()
@@ -102,11 +102,10 @@ def auto_tag_file(filepath, dry_run=False):
     print(f"\n{'=' * 70}")
     print("Auto-Tagging Summary")
     print(f"{'=' * 70}")
-    print(f"  [VISUAL] tags added: {changes['VISUAL']}")
-    print(f"  [MNEM] tags added:   {changes['MNEM']}")
-    print(f"  [ALT] tags added:    {changes['ALT']}")
-    print(f"  Already tagged:      {changes['already_tagged']}")
-    print(f"  Total processed:     {sum(changes.values())}")
+    print(f"  [ICONIC] tags added:    {changes['ICONIC']}")
+    print(f"  [MNEMONIC] tags added:  {changes['MNEMONIC']}")
+    print(f"  Already tagged:         {changes['already_tagged']}")
+    print(f"  Total processed:        {sum(changes.values())}")
     print(f"{'=' * 70}")
 
     if dry_run:

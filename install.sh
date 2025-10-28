@@ -2,8 +2,8 @@
 set -e
 
 ################################################################################
-# xcompose-stem installer
-# Part of xcompose-stem - Keyboard shortcuts for STEM symbols on Linux
+# XCompose-STEM installer
+# Part of XCompose-STEM - Easy Unicode Symbols on Linux for STEM Professionals
 #
 # Copyright (c) 2025 Phil Bowens
 # Repository: https://github.com/phil-bowens/xcompose-stem
@@ -24,7 +24,7 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}=== xcompose-stem installer ===${NC}\n"
+echo -e "${BLUE}=== XCompose-STEM installer ===${NC}\n"
 
 # Check if XCompose file exists
 if [ -f "$XCOMPOSE_FILE" ]; then
@@ -32,9 +32,9 @@ if [ -f "$XCOMPOSE_FILE" ]; then
 
     # Check if already installed (look for the actual include line)
     if grep -q "include.*xcompose-stem.*XCompose" "$XCOMPOSE_FILE" 2>/dev/null; then
-        echo -e "${GREEN}✓ xcompose-stem is already installed!${NC}"
+        echo -e "${GREEN}✓ XCompose-STEM is already installed!${NC}"
         echo ""
-        echo "Your ~/.XCompose already includes xcompose-stem."
+        echo "Your ~/.XCompose already includes XCompose-STEM."
         echo "No changes needed."
         exit 0
     fi
@@ -47,13 +47,13 @@ if [ -f "$XCOMPOSE_FILE" ]; then
     echo ""
     echo "Adding xcompose-stem include directive..."
     echo "" >> "$XCOMPOSE_FILE"
-    echo "# xcompose-stem - STEM symbols for technical writing" >> "$XCOMPOSE_FILE"
+    echo "# XCompose-STEM - STEM symbols for technical writing" >> "$XCOMPOSE_FILE"
     echo "# https://github.com/phil-bowens/xcompose-stem" >> "$XCOMPOSE_FILE"
     echo "include \"$SCRIPT_DIR/XCompose\"" >> "$XCOMPOSE_FILE"
 
     echo -e "${GREEN}✓ Installation complete!${NC}"
     echo ""
-    echo "xcompose-stem has been added to your existing ~/.XCompose"
+    echo "XCompose-STEM has been added to your existing ~/.XCompose"
     echo -e "Backup saved: ${BACKUP_FILE}"
 else
     # Create new .XCompose file
@@ -73,7 +73,7 @@ EOF
 
     echo -e "${GREEN}✓ Installation complete!${NC}"
     echo ""
-    echo "Created new ~/.XCompose with xcompose-stem included"
+    echo "Created new ~/.XCompose with XCompose-STEM included"
 fi
 
 # Omarchy Linux integration
@@ -101,7 +101,7 @@ if [ -f "$HYPR_BINDINGS" ]; then
 
             # Add keybinding
             echo "" >> "$HYPR_BINDINGS"
-            echo "# xcompose-stem - Quick access to symbol reference" >> "$HYPR_BINDINGS"
+            echo "# XCompose-STEM - Quick access to symbol reference" >> "$HYPR_BINDINGS"
             echo "bindd = SUPER SHIFT, U, Unicode Codepoints, exec, omarchy-launch-webapp \"file://$SCRIPT_DIR/docs/xcompose_reference.html\"" >> "$HYPR_BINDINGS"
 
             echo -e "${GREEN}✓ Keybinding added to $HYPR_BINDINGS${NC}"

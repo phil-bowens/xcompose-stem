@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-xcompose-stem: Design Audit Tool
+XCompose-STEM: Design Audit Tool
 
 Analyzes XCompose file for:
 1. ASCII shortcut + mnemonic coverage (dual access principle)
@@ -8,7 +8,7 @@ Analyzes XCompose file for:
 3. Family completeness (if A exists, should B exist?)
 4. Design consistency
 
-Part of xcompose-stem - Keyboard shortcuts for STEM symbols on Linux
+Part of XCompose-STEM - Easy Unicode Symbols on Linux for STEM Professionals
 
 Copyright (c) 2025 Phil Bowens
 Repository: https://github.com/phil-bowens/xcompose-stem

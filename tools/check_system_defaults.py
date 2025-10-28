@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 ################################################################################
 # check_system_defaults.py
-# Part of xcompose-stem - Keyboard shortcuts for STEM symbols on Linux
+# Part of XCompose-STEM - Easy Unicode Symbols on Linux for STEM Professionals
 #
 # Copyright (c) 2025 Phil Bowens
 # Repository: https://github.com/phil-bowens/xcompose-stem
@@ -359,6 +359,156 @@ class ComposeComparator:
         if show_notes:
             self.print_documentation_notes()
 
+    def generate_comparison_table(self, output_format='markdown'):
+        """Generate a comparison table of all characters.
+
+        Args:
+            output_format: 'markdown', 'csv', or 'tsv'
+
+        Returns a table with columns:
+        - Unicode Character
+        - Codepoint
+        - Custom Sequence(s)
+        - System Sequence(s)
+        - Status
+        """
+        # Reorganize data by output character (not by sequence)
+        # Multiple sequences can map to same character
+        chars_data = {}
+
+        # Process custom sequences
+        for seq, data in self.custom_sequences.items():
+            output_char = data['output']
+            codepoint = data['codepoint'] or ''
+
+            if output_char not in chars_data:
+                chars_data[output_char] = {
+                    'codepoint': codepoint,
+                    'custom_sequences': [],
+                    'system_sequences': [],
+                    'status': 'Unique'
+                }
+
+            # Clean up sequence for display
+            clean_seq = seq.replace('<Multi_key> ', '').replace('<', '').replace('>', ' ')
+            chars_data[output_char]['custom_sequences'].append(clean_seq)
+
+        # Check system sequences for same output characters
+        for seq, sys_data in self.system_sequences.items():
+            output_char = sys_data['output']
+
+            if output_char in chars_data:
+                clean_seq = seq.replace('<Multi_key> ', '').replace('<', '').replace('>', ' ')
+                chars_data[output_char]['system_sequences'].append(clean_seq)
+
+                # Update status - this character is available in system
+                if chars_data[output_char]['status'] == 'Unique':
+                    chars_data[output_char]['status'] = 'Available in System'
+
+        # Re-check status based on our comparison results
+        for conflict in self.conflicts:
+            output = conflict['custom_output']
+            if output in chars_data:
+                chars_data[output]['status'] = 'Override'
+
+        for overlap in self.overlaps:
+            output = overlap['output']
+            if output in chars_data:
+                chars_data[output]['status'] = 'Overlap'
+
+        # Sort by codepoint for consistent ordering
+        sorted_chars = sorted(chars_data.items(),
+                            key=lambda x: x[1]['codepoint'] if x[1]['codepoint'] else 'ZZZZ')
+
+        # Generate output based on format
+        if output_format == 'markdown':
+            return self._format_table_markdown(sorted_chars)
+        elif output_format == 'csv':
+            return self._format_table_csv(sorted_chars)
+        elif output_format == 'tsv':
+            return self._format_table_tsv(sorted_chars)
+        else:
+            return self._format_table_markdown(sorted_chars)
+
+    def _format_table_markdown(self, sorted_chars):
+        """Format comparison table as Markdown."""
+        lines = []
+        lines.append("# XCompose Character Comparison Table")
+        lines.append("")
+        lines.append("Comparison of custom XCompose sequences vs system defaults.")
+        lines.append("")
+        lines.append(f"- **Total characters:** {len(sorted_chars)}")
+        lines.append(f"- **Custom file:** `{self.custom_file}`")
+        lines.append(f"- **System file:** `{self.system_file}`")
+        lines.append("")
+        lines.append("| Character | Codepoint | Custom Sequence(s) | System Sequence(s) | Status |")
+        lines.append("|-----------|-----------|-------------------|-------------------|--------|")
+
+        for char, data in sorted_chars:
+            # Escape special characters for Markdown
+            char_display = char if char not in ['|', '\\'] else f'`{char}`'
+            codepoint = f"U+{data['codepoint']}" if data['codepoint'] else "—"
+
+            # Join multiple sequences with <br> for readability
+            custom_seqs = '<br>'.join(f"`{s.strip()}`" for s in data['custom_sequences'][:5])
+            if len(data['custom_sequences']) > 5:
+                custom_seqs += f"<br>*+{len(data['custom_sequences'])-5} more*"
+
+            system_seqs = "—"
+            if data['system_sequences']:
+                system_seqs = '<br>'.join(f"`{s.strip()}`" for s in data['system_sequences'][:3])
+                if len(data['system_sequences']) > 3:
+                    system_seqs += f"<br>*+{len(data['system_sequences'])-3} more*"
+
+            status = data['status']
+
+            lines.append(f"| {char_display} | {codepoint} | {custom_seqs} | {system_seqs} | {status} |")
+
+        lines.append("")
+        lines.append("## Status Legend")
+        lines.append("")
+        lines.append("- **Unique**: Character sequence not available in system defaults")
+        lines.append("- **Overlap**: Same sequence produces same character in both")
+        lines.append("- **Override**: Custom sequence overrides system default for this character")
+        lines.append("- **Available in System**: Character can be produced via system defaults (different sequence)")
+
+        return '\n'.join(lines)
+
+    def _format_table_csv(self, sorted_chars):
+        """Format comparison table as CSV."""
+        import csv
+        from io import StringIO
+
+        output = StringIO()
+        writer = csv.writer(output)
+
+        writer.writerow(['Character', 'Codepoint', 'Custom Sequences', 'System Sequences', 'Status'])
+
+        for char, data in sorted_chars:
+            codepoint = f"U+{data['codepoint']}" if data['codepoint'] else ""
+            custom_seqs = '; '.join(s.strip() for s in data['custom_sequences'])
+            system_seqs = '; '.join(s.strip() for s in data['system_sequences']) if data['system_sequences'] else ""
+            status = data['status']
+
+            writer.writerow([char, codepoint, custom_seqs, system_seqs, status])
+
+        return output.getvalue()
+
+    def _format_table_tsv(self, sorted_chars):
+        """Format comparison table as TSV."""
+        lines = []
+        lines.append("Character\tCodepoint\tCustom Sequences\tSystem Sequences\tStatus")
+
+        for char, data in sorted_chars:
+            codepoint = f"U+{data['codepoint']}" if data['codepoint'] else ""
+            custom_seqs = '; '.join(s.strip() for s in data['custom_sequences'])
+            system_seqs = '; '.join(s.strip() for s in data['system_sequences']) if data['system_sequences'] else ""
+            status = data['status']
+
+            lines.append(f"{char}\t{codepoint}\t{custom_seqs}\t{system_seqs}\t{status}")
+
+        return '\n'.join(lines)
+
     def print_documentation_notes(self):
         """Print suggested documentation for README."""
         print()
@@ -465,6 +615,21 @@ def main():
         action='store_true',
         help='Generate documentation notes for README'
     )
+    parser.add_argument(
+        '--table',
+        action='store_true',
+        help='Generate comparison table (default: markdown)'
+    )
+    parser.add_argument(
+        '--format',
+        choices=['markdown', 'csv', 'tsv'],
+        default='markdown',
+        help='Output format for table (default: markdown)'
+    )
+    parser.add_argument(
+        '--output',
+        help='Output file for table (default: stdout)'
+    )
 
     args = parser.parse_args()
 
@@ -503,7 +668,22 @@ def main():
         return 1
 
     comparator.compare()
-    comparator.print_report(verbose=args.verbose, show_notes=args.notes)
+
+    # Handle --table flag
+    if args.table:
+        table_output = comparator.generate_comparison_table(output_format=args.format)
+
+        if args.output:
+            # Write to file
+            with open(args.output, 'w', encoding='utf-8') as f:
+                f.write(table_output)
+            print(f"Table written to: {args.output}")
+        else:
+            # Print to stdout
+            print(table_output)
+    else:
+        # Default report output
+        comparator.print_report(verbose=args.verbose, show_notes=args.notes)
 
     return 0
 

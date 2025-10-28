@@ -2,15 +2,15 @@
 set -e
 
 ################################################################################
-# xcompose-stem uninstaller
-# Part of xcompose-stem - Keyboard shortcuts for STEM symbols on Linux
+# XCompose-STEM uninstaller
+# Part of XCompose-STEM - Easy Unicode Symbols on Linux for STEM Professionals
 #
 # Copyright (c) 2025 Phil Bowens
 # Repository: https://github.com/phil-bowens/xcompose-stem
 # License: MIT
 ################################################################################
 #
-# This script removes xcompose-stem from your ~/.XCompose, restoring your
+# This script removes XCompose-STEM from your ~/.XCompose, restoring your
 # original configuration.
 
 XCOMPOSE_FILE="$HOME/.XCompose"
@@ -22,7 +22,7 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}=== xcompose-stem uninstaller ===${NC}\n"
+echo -e "${BLUE}=== XCompose-STEM uninstaller ===${NC}\n"
 
 # Check if XCompose file exists
 if [ ! -f "$XCOMPOSE_FILE" ]; then
@@ -31,9 +31,9 @@ if [ ! -f "$XCOMPOSE_FILE" ]; then
     exit 0
 fi
 
-# Check if xcompose-stem is installed (look for the actual include line)
+# Check if XCompose-STEM is installed (look for the actual include line)
 if ! grep -q "include.*xcompose-stem.*XCompose" "$XCOMPOSE_FILE" 2>/dev/null; then
-    echo -e "${YELLOW}xcompose-stem is not installed in ~/.XCompose${NC}"
+    echo -e "${YELLOW}XCompose-STEM is not installed in ~/.XCompose${NC}"
     echo "Nothing to uninstall."
     exit 0
 fi
@@ -58,14 +58,14 @@ if [ -n "$INSTALL_BACKUP" ]; then
         echo -e "Creating backup: ${UNINSTALL_BACKUP}"
         cp "$XCOMPOSE_FILE" "$UNINSTALL_BACKUP"
 
-        # Remove xcompose-stem lines
-        echo "Removing xcompose-stem from ~/.XCompose..."
-        sed -i '/^# xcompose-stem - STEM symbols for technical writing$/d' "$XCOMPOSE_FILE"
+        # Remove XCompose-STEM lines
+        echo "Removing XCompose-STEM from ~/.XCompose..."
+        sed -i '/^# XCompose-STEM - STEM symbols for technical writing$/d' "$XCOMPOSE_FILE"
         sed -i '\|^# https://github.com/phil-bowens/xcompose-stem$|d' "$XCOMPOSE_FILE"
         sed -i '\|^include.*xcompose-stem.*XCompose"$|d' "$XCOMPOSE_FILE"
         sed -i '/^$/N;/^\n$/D' "$XCOMPOSE_FILE"
 
-        echo -e "${GREEN}✓ Removed xcompose-stem lines${NC}"
+        echo -e "${GREEN}✓ Removed XCompose-STEM lines${NC}"
         echo -e "Backup saved: ${UNINSTALL_BACKUP}"
     fi
 else
@@ -75,14 +75,14 @@ else
     echo -e "Creating backup: ${UNINSTALL_BACKUP}"
     cp "$XCOMPOSE_FILE" "$UNINSTALL_BACKUP"
 
-    # Remove xcompose-stem lines
-    echo "Removing xcompose-stem from ~/.XCompose..."
-    sed -i '/^# xcompose-stem - STEM symbols for technical writing$/d' "$XCOMPOSE_FILE"
+    # Remove XCompose-STEM lines
+    echo "Removing XCompose-STEM from ~/.XCompose..."
+    sed -i '/^# XCompose-STEM - STEM symbols for technical writing$/d' "$XCOMPOSE_FILE"
     sed -i '\|^# https://github.com/phil-bowens/xcompose-stem$|d' "$XCOMPOSE_FILE"
     sed -i '\|^include.*xcompose-stem.*XCompose"$|d' "$XCOMPOSE_FILE"
     sed -i '/^$/N;/^\n$/D' "$XCOMPOSE_FILE"
 
-    echo -e "${GREEN}✓ Removed xcompose-stem lines${NC}"
+    echo -e "${GREEN}✓ Removed XCompose-STEM lines${NC}"
     echo -e "Backup saved: ${UNINSTALL_BACKUP}"
 fi
 

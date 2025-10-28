@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-xcompose-stem: Shared Library
+XCompose-STEM: Shared Library
 
-Common data structures and parser logic shared across xcompose-stem tools.
+Common data structures and parser logic shared across XCompose-STEM tools.
 
-Part of xcompose-stem - Keyboard shortcuts for STEM symbols on Linux
+Part of XCompose-STEM - Easy Unicode Symbols on Linux for STEM Professionals
 
 Copyright (c) 2025 Phil Bowens
 Repository: https://github.com/phil-bowens/xcompose-stem
@@ -23,13 +23,13 @@ from typing import Dict, List, Optional
 class XComposeSequence:
     """Represents a single XCompose sequence.
 
-    This unified model is used by all xcompose-stem tools.
+    This unified model is used by all XCompose-STEM tools.
     """
     keys: List[str]  # List of key names (excluding Multi_key)
     symbol: str  # Output character(s)
     codepoint: Optional[str]  # Unicode codepoint if specified
     comment: Optional[str]  # Inline comment (without tag)
-    tag: Optional[str]  # Type tag: VISUAL, MNEM, or ALT
+    tag: Optional[str]  # Type tag: ICONIC or MNEMONIC
     category: str  # Section header (e.g., "GREEK LETTERS")
     subcategory: Optional[str]  # Subsection if applicable
     line_num: int  # Line number in source file
@@ -78,7 +78,7 @@ class XComposeParser:
     """Unified parser for XCompose configuration files.
 
     Extracts sequences, categories, subcategories, and metadata from XCompose files.
-    Used by all xcompose-stem tools for consistent parsing.
+    Used by all XCompose-STEM tools for consistent parsing.
     """
 
     def __init__(self, filepath: str):
@@ -154,7 +154,7 @@ class XComposeParser:
                 tag = None
                 comment = comment_raw
                 if comment_raw:
-                    tag_match = re.match(r'\[(VISUAL|MNEM|ALT)\]\s*(.*)', comment_raw)
+                    tag_match = re.match(r'\[(ICONIC|MNEMONIC)\]\s*(.*)', comment_raw)
                     if tag_match:
                         tag = tag_match.group(1)
                         comment = tag_match.group(2).strip()

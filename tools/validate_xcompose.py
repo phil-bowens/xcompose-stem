@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-xcompose-stem: XCompose Validator
+XCompose-STEM: XCompose Validator
 
 Validation tool for XCompose files that checks for:
 - Prefix shadowing (complete sequences that shadow longer ones)
@@ -8,7 +8,7 @@ Validation tool for XCompose files that checks for:
 - Syntax errors (malformed sequence definitions)
 - Statistics and coverage analysis
 
-Part of xcompose-stem - Keyboard shortcuts for STEM symbols on Linux
+Part of XCompose-STEM - Easy Unicode Symbols on Linux for STEM Professionals
 
 Copyright (c) 2025 Phil Bowens
 Repository: https://github.com/phil-bowens/xcompose-stem
@@ -294,7 +294,7 @@ class XComposeValidator:
 
     def _validate_comment_format(self):
         """Check for standardized comment format with type tags."""
-        valid_tags = {'VISUAL', 'MNEM', 'ALT'}
+        valid_tags = {'ICONIC', 'MNEMONIC'}
         tag_pattern = re.compile(r'#\s*\[(' + '|'.join(valid_tags) + r')\]\s+(.+)')
 
         tagged_count = 0
@@ -343,11 +343,10 @@ class XComposeValidator:
             else:
                 untagged_count += 1
                 # Only warn if comment doesn't match expected format at all
-                # This is a soft warning since we're migrating to the new format
                 if self.verbose:
                     self.warnings.append(ValidationError(
                         'untagged_comment',
-                        f'Comment not tagged with [VISUAL], [MNEM], or [ALT]',
+                        f'Comment not tagged with [ICONIC] or [MNEMONIC]',
                         line_num,
                         severity='info',
                         details={'comment': comment_part.strip()[:40]}

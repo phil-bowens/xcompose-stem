@@ -1,8 +1,8 @@
 ################################################################################
 #                                                                              #
-#                             xcompose-stem                                    #
+#                             XCompose-STEM                                    #
 #                                                                              #
-#       Keyboard shortcuts for STEM symbols on Linux - 518 sequences           #
+#       Easy Unicode Symbols on Linux for STEM Professionals                  #
 #                                                                              #
 ################################################################################
 #
@@ -24,19 +24,12 @@
 # - Compose key configured (CAPS, Right Alt, Menu key, etc.)
 #
 # INSTALLATION:
-# - Automated: ./install.sh (preserves existing sequences)
+# - Automated: make install # (preserves existing sequences)
 # - Manual: include "/path/to/this/XCompose" in ~/.XCompose
 # - Details: See README.md
 #
-# IMPORTANT - Comment Format:
-# All sequence definitions MUST follow this format:
-#   <Multi_key> <keys> : "symbol" UXXXX  # [TYPE] Description
-#
-# Where TYPE is one of: [VISUAL] [MNEM] [ALT]
-# This format is required by validation and documentation generation tools.
-# Do not deviate from this format or scripts will fail to parse sequences.
-#
-# Copyright (c) 2025 Phil Bowens
+#                   ╭──────────────────────────────────╮
+#                   │  Copyright (c) 2025 Phil Bowens  │
 ################################################################################
 
 ########################################################################
@@ -136,18 +129,19 @@
 #   <<" and >>"            « » Guillemets
 #   <, and >,              ‹ › Single guillemets
 #
-# FRACTIONS (natural digit/slash):
+# FRACTIONS (natural digits):
 #   1/2, 1/3, 2/3, 1/4, 3/4, 1/5, 1/8, 3/8, 5/8, 7/8
 #   → ½ ⅓ ⅔ ¼ ¾ ⅕ ⅛ ⅜ ⅝ ⅞
 #
 # TIME-SAVING TIPS:
-# - Common symbols have BOTH ASCII and mnemonic variants (use whichever you remember)
+# - Common symbols have BOTH Iconic/ASCII and Mnemonic/Symbolic variants (use whichever you remember)
 # - When in doubt, try the obvious abbreviation: <h><i><f><f> for iff really works
 # - The validator (validate_xcompose.py) prevents conflicts—experiment freely
 #
 # SYSTEM INTEGRATION:
 # - Optimized for US QWERTY keyboard layout (all keys easily reachable)
 # - Short sequences (2-4 keys) for speed
+# - Where possible, system defaults are preserved, but this is not a rule
 # - Supplements (not replaces) dead keys for international diacritics
 # - Compatible with standard Compose (preserves î, ā, « », etc.)
 # - Wayland/Hyprland: Works via XWayland (restart ibus/fcitx if needed)
@@ -171,66 +165,78 @@
 ########################################################################
 
 ########################################################################
+# IMPORTANT - Comment Format:
+# All sequence definitions MUST follow this format:
+#   <Multi_key> <keys> : "symbol" UXXXX  # [TYPE] Description
+#
+# Where TYPE is one of: [ICONIC] [MNEMONIC]
+#
+# This format is required by validation and documentation generation tools.
+# Do not deviate from this format or scripts will fail to parse sequences.
+#
+########################################################################
+
+########################################################################
 # GREEK LETTERS  (prefix: g) — Greek alphabet symbols
 ########################################################################
 
 # lowercase
-<Multi_key> <g> <a> : "α" U03B1  # [MNEM] Greek small letter alpha
-<Multi_key> <g> <b> : "β" U03B2  # [MNEM] Greek small letter beta
-<Multi_key> <g> <g> : "γ" U03B3  # [MNEM] Greek small letter gamma
-<Multi_key> <g> <d> : "δ" U03B4  # [MNEM] Greek small letter delta
-<Multi_key> <g> <e> : "ε" U03B5  # [MNEM] Greek small letter epsilon
-<Multi_key> <g> <z> : "ζ" U03B6  # [MNEM] Greek small letter zeta
-<Multi_key> <g> <h> : "η" U03B7  # [MNEM] Greek small letter eta
-<Multi_key> <g> <t> : "θ" U03B8  # [MNEM] Greek small letter theta
-<Multi_key> <g> <i> : "ι" U03B9  # [MNEM] Greek small letter iota
-<Multi_key> <g> <k> : "κ" U03BA  # [MNEM] Greek small letter kappa
-<Multi_key> <g> <l> : "λ" U03BB  # [MNEM] Greek small letter lambda
-<Multi_key> <g> <m> : "μ" U03BC  # [MNEM] Greek small letter mu
-<Multi_key> <g> <n> : "ν" U03BD  # [MNEM] Greek small letter nu
-<Multi_key> <g> <x> : "ξ" U03BE  # [MNEM] Greek small letter xi
-<Multi_key> <g> <o> : "ο" U03BF  # [MNEM] Greek small letter omicron
-<Multi_key> <g> <p> : "π" U03C0  # [MNEM] Greek small letter pi
-<Multi_key> <g> <r> : "ρ" U03C1  # [MNEM] Greek small letter rho
-<Multi_key> <g> <s> : "σ" U03C3  # [MNEM] Greek small letter sigma
-<Multi_key> <g> <f> : "φ" U03C6  # [MNEM] Greek small letter phi
-<Multi_key> <g> <c> : "χ" U03C7  # [MNEM] Greek small letter chi
-<Multi_key> <g> <y> : "ψ" U03C8  # [MNEM] Greek small letter psi
-<Multi_key> <g> <w> : "ω" U03C9  # [MNEM] Greek small letter omega
-<Multi_key> <g> <period> <s> : "ς" U03C2  # [MNEM] Greek small letter final sigma
+<Multi_key> <g> <a> : "α" U03B1  # [MNEMONIC] Greek small letter alpha
+<Multi_key> <g> <b> : "β" U03B2  # [MNEMONIC] Greek small letter beta
+<Multi_key> <g> <g> : "γ" U03B3  # [MNEMONIC] Greek small letter gamma
+<Multi_key> <g> <d> : "δ" U03B4  # [MNEMONIC] Greek small letter delta
+<Multi_key> <g> <e> : "ε" U03B5  # [MNEMONIC] Greek small letter epsilon
+<Multi_key> <g> <z> : "ζ" U03B6  # [MNEMONIC] Greek small letter zeta
+<Multi_key> <g> <h> : "η" U03B7  # [MNEMONIC] Greek small letter eta
+<Multi_key> <g> <t> : "θ" U03B8  # [MNEMONIC] Greek small letter theta
+<Multi_key> <g> <i> : "ι" U03B9  # [MNEMONIC] Greek small letter iota
+<Multi_key> <g> <k> : "κ" U03BA  # [MNEMONIC] Greek small letter kappa
+<Multi_key> <g> <l> : "λ" U03BB  # [MNEMONIC] Greek small letter lambda
+<Multi_key> <g> <m> : "μ" U03BC  # [MNEMONIC] Greek small letter mu
+<Multi_key> <g> <n> : "ν" U03BD  # [MNEMONIC] Greek small letter nu
+<Multi_key> <g> <x> : "ξ" U03BE  # [MNEMONIC] Greek small letter xi
+<Multi_key> <g> <o> : "ο" U03BF  # [MNEMONIC] Greek small letter omicron
+<Multi_key> <g> <p> : "π" U03C0  # [MNEMONIC] Greek small letter pi
+<Multi_key> <g> <r> : "ρ" U03C1  # [MNEMONIC] Greek small letter rho
+<Multi_key> <g> <s> : "σ" U03C3  # [MNEMONIC] Greek small letter sigma
+<Multi_key> <g> <f> : "φ" U03C6  # [MNEMONIC] Greek small letter phi
+<Multi_key> <g> <c> : "χ" U03C7  # [MNEMONIC] Greek small letter chi
+<Multi_key> <g> <y> : "ψ" U03C8  # [MNEMONIC] Greek small letter psi
+<Multi_key> <g> <w> : "ω" U03C9  # [MNEMONIC] Greek small letter omega
+<Multi_key> <g> <period> <s> : "ς" U03C2  # [MNEMONIC] Greek small letter final sigma
 
 # uppercase
-<Multi_key> <g> <A> : "Α" U0391  # [MNEM] Greek capital letter Alpha
-<Multi_key> <g> <B> : "Β" U0392  # [MNEM] Greek capital letter Beta
-<Multi_key> <g> <G> : "Γ" U0393  # [MNEM] Greek capital letter Gamma
-<Multi_key> <g> <D> : "Δ" U0394  # [MNEM] Greek capital letter Delta
-<Multi_key> <g> <E> : "Ε" U0395  # [MNEM] Greek capital letter Epsilon
-<Multi_key> <g> <Z> : "Ζ" U0396  # [MNEM] Greek capital letter Zeta
-<Multi_key> <g> <H> : "Η" U0397  # [MNEM] Greek capital letter Eta
-<Multi_key> <g> <T> : "Θ" U0398  # [MNEM] Greek capital letter Theta
-<Multi_key> <g> <I> : "Ι" U0399  # [MNEM] Greek capital letter Iota
-<Multi_key> <g> <K> : "Κ" U039A  # [MNEM] Greek capital letter Kappa
-<Multi_key> <g> <L> : "Λ" U039B  # [MNEM] Greek capital letter Lambda
-<Multi_key> <g> <M> : "Μ" U039C  # [MNEM] Greek capital letter Mu
-<Multi_key> <g> <N> : "Ν" U039D  # [MNEM] Greek capital letter Nu
-<Multi_key> <g> <X> : "Ξ" U039E  # [MNEM] Greek capital letter Xi
-<Multi_key> <g> <O> : "Ο" U039F  # [MNEM] Greek capital letter Omicron
-<Multi_key> <g> <P> : "Π" U03A0  # [MNEM] Greek capital letter Pi
-<Multi_key> <g> <R> : "Ρ" U03A1  # [MNEM] Greek capital letter Rho
-<Multi_key> <g> <S> : "Σ" U03A3  # [MNEM] Greek capital letter Sigma
-<Multi_key> <g> <F> : "Φ" U03A6  # [MNEM] Greek capital letter Phi
-<Multi_key> <g> <C> : "Χ" U03A7  # [MNEM] Greek capital letter Chi
-<Multi_key> <g> <Y> : "Ψ" U03A8  # [MNEM] Greek capital letter Psi
-<Multi_key> <g> <W> : "Ω" U03A9  # [MNEM] Greek capital letter Omega
+<Multi_key> <g> <A> : "Α" U0391  # [MNEMONIC] Greek capital letter Alpha
+<Multi_key> <g> <B> : "Β" U0392  # [MNEMONIC] Greek capital letter Beta
+<Multi_key> <g> <G> : "Γ" U0393  # [MNEMONIC] Greek capital letter Gamma
+<Multi_key> <g> <D> : "Δ" U0394  # [MNEMONIC] Greek capital letter Delta
+<Multi_key> <g> <E> : "Ε" U0395  # [MNEMONIC] Greek capital letter Epsilon
+<Multi_key> <g> <Z> : "Ζ" U0396  # [MNEMONIC] Greek capital letter Zeta
+<Multi_key> <g> <H> : "Η" U0397  # [MNEMONIC] Greek capital letter Eta
+<Multi_key> <g> <T> : "Θ" U0398  # [MNEMONIC] Greek capital letter Theta
+<Multi_key> <g> <I> : "Ι" U0399  # [MNEMONIC] Greek capital letter Iota
+<Multi_key> <g> <K> : "Κ" U039A  # [MNEMONIC] Greek capital letter Kappa
+<Multi_key> <g> <L> : "Λ" U039B  # [MNEMONIC] Greek capital letter Lambda
+<Multi_key> <g> <M> : "Μ" U039C  # [MNEMONIC] Greek capital letter Mu
+<Multi_key> <g> <N> : "Ν" U039D  # [MNEMONIC] Greek capital letter Nu
+<Multi_key> <g> <X> : "Ξ" U039E  # [MNEMONIC] Greek capital letter Xi
+<Multi_key> <g> <O> : "Ο" U039F  # [MNEMONIC] Greek capital letter Omicron
+<Multi_key> <g> <P> : "Π" U03A0  # [MNEMONIC] Greek capital letter Pi
+<Multi_key> <g> <R> : "Ρ" U03A1  # [MNEMONIC] Greek capital letter Rho
+<Multi_key> <g> <S> : "Σ" U03A3  # [MNEMONIC] Greek capital letter Sigma
+<Multi_key> <g> <F> : "Φ" U03A6  # [MNEMONIC] Greek capital letter Phi
+<Multi_key> <g> <C> : "Χ" U03A7  # [MNEMONIC] Greek capital letter Chi
+<Multi_key> <g> <Y> : "Ψ" U03A8  # [MNEMONIC] Greek capital letter Psi
+<Multi_key> <g> <W> : "Ω" U03A9  # [MNEMONIC] Greek capital letter Omega
 
 # optional tonos accents with apostrophe
-<Multi_key> <g> <apostrophe> <a> : "ά" U03AC  # [MNEM] Greek small letter alpha with tonos
-<Multi_key> <g> <apostrophe> <e> : "έ" U03AD  # [MNEM] Greek small letter epsilon with tonos
-<Multi_key> <g> <apostrophe> <h> : "ή" U03AE  # [MNEM] Greek small letter eta with tonos
-<Multi_key> <g> <apostrophe> <i> : "ί" U03AF  # [MNEM] Greek small letter iota with tonos
-<Multi_key> <g> <apostrophe> <o> : "ό" U03CC    # [MNEM] Greek small letter omicron with tonos
-<Multi_key> <g> <apostrophe> <y> : "ύ" U03CD    # [MNEM] Greek small letter upsilon with tonos
-<Multi_key> <g> <apostrophe> <w> : "ώ" U03CE    # [MNEM] Greek small letter omega with tonos
+<Multi_key> <g> <apostrophe> <a> : "ά" U03AC  # [MNEMONIC] Greek small letter alpha with tonos
+<Multi_key> <g> <apostrophe> <e> : "έ" U03AD  # [MNEMONIC] Greek small letter epsilon with tonos
+<Multi_key> <g> <apostrophe> <h> : "ή" U03AE  # [MNEMONIC] Greek small letter eta with tonos
+<Multi_key> <g> <apostrophe> <i> : "ί" U03AF  # [MNEMONIC] Greek small letter iota with tonos
+<Multi_key> <g> <apostrophe> <o> : "ό" U03CC    # [MNEMONIC] Greek small letter omicron with tonos
+<Multi_key> <g> <apostrophe> <y> : "ύ" U03CD    # [MNEMONIC] Greek small letter upsilon with tonos
+<Multi_key> <g> <apostrophe> <w> : "ώ" U03CE    # [MNEMONIC] Greek small letter omega with tonos
 
 ########################################################################
 # MATH / LOGIC / SETS  (prefix: h) — avoids 'm' (emoji) conflicts
@@ -240,180 +246,180 @@
 
 ## ARITHMETIC & RELATIONS
 # ASCII shortcuts: <= >= != ~= +- ** :- := etc.
-<Multi_key> <plus> <minus> : "±" U00B1    # [VISUAL] Plus-minus sign
-<Multi_key> <asterisk> <asterisk> : "×" U00D7    # [VISUAL] Multiplication sign
-<Multi_key> <colon> <minus> : "÷" U00F7    # [VISUAL] Division sign
-<Multi_key> <h> <d> <i> <v> : "÷" U00F7    # [MNEM] Division (mnemonic)
-<Multi_key> <h> <l> <t> : "<" U003C    # [MNEM] Less than
-<Multi_key> <h> <g> <t> : ">" U003E    # [MNEM] Greater than
-<Multi_key> <less> <equal> : "≤" U2264    # [VISUAL] Less-than or equal to
-<Multi_key> <h> <l> <e> <q> : "≤" U2264    # [MNEM] Less-than or equal to (mnemonic)
-<Multi_key> <greater> <equal> : "≥" U2265    # [VISUAL] Greater-than or equal to
-<Multi_key> <h> <g> <e> <q> : "≥" U2265    # [MNEM] Greater-than or equal to (mnemonic)
-<Multi_key> <exclam> <equal> : "≠" U2260    # [VISUAL] Not equal to
-<Multi_key> <h> <n> <e> <q> : "≠" U2260    # [MNEM] Not equal to (mnemonic)
-<Multi_key> <asciitilde> <equal> : "≈" U2248    # [VISUAL] Approximately equal to
-<Multi_key> <minus> <asciitilde> : "≃" U2243    # [VISUAL] Asymptotically equal to
-<Multi_key> <period> <asciitilde> <equal> : "≐" U2250    # [VISUAL] Approaches the limit
-<Multi_key> <colon> <equal> : "≔" U2254    # [VISUAL] Colon equals
-<Multi_key> <equal> <colon> : "≕" U2255    # [VISUAL] Equals colon
-<Multi_key> <less> <less> <less> : "≪" U226A    # [VISUAL] Much less-than (visual: <<<)
-<Multi_key> <h> <m> <l> <t> : "≪" U226A    # [MNEM] Much less-than (mnemonic: hmlt)
-<Multi_key> <greater> <greater> <greater> : "≫" U226B    # [VISUAL] Much greater-than (visual: >>>)
-<Multi_key> <h> <m> <g> <t> : "≫" U226B    # [MNEM] Much greater-than (mnemonic: hmgt)
-<Multi_key> <less> <asciitilde> : "≺" U227A    # [VISUAL] Precedes
-<Multi_key> <asciitilde> <greater> : "≻" U227B    # [VISUAL] Succeeds
-<Multi_key> <h> <j> <o> <i> <n> : "⋈" U22C8    # [MNEM] Bowtie (join operator)
-<Multi_key> <greater> <less> : "⋈" U22C8    # [VISUAL] Bowtie (join operator, visual mnemonic)
+<Multi_key> <plus> <minus> : "±" U00B1    # [ICONIC] Plus-minus sign
+<Multi_key> <asterisk> <asterisk> : "×" U00D7    # [ICONIC] Multiplication sign
+<Multi_key> <colon> <minus> : "÷" U00F7    # [ICONIC] Division sign
+<Multi_key> <h> <d> <i> <v> : "÷" U00F7    # [MNEMONIC] Division (mnemonic)
+<Multi_key> <h> <l> <t> : "<" U003C    # [MNEMONIC] Less than
+<Multi_key> <h> <g> <t> : ">" U003E    # [MNEMONIC] Greater than
+<Multi_key> <less> <equal> : "≤" U2264    # [ICONIC] Less-than or equal to
+<Multi_key> <h> <l> <e> <q> : "≤" U2264    # [MNEMONIC] Less-than or equal to (mnemonic)
+<Multi_key> <greater> <equal> : "≥" U2265    # [ICONIC] Greater-than or equal to
+<Multi_key> <h> <g> <e> <q> : "≥" U2265    # [MNEMONIC] Greater-than or equal to (mnemonic)
+<Multi_key> <exclam> <equal> : "≠" U2260    # [ICONIC] Not equal to
+<Multi_key> <h> <n> <e> <q> : "≠" U2260    # [MNEMONIC] Not equal to (mnemonic)
+<Multi_key> <asciitilde> <equal> : "≈" U2248    # [ICONIC] Approximately equal to
+<Multi_key> <minus> <asciitilde> : "≃" U2243    # [ICONIC] Asymptotically equal to
+<Multi_key> <period> <asciitilde> <equal> : "≐" U2250    # [ICONIC] Approaches the limit
+<Multi_key> <colon> <equal> : "≔" U2254    # [ICONIC] Colon equals
+<Multi_key> <equal> <colon> : "≕" U2255    # [ICONIC] Equals colon
+<Multi_key> <less> <less> <less> : "≪" U226A    # [ICONIC] Much less-than (visual: <<<)
+<Multi_key> <h> <m> <l> <t> : "≪" U226A    # [MNEMONIC] Much less-than (mnemonic: hmlt)
+<Multi_key> <greater> <greater> <greater> : "≫" U226B    # [ICONIC] Much greater-than (visual: >>>)
+<Multi_key> <h> <m> <g> <t> : "≫" U226B    # [MNEMONIC] Much greater-than (mnemonic: hmgt)
+<Multi_key> <less> <asciitilde> : "≺" U227A    # [ICONIC] Precedes
+<Multi_key> <asciitilde> <greater> : "≻" U227B    # [ICONIC] Succeeds
+<Multi_key> <h> <j> <o> <i> <n> : "⋈" U22C8    # [MNEMONIC] Bowtie (join operator)
+<Multi_key> <greater> <less> : "⋈" U22C8    # [ICONIC] Bowtie (join operator, visual mnemonic)
 
 ## ARROWS
 # ASCII shortcuts: -> <- <> => <= ^^ vv etc.
 # Mnemonics: <h><l><e><f><t> <h><i><m><p><l> <h><i><f><f> etc.
-<Multi_key> <minus> <greater> : "→" U2192    # [VISUAL] Rightwards arrow
-<Multi_key> <less> <minus> : "←" U2190    # [VISUAL] Leftwards arrow
-<Multi_key> <less> <greater> : "↔" U2194    # [VISUAL] Left right arrow
-<Multi_key> <equal> <greater> : "⇒" U21D2    # [VISUAL] Rightwards double arrow (implies)
-<Multi_key> <bar> <less> <less> : "⇐" U21D0    # [VISUAL] Leftwards double arrow (visual: |<<)
-<Multi_key> <bar> <greater> <greater> : "⇒" U21D2    # [VISUAL] Rightwards double arrow (visual: |>>)
-<Multi_key> <equal> <less> <greater> : "⇔" U21D4    # [VISUAL] Left right double arrow (iff)
-<Multi_key> <equal> <asciicircum> : "⇑" U21D1    # [VISUAL] Upwards double arrow
-<Multi_key> <equal> <v> : "⇓" U21D3    # [VISUAL] Downwards double arrow
-<Multi_key> <asciicircum> <asciicircum> <asciicircum> : "↑" U2191    # [VISUAL] Upwards arrow
-<Multi_key> <v> <v> : "↓" U2193    # [VISUAL] Downwards arrow
+<Multi_key> <minus> <greater> : "→" U2192    # [ICONIC] Rightwards arrow
+<Multi_key> <less> <minus> : "←" U2190    # [ICONIC] Leftwards arrow
+<Multi_key> <less> <greater> : "↔" U2194    # [ICONIC] Left right arrow
+<Multi_key> <equal> <greater> : "⇒" U21D2    # [ICONIC] Rightwards double arrow (implies)
+<Multi_key> <bar> <less> <less> : "⇐" U21D0    # [ICONIC] Leftwards double arrow (visual: |<<)
+<Multi_key> <bar> <greater> <greater> : "⇒" U21D2    # [ICONIC] Rightwards double arrow (visual: |>>)
+<Multi_key> <equal> <less> <greater> : "⇔" U21D4    # [ICONIC] Left right double arrow (iff)
+<Multi_key> <equal> <asciicircum> : "⇑" U21D1    # [ICONIC] Upwards double arrow
+<Multi_key> <equal> <v> : "⇓" U21D3    # [ICONIC] Downwards double arrow
+<Multi_key> <asciicircum> <asciicircum> <asciicircum> : "↑" U2191    # [ICONIC] Upwards arrow
+<Multi_key> <v> <v> : "↓" U2193    # [ICONIC] Downwards arrow
 # mnemonic alternatives (prefix: h)
-<Multi_key> <h> <u> <p> : "↑" U2191    # [MNEM] Upwards arrow (mnemonic: up)
-<Multi_key> <h> <d> <o> <w> <n> : "↓" U2193    # [MNEM] Downwards arrow (mnemonic: down)
-<Multi_key> <h> <l> <e> <f> <t> : "←" U2190    # [MNEM] Leftwards arrow (mnemonic: left)
-<Multi_key> <h> <i> <m> <p> <l> : "⇒" U21D2    # [MNEM] Implies (mnemonic: impl)
-<Multi_key> <h> <i> <f> <f> : "⇔" U21D4    # [MNEM] If and only if (mnemonic: iff)
-<Multi_key> <h> <d> <u> <p> : "⇑" U21D1    # [MNEM] Double up arrow (mnemonic: dup)
-<Multi_key> <h> <u> <d> : "↕" U2195    # [MNEM] Up-down arrow (mnemonic: ud)
-<Multi_key> <h> <d> <a> <u> <r> : "↗" U2197    # [MNEM] North-east arrow (diagonal arrow up-right)
-<Multi_key> <h> <d> <a> <d> <r> : "↘" U2198    # [MNEM] South-east arrow (diagonal arrow down-right)
-<Multi_key> <h> <d> <a> <u> <l> : "↖" U2196    # [MNEM] North-west arrow (diagonal arrow up-left)
-<Multi_key> <h> <d> <a> <d> <l> : "↙" U2199    # [MNEM] South-west arrow (diagonal arrow down-left)
-<Multi_key> <h> <v> <a> <r> : "➔" U2794    # [MNEM] Heavy wide-headed rightwards arrow (v=heavy)
-<Multi_key> <h> <v> <a> <l> : "⬅" U2B05    # [MNEM] Heavy leftwards arrow (v=heavy)
-<Multi_key> <h> <v> <r> <a> : "➜" U279C    # [MNEM] Heavy round-tipped rightwards arrow (v=heavy)
-<Multi_key> <h> <v> <c> <a> : "➙" U2799    # [MNEM] Heavy rightwards arrow chevron (v=heavy)
+<Multi_key> <h> <u> <p> : "↑" U2191    # [MNEMONIC] Upwards arrow (mnemonic: up)
+<Multi_key> <h> <d> <o> <w> <n> : "↓" U2193    # [MNEMONIC] Downwards arrow (mnemonic: down)
+<Multi_key> <h> <l> <e> <f> <t> : "←" U2190    # [MNEMONIC] Leftwards arrow (mnemonic: left)
+<Multi_key> <h> <i> <m> <p> <l> : "⇒" U21D2    # [MNEMONIC] Implies (mnemonic: impl)
+<Multi_key> <h> <i> <f> <f> : "⇔" U21D4    # [MNEMONIC] If and only if (mnemonic: iff)
+<Multi_key> <h> <d> <u> <p> : "⇑" U21D1    # [MNEMONIC] Double up arrow (mnemonic: dup)
+<Multi_key> <h> <u> <d> : "↕" U2195    # [MNEMONIC] Up-down arrow (mnemonic: ud)
+<Multi_key> <h> <d> <a> <u> <r> : "↗" U2197    # [MNEMONIC] North-east arrow (diagonal arrow up-right)
+<Multi_key> <h> <d> <a> <d> <r> : "↘" U2198    # [MNEMONIC] South-east arrow (diagonal arrow down-right)
+<Multi_key> <h> <d> <a> <u> <l> : "↖" U2196    # [MNEMONIC] North-west arrow (diagonal arrow up-left)
+<Multi_key> <h> <d> <a> <d> <l> : "↙" U2199    # [MNEMONIC] South-west arrow (diagonal arrow down-left)
+<Multi_key> <h> <v> <a> <r> : "➔" U2794    # [MNEMONIC] Heavy wide-headed rightwards arrow (v=heavy)
+<Multi_key> <h> <v> <a> <l> : "⬅" U2B05    # [MNEMONIC] Heavy leftwards arrow (v=heavy)
+<Multi_key> <h> <v> <r> <a> : "➜" U279C    # [MNEMONIC] Heavy round-tipped rightwards arrow (v=heavy)
+<Multi_key> <h> <v> <c> <a> : "➙" U2799    # [MNEMONIC] Heavy rightwards arrow chevron (v=heavy)
 
 ## LOGIC
 # All use <h> prefix for consistency
 # Includes: ∧ (and), ∨ (or), ¬ (not), ∀ (forall), ∃ (exists), etc.
-<Multi_key> <h> <n> <o> <t> : "¬" U00AC    # [MNEM] Not sign
-<Multi_key> <h> <a> : "∧" U2227    # [MNEM] Logical and
-<Multi_key> <h> <o> : "∨" U2228    # [MNEM] Logical or
-<Multi_key> <h> <exclam> <a> : "⊼" U22BC    # [MNEM] NAND (Sheffer stroke)
-<Multi_key> <h> <exclam> <o> : "⊽" U22BD    # [MNEM] NOR (Peirce arrow)
-<Multi_key> <h> <f> : "∀" U2200    # [MNEM] For all
-<Multi_key> <h> <E> : "∃" U2203    # [MNEM] There exists
-<Multi_key> <exclam> <h> <E> : "∄" U2204    # [ALT] There does not exist
-<Multi_key> <h> <x> <o> : "⊕" U2295    # [MNEM] Circled plus (XOR)
-<Multi_key> <h> <x> <m> : "⊖" U2296    # [MNEM] Circled minus
-<Multi_key> <h> <t> <e> : "⊗" U2297    # [MNEM] Circled times (tensor product)
-<Multi_key> <h> <x> <d> : "⊘" U2298    # [MNEM] Circled division slash
+<Multi_key> <h> <n> <o> <t> : "¬" U00AC    # [MNEMONIC] Not sign
+<Multi_key> <h> <a> : "∧" U2227    # [MNEMONIC] Logical and
+<Multi_key> <h> <o> : "∨" U2228    # [MNEMONIC] Logical or
+<Multi_key> <h> <exclam> <a> : "⊼" U22BC    # [MNEMONIC] NAND (Sheffer stroke)
+<Multi_key> <h> <exclam> <o> : "⊽" U22BD    # [MNEMONIC] NOR (Peirce arrow)
+<Multi_key> <h> <f> : "∀" U2200    # [MNEMONIC] For all
+<Multi_key> <h> <E> : "∃" U2203    # [MNEMONIC] There exists
+<Multi_key> <exclam> <h> <E> : "∄" U2204    # [ICONIC] There does not exist
+<Multi_key> <h> <x> <o> : "⊕" U2295    # [MNEMONIC] Circled plus (XOR)
+<Multi_key> <h> <x> <m> : "⊖" U2296    # [MNEMONIC] Circled minus
+<Multi_key> <h> <t> <e> : "⊗" U2297    # [MNEMONIC] Circled times (tensor product)
+<Multi_key> <h> <x> <d> : "⊘" U2298    # [MNEMONIC] Circled division slash
 
 ## SET THEORY
 # All use <h> prefix for consistency
 # Includes: ∅ (empty), ∪ (union), ∩ (intersection), ∈ (element of), etc.
-<Multi_key> <h> <0> : "∅" U2205    # [MNEM] Empty set
-<Multi_key> <h> <U> : "∪" U222A    # [MNEM] Union
-<Multi_key> <h> <I> : "∩" U2229    # [MNEM] Intersection
-<Multi_key> <h> <s> <b> : "⊂" U2282    # [MNEM] Subset of (strict)
-<Multi_key> <h> <s> <p> : "⊃" U2283    # [MNEM] Superset of (strict)
-<Multi_key> <h> <s> <e> <b> : "⊆" U2286    # [MNEM] Subset or equal to
-<Multi_key> <h> <s> <e> <p> : "⊇" U2287    # [MNEM] Superset or equal to
-<Multi_key> <exclam> <h> <s> <b> : "⊄" U2284    # [ALT] Not a subset of
-<Multi_key> <exclam> <h> <s> <p> : "⊅" U2285    # [ALT] Not a superset of
-<Multi_key> <exclam> <h> <s> <e> <b> : "⊈" U2288    # [ALT] Not subset or equal to
-<Multi_key> <exclam> <h> <s> <e> <p> : "⊉" U2289    # [ALT] Not superset or equal to
-<Multi_key> <h> <e> : "∈" U2208    # [MNEM] Element of
-<Multi_key> <h> <i> <n> : "∈" U2208    # [MNEM] Element of
-<Multi_key> <exclam> <h> <e> : "∉" U2209    # [ALT] Not an element of
-<Multi_key> <h> <n> <i> : "∋" U220B    # [MNEM] Contains as member (ni = reverse of "in")
-<Multi_key> <exclam> <h> <n> <i> : "∌" U220C    # [ALT] Does not contain as member
-<Multi_key> <h> <N> : "ℕ" U2115    # [MNEM] Double-struck capital N (natural numbers)
-<Multi_key> <h> <Z> : "ℤ" U2124    # [MNEM] Double-struck capital Z (integers)
-<Multi_key> <h> <Q> : "ℚ" U211A    # [MNEM] Double-struck capital Q (rationals)
-<Multi_key> <h> <R> : "ℝ" U211D    # [MNEM] Double-struck capital R (reals)
-<Multi_key> <h> <C> : "ℂ" U2102    # [MNEM] Double-struck capital C (complex numbers)
-<Multi_key> <h> <P> <o> : "℘" U2118    # [MNEM] Script capital P (power set)
+<Multi_key> <h> <0> : "∅" U2205    # [MNEMONIC] Empty set
+<Multi_key> <h> <U> : "∪" U222A    # [MNEMONIC] Union
+<Multi_key> <h> <I> : "∩" U2229    # [MNEMONIC] Intersection
+<Multi_key> <h> <s> <b> : "⊂" U2282    # [MNEMONIC] Subset of (strict)
+<Multi_key> <h> <s> <p> : "⊃" U2283    # [MNEMONIC] Superset of (strict)
+<Multi_key> <h> <s> <e> <b> : "⊆" U2286    # [MNEMONIC] Subset or equal to
+<Multi_key> <h> <s> <e> <p> : "⊇" U2287    # [MNEMONIC] Superset or equal to
+<Multi_key> <exclam> <h> <s> <b> : "⊄" U2284    # [MNEMONIC] Not a subset of
+<Multi_key> <exclam> <h> <s> <p> : "⊅" U2285    # [MNEMONIC] Not a superset of
+<Multi_key> <exclam> <h> <s> <e> <b> : "⊈" U2288    # [MNEMONIC] Not subset or equal to
+<Multi_key> <exclam> <h> <s> <e> <p> : "⊉" U2289    # [MNEMONIC] Not superset or equal to
+<Multi_key> <h> <e> : "∈" U2208    # [MNEMONIC] Element of
+<Multi_key> <h> <i> <n> : "∈" U2208    # [MNEMONIC] Element of
+<Multi_key> <exclam> <h> <e> : "∉" U2209    # [MNEMONIC] Not an element of
+<Multi_key> <h> <n> <i> : "∋" U220B    # [MNEMONIC] Contains as member (ni = reverse of "in")
+<Multi_key> <exclam> <h> <n> <i> : "∌" U220C    # [MNEMONIC] Does not contain as member
+<Multi_key> <h> <N> : "ℕ" U2115    # [MNEMONIC] Double-struck capital N (natural numbers)
+<Multi_key> <h> <Z> : "ℤ" U2124    # [MNEMONIC] Double-struck capital Z (integers)
+<Multi_key> <h> <Q> : "ℚ" U211A    # [MNEMONIC] Double-struck capital Q (rationals)
+<Multi_key> <h> <R> : "ℝ" U211D    # [MNEMONIC] Double-struck capital R (reals)
+<Multi_key> <h> <C> : "ℂ" U2102    # [MNEMONIC] Double-struck capital C (complex numbers)
+<Multi_key> <h> <P> <o> : "℘" U2118    # [MNEMONIC] Script capital P (power set)
 
 ## CALCULUS & OPERATORS
 # All use <h> prefix for consistency
 # Includes: ∂ (partial), ∇ (nabla), ∫ (integral), ∑ (sum), ∏ (product), etc.
-<Multi_key> <d> <slash> : "∂" U2202    # [VISUAL] Partial differential (visual: d with slash)
-<Multi_key> <h> <d> <e> <l> : "∂" U2202    # [MNEM] Partial differential (mnemonic: del)
-<Multi_key> <h> <D> : "∇" U2207    # [MNEM] Nabla
-<Multi_key> <h> <i> <t> : "∫" U222B    # [MNEM] Integral
-<Multi_key> <h> <i> <2> : "∬" U222C    # [MNEM] Double integral
-<Multi_key> <h> <i> <3> : "∭" U222D    # [MNEM] Triple integral
-<Multi_key> <h> <i> <c> : "∮" U222E    # [MNEM] Contour integral
-<Multi_key> <h> <S> <U> : "∑" U2211    # [MNEM] N-ary summation
-<Multi_key> <h> <P> <n> : "∏" U220F    # [MNEM] N-ary product
-<Multi_key> <h> <c> <o> : "∘" U2218    # [MNEM] Ring operator (function composition: f∘g)
+<Multi_key> <d> <slash> : "∂" U2202    # [ICONIC] Partial differential (visual: d with slash)
+<Multi_key> <h> <d> <e> <l> : "∂" U2202    # [MNEMONIC] Partial differential (mnemonic: del)
+<Multi_key> <h> <D> : "∇" U2207    # [MNEMONIC] Nabla
+<Multi_key> <h> <i> <t> : "∫" U222B    # [MNEMONIC] Integral
+<Multi_key> <h> <i> <2> : "∬" U222C    # [MNEMONIC] Double integral
+<Multi_key> <h> <i> <3> : "∭" U222D    # [MNEMONIC] Triple integral
+<Multi_key> <h> <i> <c> : "∮" U222E    # [MNEMONIC] Contour integral
+<Multi_key> <h> <S> <U> : "∑" U2211    # [MNEMONIC] N-ary summation
+<Multi_key> <h> <P> <n> : "∏" U220F    # [MNEMONIC] N-ary product
+<Multi_key> <h> <c> <o> : "∘" U2218    # [MNEMONIC] Ring operator (function composition: f∘g)
 
 ## MISC MATH & SYMBOLS
 # All use <h> prefix for consistency
 # Includes: ∞ (infinity), ∥ (parallel), ⊥ (perpendicular), card suits, etc.
-<Multi_key> <h> <8> : "∞" U221E    # [MNEM] Infinity
-<Multi_key> <h> <bar> <bar> : "∥" U2225    # [MNEM] Parallel to
-<Multi_key> <exclam> <h> <bar> <bar> : "∦" U2226    # [ALT] Not parallel to
-<Multi_key> <h> <bar> <v> : "∣" U2223    # [MNEM] Divides
-<Multi_key> <exclam> <h> <bar> <v> : "∤" U2224    # [ALT] Does not divide
-<Multi_key> <h> <period> : "·" U00B7    # [MNEM] Middle dot operator
-<Multi_key> <slash> <v> : "√" U221A    # [VISUAL] Square root (visual: check mark / V shape)
-<Multi_key> <h> <s> <q> <r> <t> : "√" U221A    # [MNEM] Square root (mnemonic: sqrt)
-<Multi_key> <3> <slash> <v> : "∛" U221B    # [VISUAL] Cube root (visual: 3rd root, extends /v pattern)
-<Multi_key> <h> <c> <b> <r> <t> : "∛" U221B    # [MNEM] Cube root (mnemonic: cbrt)
-<Multi_key> <h> <A> <N> : "∠" U2220    # [MNEM] Angle
-<Multi_key> <h> <p> : "⊥" U22A5    # [MNEM] Perpendicular
-<Multi_key> <period> <period> <colon> : "∴" U2234    # [VISUAL] Therefore (three dots in triangle)
-<Multi_key> <colon> <period> <period> : "∵" U2235    # [VISUAL] Because (inverted therefore)
-<Multi_key> <equal> <asciitilde> <equal> : "≡" U2261    # [VISUAL] Identical to / Equivalent to
-<Multi_key> <exclam> <asciitilde> <equal> : "≢" U2262    # [VISUAL] Not identical to
-<Multi_key> <h> <P> <R> : "∝" U221D    # [MNEM] Proportional to
-<Multi_key> <h> <q> <e> : "∎" U220E    # [MNEM] End of proof (QED)
-<Multi_key> <h> <P> <r> : "ℙ" U2119    # [MNEM] Double-struck capital P (primes)
-<Multi_key> <h> <H> : "ℍ" U210D    # [MNEM] Double-struck capital H (quaternions)
-<Multi_key> <h> <b> <A> : "𝐀" U1D400    # [MNEM] Bold capital A (font-dependent)
-<Multi_key> <h> <bracketleft> : "⎡" U23A1    # [MNEM] Left square bracket upper corner (for matrices)
-<Multi_key> <h> <bracketright> : "⎤" U23A4    # [MNEM] Right square bracket upper corner (for matrices)
-<Multi_key> <h> <c> <p> : "∐" U2210    # [MNEM] N-ary coproduct
-<Multi_key> <h> <t> <o> : "⊤" U22A4    # [MNEM] Down tack (top)
-<Multi_key> <h> <b> <o> : "⊥" U22A5    # [MNEM] Up tack (bottom)
-<Multi_key> <h> <s> <P> : "⊊" U228A    # [MNEM] Proper subset of (strict)
-<Multi_key> <h> <S> <p> : "⊋" U228B    # [MNEM] Proper superset of (strict)
-<Multi_key> <h> <l> <l> : "ℓ" U2113    # [MNEM] Script small l (liters, length)
-<Multi_key> <period> <period> <minus> : "⋯" U22EF    # [VISUAL] Midline horizontal ellipsis
-<Multi_key> <h> <b> <p> <s> : "‱" U2031    # [MNEM] Per ten thousand (basis points)
+<Multi_key> <h> <8> : "∞" U221E    # [MNEMONIC] Infinity
+<Multi_key> <h> <bar> <bar> : "∥" U2225    # [MNEMONIC] Parallel to
+<Multi_key> <exclam> <h> <bar> <bar> : "∦" U2226    # [MNEMONIC] Not parallel to
+<Multi_key> <h> <bar> <v> : "∣" U2223    # [MNEMONIC] Divides
+<Multi_key> <exclam> <h> <bar> <v> : "∤" U2224    # [MNEMONIC] Does not divide
+<Multi_key> <h> <period> : "·" U00B7    # [MNEMONIC] Middle dot operator
+<Multi_key> <slash> <v> : "√" U221A    # [ICONIC] Square root (visual: check mark / V shape)
+<Multi_key> <h> <s> <q> <r> <t> : "√" U221A    # [MNEMONIC] Square root (mnemonic: sqrt)
+<Multi_key> <3> <slash> <v> : "∛" U221B    # [ICONIC] Cube root (visual: 3rd root, extends /v pattern)
+<Multi_key> <h> <c> <b> <r> <t> : "∛" U221B    # [MNEMONIC] Cube root (mnemonic: cbrt)
+<Multi_key> <h> <A> <N> : "∠" U2220    # [MNEMONIC] Angle
+<Multi_key> <h> <p> : "⊥" U22A5    # [MNEMONIC] Perpendicular
+<Multi_key> <period> <period> <colon> : "∴" U2234    # [ICONIC] Therefore (three dots in triangle)
+<Multi_key> <colon> <period> <period> : "∵" U2235    # [ICONIC] Because (inverted therefore)
+<Multi_key> <equal> <asciitilde> <equal> : "≡" U2261    # [ICONIC] Identical to / Equivalent to
+<Multi_key> <exclam> <asciitilde> <equal> : "≢" U2262    # [ICONIC] Not identical to
+<Multi_key> <h> <P> <R> : "∝" U221D    # [MNEMONIC] Proportional to
+<Multi_key> <h> <q> <e> : "∎" U220E    # [MNEMONIC] End of proof (QED)
+<Multi_key> <h> <P> <r> : "ℙ" U2119    # [MNEMONIC] Double-struck capital P (primes)
+<Multi_key> <h> <H> : "ℍ" U210D    # [MNEMONIC] Double-struck capital H (quaternions)
+<Multi_key> <h> <b> <A> : "𝐀" U1D400    # [MNEMONIC] Bold capital A (font-dependent)
+<Multi_key> <h> <bracketleft> : "⎡" U23A1    # [MNEMONIC] Left square bracket upper corner (for matrices)
+<Multi_key> <h> <bracketright> : "⎤" U23A4    # [MNEMONIC] Right square bracket upper corner (for matrices)
+<Multi_key> <h> <c> <p> : "∐" U2210    # [MNEMONIC] N-ary coproduct
+<Multi_key> <h> <t> <o> : "⊤" U22A4    # [MNEMONIC] Down tack (top)
+<Multi_key> <h> <b> <o> : "⊥" U22A5    # [MNEMONIC] Up tack (bottom)
+<Multi_key> <h> <s> <P> : "⊊" U228A    # [MNEMONIC] Proper subset of (strict)
+<Multi_key> <h> <S> <p> : "⊋" U228B    # [MNEMONIC] Proper superset of (strict)
+<Multi_key> <h> <l> <l> : "ℓ" U2113    # [MNEMONIC] Script small l (liters, length)
+<Multi_key> <period> <period> <minus> : "⋯" U22EF    # [ICONIC] Midline horizontal ellipsis
+<Multi_key> <h> <b> <p> <s> : "‱" U2031    # [MNEMONIC] Per ten thousand (basis points)
 
 ## COMMON FRACTIONS
 # ASCII shortcuts: 1/2, 1/3, 2/3, 1/4, 3/4, 1/5, 1/8
-<Multi_key> <1> <slash> <2> : "½" U00BD    # [VISUAL] Vulgar fraction one half
-<Multi_key> <1> <slash> <3> : "⅓" U2153    # [VISUAL] Vulgar fraction one third
-<Multi_key> <2> <slash> <3> : "⅔" U2154    # [VISUAL] Vulgar fraction two thirds
-<Multi_key> <1> <slash> <4> : "¼" U00BC    # [VISUAL] Vulgar fraction one quarter
-<Multi_key> <3> <slash> <4> : "¾" U00BE    # [VISUAL] Vulgar fraction three quarters
-<Multi_key> <1> <slash> <5> : "⅕" U2155    # [VISUAL] Vulgar fraction one fifth
-<Multi_key> <1> <slash> <8> : "⅛" U215B    # [VISUAL] Vulgar fraction one eighth
-<Multi_key> <3> <slash> <8> : "⅜" U215C    # [VISUAL] Vulgar fraction three eighths
-<Multi_key> <5> <slash> <8> : "⅝" U215D    # [VISUAL] Vulgar fraction five eighths
-<Multi_key> <7> <slash> <8> : "⅞" U215E    # [VISUAL] Vulgar fraction seven eighths
+<Multi_key> <1> <slash> <2> : "½" U00BD    # [ICONIC] Vulgar fraction one half
+<Multi_key> <1> <slash> <3> : "⅓" U2153    # [ICONIC] Vulgar fraction one third
+<Multi_key> <2> <slash> <3> : "⅔" U2154    # [ICONIC] Vulgar fraction two thirds
+<Multi_key> <1> <slash> <4> : "¼" U00BC    # [ICONIC] Vulgar fraction one quarter
+<Multi_key> <3> <slash> <4> : "¾" U00BE    # [ICONIC] Vulgar fraction three quarters
+<Multi_key> <1> <slash> <5> : "⅕" U2155    # [ICONIC] Vulgar fraction one fifth
+<Multi_key> <1> <slash> <8> : "⅛" U215B    # [ICONIC] Vulgar fraction one eighth
+<Multi_key> <3> <slash> <8> : "⅜" U215C    # [ICONIC] Vulgar fraction three eighths
+<Multi_key> <5> <slash> <8> : "⅝" U215D    # [ICONIC] Vulgar fraction five eighths
+<Multi_key> <7> <slash> <8> : "⅞" U215E    # [ICONIC] Vulgar fraction seven eighths
 
 ## ADDITIONAL SYMBOLS
 # Miscellaneous useful symbols (checkmarks, bullets, card suits, specialized arrows)
-<Multi_key> <period> <minus> <less> : "⇠" U21E0    # [VISUAL] Leftwards dashed arrow
-<Multi_key> <period> <minus> <greater> : "⇢" U21E2    # [VISUAL] Rightwards dashed arrow
-<Multi_key> <h> <c> <w> : "↷" U21B7    # [MNEM] Clockwise top semicircle arrow
-<Multi_key> <h> <c> <c> <w> : "↶" U21B6    # [MNEM] Counterclockwise top semicircle arrow
-<Multi_key> <v> <period> <v> : "✓" U2713    # [VISUAL] Check mark
-<Multi_key> <x> <x> <x> : "✗" U2717    # [ALT] Ballot X
-<Multi_key> <period> <asterisk> : "•" U2022    # [VISUAL] Bullet
-<Multi_key> <k> <asterisk> <s> : "♠" U2660    # [MNEM] Spade suit
-<Multi_key> <k> <asterisk> <h> : "♥" U2665    # [MNEM] Heart suit
-<Multi_key> <k> <asterisk> <d> : "♦" U2666    # [MNEM] Diamond suit
-<Multi_key> <k> <asterisk> <c> : "♣" U2663    # [MNEM] Club suit
+<Multi_key> <period> <minus> <less> : "⇠" U21E0    # [ICONIC] Leftwards dashed arrow
+<Multi_key> <period> <minus> <greater> : "⇢" U21E2    # [ICONIC] Rightwards dashed arrow
+<Multi_key> <h> <c> <w> : "↷" U21B7    # [MNEMONIC] Clockwise top semicircle arrow
+<Multi_key> <h> <c> <c> <w> : "↶" U21B6    # [MNEMONIC] Counterclockwise top semicircle arrow
+<Multi_key> <v> <period> <v> : "✓" U2713    # [ICONIC] Check mark
+<Multi_key> <x> <x> <x> : "✗" U2717    # [MNEMONIC] Ballot X
+<Multi_key> <period> <asterisk> : "•" U2022    # [ICONIC] Bullet
+<Multi_key> <k> <asterisk> <s> : "♠" U2660    # [MNEMONIC] Spade suit
+<Multi_key> <k> <asterisk> <h> : "♥" U2665    # [MNEMONIC] Heart suit
+<Multi_key> <k> <asterisk> <d> : "♦" U2666    # [MNEMONIC] Diamond suit
+<Multi_key> <k> <asterisk> <c> : "♣" U2663    # [MNEMONIC] Club suit
 
 ########################################################################
 # HIGHER LOGIC / CATEGORY THEORY / LONG ARROWS  (prefix: h) — Advanced mathematical logic and category theory notation
@@ -422,190 +428,190 @@
 ## TURNSTILES & ENTAILMENT
 # Used in formal logic, proof theory, type theory
 # Includes: ⊢ (provable), ⊨ (models), ⊩ (forces), and negated variants
-<Multi_key> <h> <t> <r> : "⊢" U22A2    # [MNEM] Right tack (provable)
-<Multi_key> <h> <t> <l> : "⊣" U22A3    # [MNEM] Left tack
-<Multi_key> <h> <t> <t> : "⊫" U22AB    # [MNEM] Double turnstile
-<Multi_key> <h> <m> <o> : "⊨" U22A8    # [MNEM] Models (semantic entailment)
-<Multi_key> <h> <m> <v> : "⊧" U22A7    # [MNEM] Models (alternative)
-<Multi_key> <h> <F> <R> : "⊩" U22A9    # [MNEM] Forces (forcing)
+<Multi_key> <h> <t> <r> : "⊢" U22A2    # [MNEMONIC] Right tack (provable)
+<Multi_key> <h> <t> <l> : "⊣" U22A3    # [MNEMONIC] Left tack
+<Multi_key> <h> <t> <t> : "⊫" U22AB    # [MNEMONIC] Double turnstile
+<Multi_key> <h> <m> <o> : "⊨" U22A8    # [MNEMONIC] Models (semantic entailment)
+<Multi_key> <h> <m> <v> : "⊧" U22A7    # [MNEMONIC] Models (alternative)
+<Multi_key> <h> <F> <R> : "⊩" U22A9    # [MNEMONIC] Forces (forcing)
 # negated variants
-<Multi_key> <exclam> <h> <t> <r> : "⊬" U22AC    # [ALT] Not provable
-<Multi_key> <exclam> <h> <m> <o> : "⊭" U22AD    # [ALT] Not models
-<Multi_key> <exclam> <h> <t> <t> : "⊮" U22AE    # [ALT] Not double turnstile
-<Multi_key> <exclam> <h> <f> <r> : "⊯" U22AF    # [ALT] Not forces
+<Multi_key> <exclam> <h> <t> <r> : "⊬" U22AC    # [MNEMONIC] Not provable
+<Multi_key> <exclam> <h> <m> <o> : "⊭" U22AD    # [MNEMONIC] Not models
+<Multi_key> <exclam> <h> <t> <t> : "⊮" U22AE    # [MNEMONIC] Not double turnstile
+<Multi_key> <exclam> <h> <f> <r> : "⊯" U22AF    # [MNEMONIC] Not forces
 
 ## LONG IMPLICATION ARROWS
 # Extended versions of ⇒ ⇐ ⇔ for formal logic and type theory
 # ASCII shortcuts: ===>, |==, >|<
 # Mnemonics: <h><l><i><m><p> <h><l><i><m><b> <h><l><i><f><f>
-<Multi_key> <equal> <equal> <equal> <greater> : "⟹" U27F9    # [VISUAL] Long implies
-<Multi_key> <bar> <equal> <equal> : "⟸" U27F8    # [VISUAL] Long implied by
-<Multi_key> <greater> <bar> <less> : "⟺" U27FA    # [VISUAL] Long iff
+<Multi_key> <equal> <equal> <equal> <greater> : "⟹" U27F9    # [ICONIC] Long implies
+<Multi_key> <bar> <equal> <equal> : "⟸" U27F8    # [ICONIC] Long implied by
+<Multi_key> <greater> <bar> <less> : "⟺" U27FA    # [ICONIC] Long iff
 # mnemonic alternatives (prefix: h)
-<Multi_key> <h> <l> <i> <m> <p> : "⟹" U27F9    # [MNEM] Long implies (mnemonic: limp)
-<Multi_key> <h> <l> <i> <m> <b> : "⟸" U27F8    # [MNEM] Long implied by (mnemonic: limb)
-<Multi_key> <h> <l> <i> <f> <f> : "⟺" U27FA    # [MNEM] Long iff (mnemonic: liff)
+<Multi_key> <h> <l> <i> <m> <p> : "⟹" U27F9    # [MNEMONIC] Long implies (mnemonic: limp)
+<Multi_key> <h> <l> <i> <m> <b> : "⟸" U27F8    # [MNEMONIC] Long implied by (mnemonic: limb)
+<Multi_key> <h> <l> <i> <f> <f> : "⟺" U27FA    # [MNEMONIC] Long iff (mnemonic: liff)
 
 ## LONG PLAIN ARROWS
 # Extended versions of → ← ↔ for category diagrams and commutative diagrams
 # ASCII shortcuts: ||>, ||<, ||->
 # Mnemonics: <h><l><a><r> <h><l><a><l> <h><l><a><b>
-<Multi_key> <bar> <bar> <greater> : "⟶" U27F6    # [VISUAL] Long rightwards arrow
-<Multi_key> <bar> <bar> <less> : "⟵" U27F5    # [VISUAL] Long leftwards arrow
-<Multi_key> <bar> <bar> <minus> <greater> : "⟷" U27F7    # [VISUAL] Long left right arrow
+<Multi_key> <bar> <bar> <greater> : "⟶" U27F6    # [ICONIC] Long rightwards arrow
+<Multi_key> <bar> <bar> <less> : "⟵" U27F5    # [ICONIC] Long leftwards arrow
+<Multi_key> <bar> <bar> <minus> <greater> : "⟷" U27F7    # [ICONIC] Long left right arrow
 # mnemonic alternatives (prefix: h l)
-<Multi_key> <h> <l> <a> <r> : "⟶" U27F6    # [MNEM] Long arrow right (mnemonic: lar)
-<Multi_key> <h> <l> <a> <l> : "⟵" U27F5    # [MNEM] Long arrow left (mnemonic: lal)
-<Multi_key> <h> <l> <a> <b> : "⟷" U27F7    # [MNEM] Long arrow both (mnemonic: lab)
+<Multi_key> <h> <l> <a> <r> : "⟶" U27F6    # [MNEMONIC] Long arrow right (mnemonic: lar)
+<Multi_key> <h> <l> <a> <l> : "⟵" U27F5    # [MNEMONIC] Long arrow left (mnemonic: lal)
+<Multi_key> <h> <l> <a> <b> : "⟷" U27F7    # [MNEMONIC] Long arrow both (mnemonic: lab)
 
 ## CATEGORY THEORY ARROWS
 # Specialized arrows for category theory, type theory, and abstract algebra
 # Includes: ↦ (mapsto), ↪ (mono/injection), ↠ (epi/surjection), ≅ (isomorphism)
-<Multi_key> <h> <m> <s> : "↦" U21A6    # [MNEM] Rightwards arrow from bar (mapsto)
-<Multi_key> <h> <j> <n> : "↪" U21AA    # [MNEM] Rightwards arrow with hook (injection)
-<Multi_key> <greater> <bar> <greater> : "↠" U21A0    # [VISUAL] Rightwards two-headed arrow (surjection/epi)
-<Multi_key> <I> <S> : "≅" U2245    # [ALT] Approximately equal to (isomorphism)
-<Multi_key> <h> <t> <a> : "↣" U21A3    # [MNEM] Rightwards arrow with tail
-<Multi_key> <h> <h> <r> : "⇝" U21DD    # [MNEM] Rightwards squiggle arrow
+<Multi_key> <h> <m> <s> : "↦" U21A6    # [MNEMONIC] Rightwards arrow from bar (mapsto)
+<Multi_key> <h> <j> <n> : "↪" U21AA    # [MNEMONIC] Rightwards arrow with hook (injection)
+<Multi_key> <greater> <bar> <greater> : "↠" U21A0    # [ICONIC] Rightwards two-headed arrow (surjection/epi)
+<Multi_key> <I> <S> : "≅" U2245    # [MNEMONIC] Approximately equal to (isomorphism)
+<Multi_key> <h> <t> <a> : "↣" U21A3    # [MNEMONIC] Rightwards arrow with tail
+<Multi_key> <h> <h> <r> : "⇝" U21DD    # [MNEMONIC] Rightwards squiggle arrow
 # mnemonic alternatives (prefix: h)
-<Multi_key> <h> <s> <u> <r> : "↠" U21A0    # [MNEM] Surjection/epi (mnemonic: sur)
-<Multi_key> <h> <i> <s> <o> <m> : "≅" U2245    # [MNEM] Isomorphism (mnemonic: isom)
+<Multi_key> <h> <s> <u> <r> : "↠" U21A0    # [MNEMONIC] Surjection/epi (mnemonic: sur)
+<Multi_key> <h> <i> <s> <o> <m> : "≅" U2245    # [MNEMONIC] Isomorphism (mnemonic: isom)
 
 # long mapsto
-<Multi_key> <h> <l> <m> <s> : "⟼" U27FC    # [MNEM] Long mapsto (mnemonic: lms)
+<Multi_key> <h> <l> <m> <s> : "⟼" U27FC    # [MNEMONIC] Long mapsto (mnemonic: lms)
 
 ########################################################################
 # SUPERSCRIPTS & SUBSCRIPTS (prefix: ^ _) — digits, signs, parens, common letters
 ########################################################################
 
 # superscripts 0–9, + - = ( )
-<Multi_key> <asciicircum> <0> : "⁰" U2070    # [VISUAL] Superscript zero
-<Multi_key> <asciicircum> <1> : "¹" U00B9    # [VISUAL] Superscript one
-<Multi_key> <asciicircum> <2> : "²" U00B2    # [VISUAL] Superscript two
-<Multi_key> <asciicircum> <3> : "³" U00B3    # [VISUAL] Superscript three
-<Multi_key> <asciicircum> <4> : "⁴" U2074    # [VISUAL] Superscript four
-<Multi_key> <asciicircum> <5> : "⁵" U2075    # [VISUAL] Superscript five
-<Multi_key> <asciicircum> <6> : "⁶" U2076    # [VISUAL] Superscript six
-<Multi_key> <asciicircum> <7> : "⁷" U2077    # [VISUAL] Superscript seven
-<Multi_key> <asciicircum> <8> : "⁸" U2078    # [VISUAL] Superscript eight
-<Multi_key> <asciicircum> <9> : "⁹" U2079    # [VISUAL] Superscript nine
-<Multi_key> <asciicircum> <plus> : "⁺" U207A    # [VISUAL] Superscript plus
-<Multi_key> <asciicircum> <minus> : "⁻" U207B    # [VISUAL] Superscript minus
-<Multi_key> <asciicircum> <equal> : "⁼" U207C    # [VISUAL] Superscript equals
-<Multi_key> <asciicircum> <parenleft> : "⁽" U207D    # [VISUAL] Superscript left parenthesis
-<Multi_key> <asciicircum> <parenright> : "⁾" U207E    # [VISUAL] Superscript right parenthesis
+<Multi_key> <asciicircum> <0> : "⁰" U2070    # [ICONIC] Superscript zero
+<Multi_key> <asciicircum> <1> : "¹" U00B9    # [ICONIC] Superscript one
+<Multi_key> <asciicircum> <2> : "²" U00B2    # [ICONIC] Superscript two
+<Multi_key> <asciicircum> <3> : "³" U00B3    # [ICONIC] Superscript three
+<Multi_key> <asciicircum> <4> : "⁴" U2074    # [ICONIC] Superscript four
+<Multi_key> <asciicircum> <5> : "⁵" U2075    # [ICONIC] Superscript five
+<Multi_key> <asciicircum> <6> : "⁶" U2076    # [ICONIC] Superscript six
+<Multi_key> <asciicircum> <7> : "⁷" U2077    # [ICONIC] Superscript seven
+<Multi_key> <asciicircum> <8> : "⁸" U2078    # [ICONIC] Superscript eight
+<Multi_key> <asciicircum> <9> : "⁹" U2079    # [ICONIC] Superscript nine
+<Multi_key> <asciicircum> <plus> : "⁺" U207A    # [ICONIC] Superscript plus
+<Multi_key> <asciicircum> <minus> : "⁻" U207B    # [ICONIC] Superscript minus
+<Multi_key> <asciicircum> <equal> : "⁼" U207C    # [ICONIC] Superscript equals
+<Multi_key> <asciicircum> <parenleft> : "⁽" U207D    # [ICONIC] Superscript left parenthesis
+<Multi_key> <asciicircum> <parenright> : "⁾" U207E    # [ICONIC] Superscript right parenthesis
 # superscript letters (all available lowercase letters for scientific notation)
-<Multi_key> <asciicircum> <a> : "ᵃ" U1D43    # [ALT] Superscript a
-<Multi_key> <asciicircum> <b> : "ᵇ" U1D47    # [ALT] Superscript b
-<Multi_key> <asciicircum> <c> : "ᶜ" U1D9C    # [ALT] Superscript c
-<Multi_key> <asciicircum> <d> : "ᵈ" U1D48    # [VISUAL] Superscript d
-<Multi_key> <asciicircum> <e> : "ᵉ" U1D49    # [ALT] Superscript e
-<Multi_key> <asciicircum> <f> : "ᶠ" U1DA0    # [ALT] Superscript f
-<Multi_key> <asciicircum> <g> : "ᵍ" U1D4D    # [ALT] Superscript g
-<Multi_key> <asciicircum> <h> : "ʰ" U02B0    # [ALT] Superscript h
-<Multi_key> <asciicircum> <i> : "ⁱ" U2071    # [ALT] Superscript i
-<Multi_key> <asciicircum> <j> : "ʲ" U02B2    # [ALT] Superscript j
-<Multi_key> <asciicircum> <k> : "ᵏ" U1D4F    # [ALT] Superscript k
-<Multi_key> <asciicircum> <l> : "ˡ" U02E1    # [ALT] Superscript l
-<Multi_key> <asciicircum> <m> : "ᵐ" U1D50    # [ALT] Superscript m
-<Multi_key> <asciicircum> <n> : "ⁿ" U207F    # [ALT] Superscript n
-<Multi_key> <asciicircum> <o> : "ᵒ" U1D52    # [ALT] Superscript o
-<Multi_key> <asciicircum> <p> : "ᵖ" U1D56    # [ALT] Superscript p
-<Multi_key> <asciicircum> <r> : "ʳ" U02B3    # [ALT] Superscript r
-<Multi_key> <asciicircum> <s> : "ˢ" U02E2    # [ALT] Superscript s
-<Multi_key> <asciicircum> <t> : "ᵗ" U1D57    # [ALT] Superscript t
-<Multi_key> <asciicircum> <u> : "ᵘ" U1D58    # [ALT] Superscript u
-<Multi_key> <asciicircum> <v> : "ᵛ" U1D5B    # [VISUAL] Superscript v
-<Multi_key> <asciicircum> <w> : "ʷ" U02B7    # [ALT] Superscript w
-<Multi_key> <asciicircum> <x> : "ˣ" U02E3    # [ALT] Superscript x
-<Multi_key> <asciicircum> <y> : "ʸ" U02B8    # [ALT] Superscript y
-<Multi_key> <asciicircum> <z> : "ᶻ" U1DBB    # [ALT] Superscript z
+<Multi_key> <asciicircum> <a> : "ᵃ" U1D43    # [ICONIC] Superscript a
+<Multi_key> <asciicircum> <b> : "ᵇ" U1D47    # [ICONIC] Superscript b
+<Multi_key> <asciicircum> <c> : "ᶜ" U1D9C    # [ICONIC] Superscript c
+<Multi_key> <asciicircum> <d> : "ᵈ" U1D48    # [ICONIC] Superscript d
+<Multi_key> <asciicircum> <e> : "ᵉ" U1D49    # [ICONIC] Superscript e
+<Multi_key> <asciicircum> <f> : "ᶠ" U1DA0    # [ICONIC] Superscript f
+<Multi_key> <asciicircum> <g> : "ᵍ" U1D4D    # [ICONIC] Superscript g
+<Multi_key> <asciicircum> <h> : "ʰ" U02B0    # [ICONIC] Superscript h
+<Multi_key> <asciicircum> <i> : "ⁱ" U2071    # [ICONIC] Superscript i
+<Multi_key> <asciicircum> <j> : "ʲ" U02B2    # [ICONIC] Superscript j
+<Multi_key> <asciicircum> <k> : "ᵏ" U1D4F    # [ICONIC] Superscript k
+<Multi_key> <asciicircum> <l> : "ˡ" U02E1    # [ICONIC] Superscript l
+<Multi_key> <asciicircum> <m> : "ᵐ" U1D50    # [ICONIC] Superscript m
+<Multi_key> <asciicircum> <n> : "ⁿ" U207F    # [ICONIC] Superscript n
+<Multi_key> <asciicircum> <o> : "ᵒ" U1D52    # [ICONIC] Superscript o
+<Multi_key> <asciicircum> <p> : "ᵖ" U1D56    # [ICONIC] Superscript p
+<Multi_key> <asciicircum> <r> : "ʳ" U02B3    # [ICONIC] Superscript r
+<Multi_key> <asciicircum> <s> : "ˢ" U02E2    # [ICONIC] Superscript s
+<Multi_key> <asciicircum> <t> : "ᵗ" U1D57    # [ICONIC] Superscript t
+<Multi_key> <asciicircum> <u> : "ᵘ" U1D58    # [ICONIC] Superscript u
+<Multi_key> <asciicircum> <v> : "ᵛ" U1D5B    # [ICONIC] Superscript v
+<Multi_key> <asciicircum> <w> : "ʷ" U02B7    # [ICONIC] Superscript w
+<Multi_key> <asciicircum> <x> : "ˣ" U02E3    # [ICONIC] Superscript x
+<Multi_key> <asciicircum> <y> : "ʸ" U02B8    # [ICONIC] Superscript y
+<Multi_key> <asciicircum> <z> : "ᶻ" U1DBB    # [ICONIC] Superscript z
 
 # subscripts 0–9, + - = ( )
-<Multi_key> <underscore> <0> : "₀" U2080    # [VISUAL] Subscript zero
-<Multi_key> <underscore> <1> : "₁" U2081    # [VISUAL] Subscript one
-<Multi_key> <underscore> <2> : "₂" U2082    # [VISUAL] Subscript two
-<Multi_key> <underscore> <3> : "₃" U2083    # [VISUAL] Subscript three
-<Multi_key> <underscore> <4> : "₄" U2084    # [VISUAL] Subscript four
-<Multi_key> <underscore> <5> : "₅" U2085    # [VISUAL] Subscript five
-<Multi_key> <underscore> <6> : "₆" U2086    # [VISUAL] Subscript six
-<Multi_key> <underscore> <7> : "₇" U2087    # [VISUAL] Subscript seven
-<Multi_key> <underscore> <8> : "₈" U2088    # [VISUAL] Subscript eight
-<Multi_key> <underscore> <9> : "₉" U2089    # [VISUAL] Subscript nine
-<Multi_key> <underscore> <plus> : "₊" U208A    # [VISUAL] Subscript plus
-<Multi_key> <underscore> <minus> : "₋" U208B    # [VISUAL] Subscript minus
-<Multi_key> <underscore> <equal> : "₌" U208C    # [VISUAL] Subscript equals
-<Multi_key> <underscore> <parenleft> : "₍" U208D    # [VISUAL] Subscript left parenthesis
-<Multi_key> <underscore> <parenright> : "₎" U208E    # [VISUAL] Subscript right parenthesis
+<Multi_key> <underscore> <0> : "₀" U2080    # [ICONIC] Subscript zero
+<Multi_key> <underscore> <1> : "₁" U2081    # [ICONIC] Subscript one
+<Multi_key> <underscore> <2> : "₂" U2082    # [ICONIC] Subscript two
+<Multi_key> <underscore> <3> : "₃" U2083    # [ICONIC] Subscript three
+<Multi_key> <underscore> <4> : "₄" U2084    # [ICONIC] Subscript four
+<Multi_key> <underscore> <5> : "₅" U2085    # [ICONIC] Subscript five
+<Multi_key> <underscore> <6> : "₆" U2086    # [ICONIC] Subscript six
+<Multi_key> <underscore> <7> : "₇" U2087    # [ICONIC] Subscript seven
+<Multi_key> <underscore> <8> : "₈" U2088    # [ICONIC] Subscript eight
+<Multi_key> <underscore> <9> : "₉" U2089    # [ICONIC] Subscript nine
+<Multi_key> <underscore> <plus> : "₊" U208A    # [ICONIC] Subscript plus
+<Multi_key> <underscore> <minus> : "₋" U208B    # [ICONIC] Subscript minus
+<Multi_key> <underscore> <equal> : "₌" U208C    # [ICONIC] Subscript equals
+<Multi_key> <underscore> <parenleft> : "₍" U208D    # [ICONIC] Subscript left parenthesis
+<Multi_key> <underscore> <parenright> : "₎" U208E    # [ICONIC] Subscript right parenthesis
 # subscript letters available in Unicode (single underscore for subscripts)
-<Multi_key> <underscore> <a> : "ₐ" U2090    # [ALT] Subscript a
-<Multi_key> <underscore> <e> : "ₑ" U2091    # [ALT] Subscript e
-<Multi_key> <underscore> <o> : "ₒ" U2092    # [ALT] Subscript o
+<Multi_key> <underscore> <a> : "ₐ" U2090    # [ICONIC] Subscript a
+<Multi_key> <underscore> <e> : "ₑ" U2091    # [ICONIC] Subscript e
+<Multi_key> <underscore> <o> : "ₒ" U2092    # [ICONIC] Subscript o
 # MACRONS: Double underscore (ergonomic choice - subscripts more common than macrons)
 # Standard Compose uses _a for macron, but we swap it for subscripts (LaTeX convention)
 # Macrons still accessible via __ instead of _
-<Multi_key> <underscore> <underscore> <a> : "ā" U0101    # [ALT] a with macron
-<Multi_key> <underscore> <underscore> <e> : "ē" U0113    # [ALT] e with macron
-<Multi_key> <underscore> <underscore> <o> : "ō" U014D    # [ALT] o with macron
-<Multi_key> <underscore> <h> : "ₕ" U2095    # [ALT] Subscript h
-<Multi_key> <underscore> <i> : "ᵢ" U1D62    # [ALT] Subscript i
-<Multi_key> <underscore> <j> : "ⱼ" U2C7C    # [ALT] Subscript j
-<Multi_key> <underscore> <k> : "ₖ" U2096    # [ALT] Subscript k
-<Multi_key> <underscore> <l> : "ₗ" U2097    # [ALT] Subscript l
-<Multi_key> <underscore> <m> : "ₘ" U2098    # [ALT] Subscript m
-<Multi_key> <underscore> <n> : "ₙ" U2099    # [ALT] Subscript n
-<Multi_key> <underscore> <p> : "ₚ" U209A    # [ALT] Subscript p
-<Multi_key> <underscore> <r> : "ᵣ" U1D63    # [ALT] Subscript r
-<Multi_key> <underscore> <s> : "ₛ" U209B    # [ALT] Subscript s
-<Multi_key> <underscore> <t> : "ₜ" U209C    # [ALT] Subscript t
-<Multi_key> <underscore> <u> : "ᵤ" U1D64    # [ALT] Subscript u
-<Multi_key> <underscore> <v> : "ᵥ" U1D65    # [VISUAL] Subscript v
-<Multi_key> <underscore> <x> : "ₓ" U2093    # [ALT] Subscript x
+<Multi_key> <underscore> <underscore> <a> : "ā" U0101    # [ICONIC] a with macron
+<Multi_key> <underscore> <underscore> <e> : "ē" U0113    # [ICONIC] e with macron
+<Multi_key> <underscore> <underscore> <o> : "ō" U014D    # [ICONIC] o with macron
+<Multi_key> <underscore> <h> : "ₕ" U2095    # [ICONIC] Subscript h
+<Multi_key> <underscore> <i> : "ᵢ" U1D62    # [ICONIC] Subscript i
+<Multi_key> <underscore> <j> : "ⱼ" U2C7C    # [ICONIC] Subscript j
+<Multi_key> <underscore> <k> : "ₖ" U2096    # [ICONIC] Subscript k
+<Multi_key> <underscore> <l> : "ₗ" U2097    # [ICONIC] Subscript l
+<Multi_key> <underscore> <m> : "ₘ" U2098    # [ICONIC] Subscript m
+<Multi_key> <underscore> <n> : "ₙ" U2099    # [ICONIC] Subscript n
+<Multi_key> <underscore> <p> : "ₚ" U209A    # [ICONIC] Subscript p
+<Multi_key> <underscore> <r> : "ᵣ" U1D63    # [ICONIC] Subscript r
+<Multi_key> <underscore> <s> : "ₛ" U209B    # [ICONIC] Subscript s
+<Multi_key> <underscore> <t> : "ₜ" U209C    # [ICONIC] Subscript t
+<Multi_key> <underscore> <u> : "ᵤ" U1D64    # [ICONIC] Subscript u
+<Multi_key> <underscore> <v> : "ᵥ" U1D65    # [ICONIC] Subscript v
+<Multi_key> <underscore> <x> : "ₓ" U2093    # [ICONIC] Subscript x
 
 ########################################################################
-# TYPOGRAPHY & SPACING (prefix: visual) — Dashes, ellipsis, special spaces, and typographic marks
+# TYPOGRAPHY & SPACING (iconic shortcuts) — Dashes, ellipsis, special spaces, and typographic marks
 ########################################################################
 
-<Multi_key> <h> <minus> : "−" U2212    # [MNEM] True minus sign (math)
-<Multi_key> <period> <period> <period> : "…" U2026    # [VISUAL] Ellipsis
-<Multi_key> <period> <period> <bar> : "⋮" U22EE    # [VISUAL] Vertical ellipsis
-<Multi_key> <space> <b> : " " U00A0    # [ALT] Non-breaking space (NBSP)
-<Multi_key> <space> <t> : " " U2009    # [ALT] Thin space
-<Multi_key> <space> <B> : " " U202F    # [ALT] Narrow no-break space
-<Multi_key> <space> <h> : " " U200A    # [ALT] Hair space
-<Multi_key> <space> <7> : " " U2007    # [ALT] Figure space (tabular)
-<Multi_key> <space> <8> : " " U2008    # [ALT] Punctuation space
-<Multi_key> <space> <z> : "‌" U200C    # [ALT] Zero width non-joiner (ZWNJ)
-<Multi_key> <space> <Z> : "‍" U200D    # [ALT] Zero width joiner (ZWJ)
-<Multi_key> <minus> <minus> <period> : "–" U2013    # [VISUAL] En dash (for ranges)
-<Multi_key> <minus> <minus> <minus> : "—" U2014    # [VISUAL] Em dash (for breaks)
-<Multi_key> <h> <g> <i> : "" UE0A0    # [MNEM] Git branch symbol (Powerline, font-dependent)
-<Multi_key> <h> <m> <e> : "↯" U21AF    # [MNEM] Downwards zigzag arrow (merge conflict)
-<Multi_key> <minus> <b> : "‑" U2011    # [ALT] Non-breaking hyphen
+<Multi_key> <h> <minus> : "−" U2212    # [MNEMONIC] True minus sign (math)
+<Multi_key> <period> <period> <period> : "…" U2026    # [ICONIC] Ellipsis
+<Multi_key> <period> <period> <bar> : "⋮" U22EE    # [ICONIC] Vertical ellipsis
+<Multi_key> <space> <b> : " " U00A0    # [MNEMONIC] Non-breaking space (NBSP)
+<Multi_key> <space> <t> : " " U2009    # [MNEMONIC] Thin space
+<Multi_key> <space> <B> : " " U202F    # [MNEMONIC] Narrow no-break space
+<Multi_key> <space> <h> : " " U200A    # [MNEMONIC] Hair space
+<Multi_key> <space> <7> : " " U2007    # [MNEMONIC] Figure space (tabular)
+<Multi_key> <space> <8> : " " U2008    # [MNEMONIC] Punctuation space
+<Multi_key> <space> <z> : "‌" U200C    # [MNEMONIC] Zero width non-joiner (ZWNJ)
+<Multi_key> <space> <Z> : "‍" U200D    # [MNEMONIC] Zero width joiner (ZWJ)
+<Multi_key> <minus> <minus> <period> : "–" U2013    # [ICONIC] En dash (for ranges)
+<Multi_key> <minus> <minus> <minus> : "—" U2014    # [ICONIC] Em dash (for breaks)
+<Multi_key> <h> <g> <i> : "" UE0A0    # [MNEMONIC] Git branch symbol (Powerline, font-dependent)
+<Multi_key> <h> <m> <e> : "↯" U21AF    # [MNEMONIC] Downwards zigzag arrow (merge conflict)
+<Multi_key> <minus> <b> : "‑" U2011    # [MNEMONIC] Non-breaking hyphen
 
 ########################################################################
-# SMART QUOTES (prefix: visual) — curly quotes
+# SMART QUOTES (iconic shortcuts) — curly quotes
 ########################################################################
 
-<Multi_key> <quotedbl> <less> : "“" U201C    # [VISUAL] Left double quotation mark
-<Multi_key> <greater> <quotedbl> : "”" U201D    # [VISUAL] Right double quotation mark
-<Multi_key> <apostrophe> <less> : "‘" U2018    # [VISUAL] Left single quotation mark
-<Multi_key> <greater> <apostrophe> : "’" U2019    # [VISUAL] Right single quotation mark
-<Multi_key> <comma> <quotedbl> : "„" U201E    # [VISUAL] Double low-9 quotation mark (German/Eastern European)
-<Multi_key> <comma> <apostrophe> : "‚" U201A    # [VISUAL] Single low-9 quotation mark (German/Eastern European)
-<Multi_key> <less> <less> <quotedbl> : "«" U00AB    # [VISUAL] Left-pointing double angle quotation mark
-<Multi_key> <greater> <greater> <quotedbl> : "»" U00BB    # [VISUAL] Right-pointing double angle quotation mark
-<Multi_key> <less> <comma> : "‹" U2039    # [VISUAL] Single left-pointing angle quotation mark
-<Multi_key> <greater> <comma> : "›" U203A    # [VISUAL] Single right-pointing angle quotation mark
+<Multi_key> <quotedbl> <less> : "“" U201C    # [ICONIC] Left double quotation mark
+<Multi_key> <greater> <quotedbl> : "”" U201D    # [ICONIC] Right double quotation mark
+<Multi_key> <apostrophe> <less> : "‘" U2018    # [ICONIC] Left single quotation mark
+<Multi_key> <greater> <apostrophe> : "’" U2019    # [ICONIC] Right single quotation mark
+<Multi_key> <comma> <quotedbl> : "„" U201E    # [ICONIC] Double low-9 quotation mark (German/Eastern European)
+<Multi_key> <comma> <apostrophe> : "‚" U201A    # [ICONIC] Single low-9 quotation mark (German/Eastern European)
+<Multi_key> <less> <less> <quotedbl> : "«" U00AB    # [ICONIC] Left-pointing double angle quotation mark
+<Multi_key> <greater> <greater> <quotedbl> : "»" U00BB    # [ICONIC] Right-pointing double angle quotation mark
+<Multi_key> <less> <comma> : "‹" U2039    # [ICONIC] Single left-pointing angle quotation mark
+<Multi_key> <greater> <comma> : "›" U203A    # [ICONIC] Single right-pointing angle quotation mark
 
 ########################################################################
-# INTERNATIONAL PUNCTUATION (prefix: visual) — inverted marks, special characters
+# INTERNATIONAL PUNCTUATION (iconic shortcuts) — inverted marks, special characters
 ########################################################################
 
-<Multi_key> <exclam> <exclam> : "¡" U00A1    # [VISUAL] Inverted exclamation mark (Spanish)
-<Multi_key> <question> <question> : "¿" U00BF    # [VISUAL] Inverted question mark (Spanish)
-<Multi_key> <N> <o> : "№" U2116    # [ALT] Numero sign (Cyrillic/European)
-<Multi_key> <question> <exclam> : "‽" U203D    # [VISUAL] Interrobang
+<Multi_key> <exclam> <exclam> : "¡" U00A1    # [ICONIC] Inverted exclamation mark (Spanish)
+<Multi_key> <question> <question> : "¿" U00BF    # [ICONIC] Inverted question mark (Spanish)
+<Multi_key> <N> <o> : "№" U2116    # [ICONIC] Numero sign (Cyrillic/European)
+<Multi_key> <question> <exclam> : "‽" U203D    # [ICONIC] Interrobang
 
 ########################################################################
 # INTERNATIONAL DIACRITICS (prefix: i) — for letters not covered by dead keys
@@ -617,223 +623,223 @@
 #   - This frees up _ (single underscore) for subscripts (more common in STEM)
 #   - Example: __a → ā (macron), _a → ₐ (subscript)
 
-<Multi_key> <i> <acute> <a> : "á" U00E1    # [MNEM] a acute
-<Multi_key> <i> <grave> <e> : "è" U00E8    # [MNEM] e grave
-<Multi_key> <i> <tilde> <n> : "ñ" U00F1    # [MNEM] n tilde
-<Multi_key> <i> <diaeresis> <u> : "ü" U00FC    # [MNEM] u diaeresis
+<Multi_key> <i> <acute> <a> : "á" U00E1    # [MNEMONIC] a acute
+<Multi_key> <i> <grave> <e> : "è" U00E8    # [MNEMONIC] e grave
+<Multi_key> <i> <tilde> <n> : "ñ" U00F1    # [MNEMONIC] n tilde
+<Multi_key> <i> <diaeresis> <u> : "ü" U00FC    # [MNEMONIC] u diaeresis
 
 ########################################################################
-# UNITS & MEASUREMENTS (prefix: h, visual) — Scientific notation, physical constants, and measurement units
+# UNITS & MEASUREMENTS (prefix: h, iconic) — Scientific notation, physical constants, and measurement units
 ########################################################################
 
 # Degree and angle measurement
-<Multi_key> <parenleft> <parenright> : "°" U00B0    # [VISUAL] Degree sign
-<Multi_key> <o> <C> : "°C"    # [VISUAL] Degrees Celsius (composed sequence)
-<Multi_key> <o> <F> : "°F"    # [VISUAL] Degrees Fahrenheit (composed sequence)
-<Multi_key> <h> <d> <C> : "℃" U2103    # [MNEM] Degree Celsius symbol
-<Multi_key> <h> <d> <F> : "℉" U2109    # [MNEM] Degree Fahrenheit symbol
+<Multi_key> <parenleft> <parenright> : "°" U00B0    # [ICONIC] Degree sign
+<Multi_key> <o> <C> : "°C"    # [ICONIC] Degrees Celsius (composed sequence)
+<Multi_key> <o> <F> : "°F"    # [ICONIC] Degrees Fahrenheit (composed sequence)
+<Multi_key> <h> <d> <C> : "℃" U2103    # [MNEMONIC] Degree Celsius symbol
+<Multi_key> <h> <d> <F> : "℉" U2109    # [MNEMONIC] Degree Fahrenheit symbol
 
 # Prime notation (derivatives, coordinates, measurements)
-<Multi_key> <h> <apostrophe> : "′" U2032    # [MNEM] Prime (feet, derivatives, coordinates)
-<Multi_key> <h> <2> <apostrophe> : "″" U2033    # [MNEM] Double prime (inches, 2nd derivative)
-<Multi_key> <h> <3> <apostrophe> : "‴" U2034    # [MNEM] Triple prime (3rd derivative)
-<Multi_key> <h> <4> <apostrophe> : "⁗" U2057    # [MNEM] Quadruple prime (4th derivative)
-<Multi_key> <grave> <grave> : "‵" U2035    # [VISUAL] Reversed prime (backticks = backwards)
+<Multi_key> <h> <apostrophe> : "′" U2032    # [MNEMONIC] Prime (feet, derivatives, coordinates)
+<Multi_key> <h> <2> <apostrophe> : "″" U2033    # [MNEMONIC] Double prime (inches, 2nd derivative)
+<Multi_key> <h> <3> <apostrophe> : "‴" U2034    # [MNEMONIC] Triple prime (3rd derivative)
+<Multi_key> <h> <4> <apostrophe> : "⁗" U2057    # [MNEMONIC] Quadruple prime (4th derivative)
+<Multi_key> <grave> <grave> : "‵" U2035    # [ICONIC] Reversed prime (backticks = backwards)
 
 # Physical units and constants
 # <h> <m> : "µ" U00B5  # Micro sign (removed, use Greek mu instead)
-<Multi_key> <h> <A> <a> : "Å" U00C5    # [MNEM] Angstrom sign
-<Multi_key> <h> <O> : "Ω" U03A9    # [MNEM] Ohm (Greek Omega capital)
-<Multi_key> <h> <percent> : "‰" U2030    # [MNEM] Per mille sign
-<Multi_key> <h> <b> <a> <r> : "ℏ" U210F    # [MNEM] Hbar (Planck constant over 2pi)
-<Multi_key> <h> <b> <r> <a> : "⟨" U27E8    # [MNEM] Mathematical left angle bracket (bra)
-<Multi_key> <h> <k> <e> <t> : "⟩" U27E9    # [MNEM] Mathematical right angle bracket (ket)
-<Multi_key> <h> <at> : "⚛" U269B    # [MNEM] Atom symbol
+<Multi_key> <h> <A> <a> : "Å" U00C5    # [MNEMONIC] Angstrom sign
+<Multi_key> <h> <O> : "Ω" U03A9    # [MNEMONIC] Ohm (Greek Omega capital)
+<Multi_key> <h> <percent> : "‰" U2030    # [MNEMONIC] Per mille sign
+<Multi_key> <h> <b> <a> <r> : "ℏ" U210F    # [MNEMONIC] Hbar (Planck constant over 2pi)
+<Multi_key> <h> <b> <r> <a> : "⟨" U27E8    # [MNEMONIC] Mathematical left angle bracket (bra)
+<Multi_key> <h> <k> <e> <t> : "⟩" U27E9    # [MNEMONIC] Mathematical right angle bracket (ket)
+<Multi_key> <h> <at> : "⚛" U269B    # [MNEMONIC] Atom symbol
 
 ########################################################################
-# CHEMISTRY (prefix: h, visual) — reaction arrows and symbols
+# CHEMISTRY (prefix: h, iconic) — reaction arrows and symbols
 ########################################################################
 
-<Multi_key> <bar> <equal> <greater> : "⇌" U21CC    # [VISUAL] Equilibrium arrow
-<Multi_key> <minus> <bar> <minus> : "↽" U21BD    # [VISUAL] Leftwards harpoon with barb downwards (reversible reaction left)
-<Multi_key> <bar> <minus> <greater> : "⇁" U21C1    # [VISUAL] Rightwards harpoon with barb downwards (reversible reaction right)
+<Multi_key> <bar> <equal> <greater> : "⇌" U21CC    # [ICONIC] Equilibrium arrow
+<Multi_key> <minus> <bar> <minus> : "↽" U21BD    # [ICONIC] Leftwards harpoon with barb downwards (reversible reaction left)
+<Multi_key> <bar> <minus> <greater> : "⇁" U21C1    # [ICONIC] Rightwards harpoon with barb downwards (reversible reaction right)
 # mnemonic alternatives (prefix: h c)
-<Multi_key> <h> <c> <e> <q> : "⇌" U21CC    # [MNEM] Equilibrium arrow (mnemonic: ceq)
-<Multi_key> <h> <c> <h> <l> : "↽" U21BD    # [MNEM] Chemistry harpoon left (mnemonic: chl)
-<Multi_key> <h> <c> <h> <r> : "⇁" U21C1    # [MNEM] Chemistry harpoon right (mnemonic: chr)
+<Multi_key> <h> <c> <e> <q> : "⇌" U21CC    # [MNEMONIC] Equilibrium arrow (mnemonic: ceq)
+<Multi_key> <h> <c> <h> <l> : "↽" U21BD    # [MNEMONIC] Chemistry harpoon left (mnemonic: chl)
+<Multi_key> <h> <c> <h> <r> : "⇁" U21C1    # [MNEMONIC] Chemistry harpoon right (mnemonic: chr)
 
 ########################################################################
-# ASTRONOMY (prefix: h, visual) — Celestial bodies and astronomical symbols
+# ASTRONOMY (prefix: h, iconic) — Celestial bodies and astronomical symbols
 ########################################################################
 
-<Multi_key> <h> <asterisk> <b> : "★" U2605    # [MNEM] Black star
-<Multi_key> <h> <asterisk> <w> : "☆" U2606    # [MNEM] White star
-<Multi_key> <h> <S> <u> : "☉" U2609    # [MNEM] Sun symbol
-<Multi_key> <h> <T> <e> : "♁" U2641    # [MNEM] Earth symbol (Terra)
-<Multi_key> <h> <M> <a> : "♂" U2642    # [MNEM] Mars symbol
-<Multi_key> <h> <V> <e> : "♀" U2640    # [MNEM] Venus symbol
-<Multi_key> <h> <J> <u> : "♃" U2643    # [MNEM] Jupiter symbol
-<Multi_key> <h> <S> <a> : "♄" U2644    # [MNEM] Saturn symbol
-<Multi_key> <h> <m> <1> : "☽" U263D    # [MNEM] First quarter moon
-<Multi_key> <h> <m> <3> : "☾" U263E    # [MNEM] Last quarter moon
-<Multi_key> <h> <asciicircum> <n> : "☊" U260A    # [MNEM] Ascending node (up/ascending)
-<Multi_key> <h> <v> <v> <n> : "☋" U260B    # [MNEM] Descending node (down/vv)
+<Multi_key> <h> <asterisk> <b> : "★" U2605    # [MNEMONIC] Black star
+<Multi_key> <h> <asterisk> <w> : "☆" U2606    # [MNEMONIC] White star
+<Multi_key> <h> <S> <u> : "☉" U2609    # [MNEMONIC] Sun symbol
+<Multi_key> <h> <T> <e> : "♁" U2641    # [MNEMONIC] Earth symbol (Terra)
+<Multi_key> <h> <M> <a> : "♂" U2642    # [MNEMONIC] Mars symbol
+<Multi_key> <h> <V> <e> : "♀" U2640    # [MNEMONIC] Venus symbol
+<Multi_key> <h> <J> <u> : "♃" U2643    # [MNEMONIC] Jupiter symbol
+<Multi_key> <h> <S> <a> : "♄" U2644    # [MNEMONIC] Saturn symbol
+<Multi_key> <h> <m> <1> : "☽" U263D    # [MNEMONIC] First quarter moon
+<Multi_key> <h> <m> <3> : "☾" U263E    # [MNEMONIC] Last quarter moon
+<Multi_key> <h> <asciicircum> <n> : "☊" U260A    # [MNEMONIC] Ascending node (up/ascending)
+<Multi_key> <h> <v> <v> <n> : "☋" U260B    # [MNEMONIC] Descending node (down/vv)
 
 ########################################################################
 # IPA (prefix: p) — International Phonetic Alphabet
 ########################################################################
 
 # consonants
-<Multi_key> <p> <s> : "ʃ" U0283    # [MNEM] IPA voiceless postalveolar fricative (esh)
-<Multi_key> <p> <z> : "ʒ" U0292    # [MNEM] IPA voiced postalveolar fricative (ezh)
-<Multi_key> <p> <t> : "θ" U03B8    # [MNEM] Greek theta used in IPA (voiceless dental fricative)
-<Multi_key> <p> <d> : "ð" U00F0    # [MNEM] IPA voiced dental fricative (eth)
-<Multi_key> <p> <n> : "ŋ" U014B    # [MNEM] IPA velar nasal (eng)
-<Multi_key> <p> <r> : "ɾ" U027E    # [MNEM] IPA alveolar tap
-<Multi_key> <p> <l> : "ɫ" U026B    # [MNEM] IPA velarized L
-<Multi_key> <p> <w> : "ʍ" U028D    # [MNEM] IPA voiceless labial-velar approximant
-<Multi_key> <p> <v> : "ʋ" U028B    # [MNEM] IPA labiodental approximant
-<Multi_key> <p> <g> : "ɡ" U0261    # [MNEM] IPA script g
-<Multi_key> <p> <j> : "j" U006A    # [MNEM] IPA palatal approximant
-<Multi_key> <p> <q> : "ʔ" U0294    # [MNEM] IPA glottal stop
+<Multi_key> <p> <s> : "ʃ" U0283    # [MNEMONIC] IPA voiceless postalveolar fricative (esh)
+<Multi_key> <p> <z> : "ʒ" U0292    # [MNEMONIC] IPA voiced postalveolar fricative (ezh)
+<Multi_key> <p> <t> : "θ" U03B8    # [MNEMONIC] Greek theta used in IPA (voiceless dental fricative)
+<Multi_key> <p> <d> : "ð" U00F0    # [MNEMONIC] IPA voiced dental fricative (eth)
+<Multi_key> <p> <n> : "ŋ" U014B    # [MNEMONIC] IPA velar nasal (eng)
+<Multi_key> <p> <r> : "ɾ" U027E    # [MNEMONIC] IPA alveolar tap
+<Multi_key> <p> <l> : "ɫ" U026B    # [MNEMONIC] IPA velarized L
+<Multi_key> <p> <w> : "ʍ" U028D    # [MNEMONIC] IPA voiceless labial-velar approximant
+<Multi_key> <p> <v> : "ʋ" U028B    # [MNEMONIC] IPA labiodental approximant
+<Multi_key> <p> <g> : "ɡ" U0261    # [MNEMONIC] IPA script g
+<Multi_key> <p> <j> : "j" U006A    # [MNEMONIC] IPA palatal approximant
+<Multi_key> <p> <q> : "ʔ" U0294    # [MNEMONIC] IPA glottal stop
 
 # vowels
-<Multi_key> <p> <e> <e> : "ə" U0259    # [MNEM] IPA schwa (most common, double-e)
-<Multi_key> <p> <E> <R> : "ɚ" U025A    # [MNEM] IPA rhotic schwa (uppercase E+R for rhotic)
-<Multi_key> <p> <a> : "ɐ" U0250    # [MNEM] IPA near-open central vowel
-<Multi_key> <p> <3> : "ɜ" U025C    # [MNEM] IPA open-mid central vowel
-<Multi_key> <p> <6> : "ɞ" U025E    # [MNEM] IPA closed-mid central rounded vowel
-<Multi_key> <p> <I> : "ɪ" U026A    # [MNEM] IPA near-close front unrounded vowel
-<Multi_key> <p> <U> : "ʊ" U028A    # [MNEM] IPA near-close back rounded vowel
-<Multi_key> <p> <o> <v> : "ʌ" U028C    # [MNEM] IPA open-mid back unrounded vowel
-<Multi_key> <p> <A> <A> : "ɑ" U0251    # [MNEM] IPA open back unrounded vowel
-<Multi_key> <p> <O> : "ɒ" U0252    # [MNEM] IPA open back rounded vowel
-<Multi_key> <p> <o> <e> : "ø" U00F8    # [MNEM] IPA close-mid front rounded vowel
-<Multi_key> <p> <o> <E> : "œ" U0153    # [MNEM] IPA open-mid front rounded vowel
-<Multi_key> <p> <o> <O> : "ɶ" U0276    # [MNEM] IPA open front rounded vowel
-<Multi_key> <p> <y> : "y" U0079    # [MNEM] IPA close front rounded vowel
-<Multi_key> <p> <Y> : "ʏ" U028F    # [MNEM] IPA near-close front rounded vowel
-<Multi_key> <p> <A> <e> : "æ" U00E6    # [MNEM] IPA near-open front unrounded vowel
-<Multi_key> <p> <e> <p> <s> : "ɛ" U025B    # [MNEM] IPA open-mid front unrounded vowel
+<Multi_key> <p> <e> <e> : "ə" U0259    # [MNEMONIC] IPA schwa (most common, double-e)
+<Multi_key> <p> <E> <R> : "ɚ" U025A    # [MNEMONIC] IPA rhotic schwa (uppercase E+R for rhotic)
+<Multi_key> <p> <a> : "ɐ" U0250    # [MNEMONIC] IPA near-open central vowel
+<Multi_key> <p> <3> : "ɜ" U025C    # [MNEMONIC] IPA open-mid central vowel
+<Multi_key> <p> <6> : "ɞ" U025E    # [MNEMONIC] IPA closed-mid central rounded vowel
+<Multi_key> <p> <I> : "ɪ" U026A    # [MNEMONIC] IPA near-close front unrounded vowel
+<Multi_key> <p> <U> : "ʊ" U028A    # [MNEMONIC] IPA near-close back rounded vowel
+<Multi_key> <p> <o> <v> : "ʌ" U028C    # [MNEMONIC] IPA open-mid back unrounded vowel
+<Multi_key> <p> <A> <A> : "ɑ" U0251    # [MNEMONIC] IPA open back unrounded vowel
+<Multi_key> <p> <O> : "ɒ" U0252    # [MNEMONIC] IPA open back rounded vowel
+<Multi_key> <p> <o> <e> : "ø" U00F8    # [MNEMONIC] IPA close-mid front rounded vowel
+<Multi_key> <p> <o> <E> : "œ" U0153    # [MNEMONIC] IPA open-mid front rounded vowel
+<Multi_key> <p> <o> <O> : "ɶ" U0276    # [MNEMONIC] IPA open front rounded vowel
+<Multi_key> <p> <y> : "y" U0079    # [MNEMONIC] IPA close front rounded vowel
+<Multi_key> <p> <Y> : "ʏ" U028F    # [MNEMONIC] IPA near-close front rounded vowel
+<Multi_key> <p> <A> <e> : "æ" U00E6    # [MNEMONIC] IPA near-open front unrounded vowel
+<Multi_key> <p> <e> <p> <s> : "ɛ" U025B    # [MNEMONIC] IPA open-mid front unrounded vowel
 
 # length / stress / ties / diacritics
-<Multi_key> <p> <colon> : "ː" U02D0    # [MNEM] IPA length mark
-<Multi_key> <p> <semicolon> : "ˑ" U02D1    # [MNEM] IPA half-length mark
-<Multi_key> <p> <apostrophe> : "ˈ" U02C8    # [MNEM] IPA primary stress
-<Multi_key> <p> <comma> : "ˌ" U02CC    # [MNEM] IPA secondary stress
-<Multi_key> <p> <c> <t> : "͡" U0361    # [MNEM] Combining tie bar above
-<Multi_key> <p> <c> <T> : "͜" U035C    # [MNEM] Combining tie bar below
-<Multi_key> <p> <c> <n> : "̃" U0303    # [MNEM] Combining tilde (nasalization)
+<Multi_key> <p> <colon> : "ː" U02D0    # [MNEMONIC] IPA length mark
+<Multi_key> <p> <semicolon> : "ˑ" U02D1    # [MNEMONIC] IPA half-length mark
+<Multi_key> <p> <apostrophe> : "ˈ" U02C8    # [MNEMONIC] IPA primary stress
+<Multi_key> <p> <comma> : "ˌ" U02CC    # [MNEMONIC] IPA secondary stress
+<Multi_key> <p> <c> <t> : "͡" U0361    # [MNEMONIC] Combining tie bar above
+<Multi_key> <p> <c> <T> : "͜" U035C    # [MNEMONIC] Combining tie bar below
+<Multi_key> <p> <c> <n> : "̃" U0303    # [MNEMONIC] Combining tilde (nasalization)
 
 ########################################################################
 # CALLIGRAPHIC / FRAKTUR (prefix: k) — legacy + SMP (font dependent)
 ########################################################################
 
 # legacy script/calligraphic letters
-<Multi_key> <k> <H> : "ℋ" U210B    # [MNEM] Script capital H
-<Multi_key> <k> <I> : "ℐ" U2110    # [MNEM] Script capital I
-<Multi_key> <k> <L> : "ℒ" U2112    # [MNEM] Script capital L
-<Multi_key> <k> <R> : "ℛ" U211B    # [MNEM] Script capital R
-<Multi_key> <k> <F> : "ℱ" U2131    # [MNEM] Script capital F
-<Multi_key> <k> <B> : "ℬ" U212C    # [MNEM] Script capital B
+<Multi_key> <k> <H> : "ℋ" U210B    # [MNEMONIC] Script capital H
+<Multi_key> <k> <I> : "ℐ" U2110    # [MNEMONIC] Script capital I
+<Multi_key> <k> <L> : "ℒ" U2112    # [MNEMONIC] Script capital L
+<Multi_key> <k> <R> : "ℛ" U211B    # [MNEMONIC] Script capital R
+<Multi_key> <k> <F> : "ℱ" U2131    # [MNEMONIC] Script capital F
+<Multi_key> <k> <B> : "ℬ" U212C    # [MNEMONIC] Script capital B
 
 # legacy Fraktur / blackletter
-<Multi_key> <k> <f> <C> : "ℭ" U212D    # [MNEM] Blackletter capital C
-<Multi_key> <k> <h> : "ℌ" U210C    # [MNEM] Blackletter capital H
-<Multi_key> <k> <f> <I> : "ℑ" U2111    # [MNEM] Blackletter capital I (Imaginary part)
-<Multi_key> <k> <f> <R> : "ℜ" U211C    # [MNEM] Blackletter capital R (Real part)
-<Multi_key> <k> <Z> : "ℨ" U2128    # [MNEM] Blackletter capital Z
-<Multi_key> <k> <N> : "ℵ" U2135    # [MNEM] Aleph symbol
+<Multi_key> <k> <f> <C> : "ℭ" U212D    # [MNEMONIC] Blackletter capital C
+<Multi_key> <k> <h> : "ℌ" U210C    # [MNEMONIC] Blackletter capital H
+<Multi_key> <k> <f> <I> : "ℑ" U2111    # [MNEMONIC] Blackletter capital I (Imaginary part)
+<Multi_key> <k> <f> <R> : "ℜ" U211C    # [MNEMONIC] Blackletter capital R (Real part)
+<Multi_key> <k> <Z> : "ℨ" U2128    # [MNEMONIC] Blackletter capital Z
+<Multi_key> <k> <N> : "ℵ" U2135    # [MNEMONIC] Aleph symbol
 
 # optional SMP script capitals (font dependent)
-<Multi_key> <k> <S> : "𝒮" U1D4AE    # [MNEM] Mathematical script capital S
-<Multi_key> <k> <M> : "𝓜" U1D4DC    # [MNEM] Mathematical script capital M
-<Multi_key> <k> <m> <C> : "𝒞" U1D49E    # [MNEM] Mathematical script capital C
+<Multi_key> <k> <S> : "𝒮" U1D4AE    # [MNEMONIC] Mathematical script capital S
+<Multi_key> <k> <M> : "𝓜" U1D4DC    # [MNEMONIC] Mathematical script capital M
+<Multi_key> <k> <m> <C> : "𝒞" U1D49E    # [MNEMONIC] Mathematical script capital C
 
 ########################################################################
 # UI SYMBOLS & SHAPES (prefix: k) — Interface symbols, keyboard glyphs, and geometric shapes
 ########################################################################
 
-<Multi_key> <k> <c> : "⌘" U2318    # [MNEM] Place of Interest sign (Command key)
-<Multi_key> <k> <o> : "⌥" U2325    # [MNEM] Option key symbol
-<Multi_key> <k> <r> : "⌃" U2303    # [MNEM] Up arrowhead (Control key symbol)
-<Multi_key> <k> <s> : "⇧" U21E7    # [MNEM] Upwards white arrow (Shift)
-<Multi_key> <k> <e> : "⏎" U23CE    # [MNEM] Return symbol (Enter)
-<Multi_key> <k> <b> : "⌫" U232B    # [MNEM] Erase to the left (Backspace)
-<Multi_key> <k> <d> : "⌦" U2326    # [MNEM] Erase to the right (Delete)
-<Multi_key> <k> <x> : "⎋" U238B    # [MNEM] Broken circle with northwest arrow (Escape)
-<Multi_key> <k> <C> : "⎈" U2388    # [MNEM] Helm symbol often used for Control
+<Multi_key> <k> <c> : "⌘" U2318    # [MNEMONIC] Place of Interest sign (Command key)
+<Multi_key> <k> <o> : "⌥" U2325    # [MNEMONIC] Option key symbol
+<Multi_key> <k> <r> : "⌃" U2303    # [MNEMONIC] Up arrowhead (Control key symbol)
+<Multi_key> <k> <s> : "⇧" U21E7    # [MNEMONIC] Upwards white arrow (Shift)
+<Multi_key> <k> <e> : "⏎" U23CE    # [MNEMONIC] Return symbol (Enter)
+<Multi_key> <k> <b> : "⌫" U232B    # [MNEMONIC] Erase to the left (Backspace)
+<Multi_key> <k> <d> : "⌦" U2326    # [MNEMONIC] Erase to the right (Delete)
+<Multi_key> <k> <x> : "⎋" U238B    # [MNEMONIC] Broken circle with northwest arrow (Escape)
+<Multi_key> <k> <C> : "⎈" U2388    # [MNEMONIC] Helm symbol often used for Control
 
 # UI shapes for documentation
-<Multi_key> <k> <O> <w> : "○" U25CB    # [MNEM] White circle (O=circle)
-<Multi_key> <k> <O> <b> : "●" U25CF    # [MNEM] Black circle (O=circle)
-<Multi_key> <k> <O> <d> : "◉" U25C9    # [MNEM] Fisheye dotted circle (O=circle)
-<Multi_key> <k> <O> <e> : "◌" U25CC    # [MNEM] Dotted circle diacritic placeholder (O=circle)
-<Multi_key> <k> <w> <s> : "□" U25A1    # [MNEM] White square
-<Multi_key> <k> <w> <S> : "◻" U25FB    # [MNEM] White medium square
-<Multi_key> <k> <f> <s> : "■" U25A0    # [MNEM] Black filled square
-<Multi_key> <k> <f> <S> : "◼" U25FC    # [MNEM] Black filled medium square
-<Multi_key> <k> <t> <r> <u> : "▲" U25B2    # [MNEM] Black up-pointing triangle
-<Multi_key> <k> <t> <r> <d> : "▼" U25BC    # [MNEM] Black down-pointing triangle
-<Multi_key> <k> <t> <r> <l> : "◀" U25C0    # [MNEM] Black left-pointing triangle
-<Multi_key> <k> <t> <r> <r> : "▶" U25B6    # [MNEM] Black right-pointing triangle
-<Multi_key> <k> <l> <o> : "◊" U25CA    # [MNEM] Lozenge (diamond shape)
+<Multi_key> <k> <O> <w> : "○" U25CB    # [MNEMONIC] White circle (O=circle)
+<Multi_key> <k> <O> <b> : "●" U25CF    # [MNEMONIC] Black circle (O=circle)
+<Multi_key> <k> <O> <d> : "◉" U25C9    # [MNEMONIC] Fisheye dotted circle (O=circle)
+<Multi_key> <k> <O> <e> : "◌" U25CC    # [MNEMONIC] Dotted circle diacritic placeholder (O=circle)
+<Multi_key> <k> <w> <s> : "□" U25A1    # [MNEMONIC] White square
+<Multi_key> <k> <w> <S> : "◻" U25FB    # [MNEMONIC] White medium square
+<Multi_key> <k> <f> <s> : "■" U25A0    # [MNEMONIC] Black filled square
+<Multi_key> <k> <f> <S> : "◼" U25FC    # [MNEMONIC] Black filled medium square
+<Multi_key> <k> <t> <r> <u> : "▲" U25B2    # [MNEMONIC] Black up-pointing triangle
+<Multi_key> <k> <t> <r> <d> : "▼" U25BC    # [MNEMONIC] Black down-pointing triangle
+<Multi_key> <k> <t> <r> <l> : "◀" U25C0    # [MNEMONIC] Black left-pointing triangle
+<Multi_key> <k> <t> <r> <r> : "▶" U25B6    # [MNEMONIC] Black right-pointing triangle
+<Multi_key> <k> <l> <o> : "◊" U25CA    # [MNEMONIC] Lozenge (diamond shape)
 
 # Checkboxes for task lists
-<Multi_key> <k> <bracketleft> <bracketright> : "☐" U2610    # [MNEM] Ballot box (empty checkbox)
-<Multi_key> <k> <bracketleft> <v> : "☑" U2611    # [MNEM] Ballot box with check (checked)
-<Multi_key> <k> <bracketleft> <x> : "☒" U2612    # [MNEM] Ballot box with X (crossed)
+<Multi_key> <k> <bracketleft> <bracketright> : "☐" U2610    # [MNEMONIC] Ballot box (empty checkbox)
+<Multi_key> <k> <bracketleft> <v> : "☑" U2611    # [MNEMONIC] Ballot box with check (checked)
+<Multi_key> <k> <bracketleft> <x> : "☒" U2612    # [MNEMONIC] Ballot box with X (crossed)
 
 # Additional bullets
-<Multi_key> <k> <w> <b> : "◦" U25E6    # [MNEM] White bullet
+<Multi_key> <k> <w> <b> : "◦" U25E6    # [MNEMONIC] White bullet
 
 ########################################################################
 # BOX-DRAWING (prefix: b) — minimal starter
 ########################################################################
 
-<Multi_key> <b> <minus> : "─" U2500    # [MNEM] Box drawings light horizontal
-<Multi_key> <b> <bar> : "│" U2502    # [MNEM] Box drawings light vertical
-<Multi_key> <b> <l> <u> : "┌" U250C    # [MNEM] Box drawings light down and right
-<Multi_key> <b> <r> <u> : "┐" U2510    # [MNEM] Box drawings light down and left
-<Multi_key> <b> <l> <d> : "└" U2514    # [MNEM] Box drawings light up and right
-<Multi_key> <b> <r> <d> : "┘" U2518    # [MNEM] Box drawings light up and left
-<Multi_key> <b> <t> : "┬" U252C    # [MNEM] Box drawings light down and horizontal
-<Multi_key> <b> <T> : "┴" U2534    # [MNEM] Box drawings light up and horizontal
-<Multi_key> <b> <L> : "├" U251C    # [MNEM] Box drawings light vertical and right
-<Multi_key> <b> <R> : "┤" U2524    # [MNEM] Box drawings light vertical and left
-<Multi_key> <b> <plus> : "┼" U253C    # [MNEM] Box drawings light vertical and horizontal
+<Multi_key> <b> <minus> : "─" U2500    # [MNEMONIC] Box drawings light horizontal
+<Multi_key> <b> <bar> : "│" U2502    # [MNEMONIC] Box drawings light vertical
+<Multi_key> <b> <l> <u> : "┌" U250C    # [MNEMONIC] Box drawings light down and right
+<Multi_key> <b> <r> <u> : "┐" U2510    # [MNEMONIC] Box drawings light down and left
+<Multi_key> <b> <l> <d> : "└" U2514    # [MNEMONIC] Box drawings light up and right
+<Multi_key> <b> <r> <d> : "┘" U2518    # [MNEMONIC] Box drawings light up and left
+<Multi_key> <b> <t> : "┬" U252C    # [MNEMONIC] Box drawings light down and horizontal
+<Multi_key> <b> <T> : "┴" U2534    # [MNEMONIC] Box drawings light up and horizontal
+<Multi_key> <b> <L> : "├" U251C    # [MNEMONIC] Box drawings light vertical and right
+<Multi_key> <b> <R> : "┤" U2524    # [MNEMONIC] Box drawings light vertical and left
+<Multi_key> <b> <plus> : "┼" U253C    # [MNEMONIC] Box drawings light vertical and horizontal
 # double lines for ricing
-<Multi_key> <b> <D> <minus> : "═" U2550    # [MNEM] Box drawings double horizontal
-<Multi_key> <b> <D> <bar> : "║" U2551    # [MNEM] Box drawings double vertical
-<Multi_key> <b> <D> <plus> : "╬" U256C    # [MNEM] Box drawings double vertical and horizontal
-<Multi_key> <b> <D> <l> <u> : "╔" U2554    # [MNEM] Box drawings double down and right
-<Multi_key> <b> <D> <r> <u> : "╗" U2557    # [MNEM] Box drawings double down and left
-<Multi_key> <b> <D> <l> <d> : "╚" U255A    # [MNEM] Box drawings double up and right
-<Multi_key> <b> <D> <r> <d> : "╝" U255D    # [MNEM] Box drawings double up and left
+<Multi_key> <b> <D> <minus> : "═" U2550    # [MNEMONIC] Box drawings double horizontal
+<Multi_key> <b> <D> <bar> : "║" U2551    # [MNEMONIC] Box drawings double vertical
+<Multi_key> <b> <D> <plus> : "╬" U256C    # [MNEMONIC] Box drawings double vertical and horizontal
+<Multi_key> <b> <D> <l> <u> : "╔" U2554    # [MNEMONIC] Box drawings double down and right
+<Multi_key> <b> <D> <r> <u> : "╗" U2557    # [MNEMONIC] Box drawings double down and left
+<Multi_key> <b> <D> <l> <d> : "╚" U255A    # [MNEMONIC] Box drawings double up and right
+<Multi_key> <b> <D> <r> <d> : "╝" U255D    # [MNEMONIC] Box drawings double up and left
 # curves (double)
-<Multi_key> <b> <D> <c> <l> <u> : "╭" U256D    # [MNEM] Box drawings light arc down and right (rounded upper left)
-<Multi_key> <b> <D> <c> <r> <u> : "╮" U256E    # [MNEM] Box drawings light arc down and left (rounded upper right)
-<Multi_key> <b> <D> <c> <l> <d> : "╰" U2570    # [MNEM] Box drawings light arc up and right (rounded lower left)
-<Multi_key> <b> <D> <c> <r> <d> : "╯" U256F    # [MNEM] Box drawings light arc up and left (rounded lower right)
-<Multi_key> <b> <slash> : "╱" U2571    # [MNEM] Light diagonal upper right to lower left
-<Multi_key> <b> <backslash> : "╲" U2572    # [MNEM] Light diagonal upper left to lower right
-<Multi_key> <b> <s> <l> : "░" U2591    # [MNEM] Light shade
-<Multi_key> <b> <s> <m> : "▒" U2592    # [MNEM] Medium shade
-<Multi_key> <b> <s> <d> : "▓" U2593    # [MNEM] Dark shade
-<Multi_key> <b> <D> <t> : "╦" U2566    # [MNEM] Double down and horizontal
+<Multi_key> <b> <D> <c> <l> <u> : "╭" U256D    # [MNEMONIC] Box drawings light arc down and right (rounded upper left)
+<Multi_key> <b> <D> <c> <r> <u> : "╮" U256E    # [MNEMONIC] Box drawings light arc down and left (rounded upper right)
+<Multi_key> <b> <D> <c> <l> <d> : "╰" U2570    # [MNEMONIC] Box drawings light arc up and right (rounded lower left)
+<Multi_key> <b> <D> <c> <r> <d> : "╯" U256F    # [MNEMONIC] Box drawings light arc up and left (rounded lower right)
+<Multi_key> <b> <slash> : "╱" U2571    # [MNEMONIC] Light diagonal upper right to lower left
+<Multi_key> <b> <backslash> : "╲" U2572    # [MNEMONIC] Light diagonal upper left to lower right
+<Multi_key> <b> <s> <l> : "░" U2591    # [MNEMONIC] Light shade
+<Multi_key> <b> <s> <m> : "▒" U2592    # [MNEMONIC] Medium shade
+<Multi_key> <b> <s> <d> : "▓" U2593    # [MNEMONIC] Dark shade
+<Multi_key> <b> <D> <t> : "╦" U2566    # [MNEMONIC] Double down and horizontal
 
 ########################################################################
 # MUSIC SYMBOLS (prefix: u) — notes, flats, sharps
 ########################################################################
 
-<Multi_key> <u> <n> <8> : "♪" U266A    # [MNEM] Eighth note
-<Multi_key> <u> <n> <b> : "♫" U266B    # [MNEM] Beamed eighth notes
-<Multi_key> <u> <f> : "♭" U266D    # [MNEM] Flat
-<Multi_key> <u> <n> <a> <t> : "♮" U266E    # [MNEM] Natural
-<Multi_key> <u> <s> : "♯" U266F    # [MNEM] Sharp
-<Multi_key> <u> <r> <q> : "𝄻" U1D13B    # [MNEM] Quarter rest (font-dependent)
-<Multi_key> <u> <r> <h> : "𝄼" U1D13C    # [MNEM] Half rest (font-dependent)
-<Multi_key> <u> <r> <w> : "𝄺" U1D13A    # [MNEM] Whole rest (font-dependent)
+<Multi_key> <u> <n> <8> : "♪" U266A    # [MNEMONIC] Eighth note
+<Multi_key> <u> <n> <b> : "♫" U266B    # [MNEMONIC] Beamed eighth notes
+<Multi_key> <u> <f> : "♭" U266D    # [MNEMONIC] Flat
+<Multi_key> <u> <n> <a> <t> : "♮" U266E    # [MNEMONIC] Natural
+<Multi_key> <u> <s> : "♯" U266F    # [MNEMONIC] Sharp
+<Multi_key> <u> <r> <q> : "𝄻" U1D13B    # [MNEMONIC] Quarter rest (font-dependent)
+<Multi_key> <u> <r> <h> : "𝄼" U1D13C    # [MNEMONIC] Half rest (font-dependent)
+<Multi_key> <u> <r> <w> : "𝄺" U1D13A    # [MNEMONIC] Whole rest (font-dependent)
 
 ########################################################################
 # CURRENCY (prefix: c) — symbols for common currencies
@@ -841,43 +847,43 @@
 # Both ASCII shortcuts (fast) and <c> prefix mnemonics (discoverable)
 
 # ASCII shortcuts
-<Multi_key> <E> <equal> : "€" U20AC    # [ALT] Euro sign
-<Multi_key> <L> <minus> : "£" U00A3    # [ALT] Pound sign
-<Multi_key> <Y> <minus> : "¥" U00A5    # [ALT] Yen sign
-<Multi_key> <R> <bar> : "₹" U20B9    # [ALT] Indian rupee sign
-<Multi_key> <B> <b> : "₿" U20BF    # [ALT] Bitcoin sign
-<Multi_key> <R> <u> : "₽" U20BD    # [ALT] Ruble sign
-<Multi_key> <W> <equal> : "₩" U20A9    # [ALT] Won sign (KRW)
-<Multi_key> <D> <equal> : "₫" U20AB    # [ALT] Dong sign (VND)
-<Multi_key> <N> <equal> : "₪" U20AA    # [ALT] New shekel sign (ILS)
-<Multi_key> <T> <L> : "₺" U20BA    # [ALT] Turkish lira sign (TRY)
-<Multi_key> <F> <r> : "₣" U20A3    # [ALT] French franc sign (legacy)
-<Multi_key> <X> <X> : "¤" U00A4    # [ALT] Generic currency sign
+<Multi_key> <E> <equal> : "€" U20AC    # [ICONIC] Euro sign
+<Multi_key> <L> <minus> : "£" U00A3    # [ICONIC] Pound sign
+<Multi_key> <Y> <minus> : "¥" U00A5    # [ICONIC] Yen sign
+<Multi_key> <R> <bar> : "₹" U20B9    # [ICONIC] Indian rupee sign
+<Multi_key> <B> <b> : "₿" U20BF    # [ICONIC] Bitcoin sign
+<Multi_key> <R> <u> : "₽" U20BD    # [ICONIC] Ruble sign
+<Multi_key> <W> <equal> : "₩" U20A9    # [ICONIC] Won sign (KRW)
+<Multi_key> <D> <equal> : "₫" U20AB    # [ICONIC] Dong sign (VND)
+<Multi_key> <N> <equal> : "₪" U20AA    # [ICONIC] New shekel sign (ILS)
+<Multi_key> <T> <L> : "₺" U20BA    # [ICONIC] Turkish lira sign (TRY)
+<Multi_key> <F> <r> : "₣" U20A3    # [ICONIC] French franc sign (legacy)
+<Multi_key> <X> <X> : "¤" U00A4    # [ICONIC] Generic currency sign
 
 # Currency prefix alternatives (prefix: c)
-<Multi_key> <c> <e> : "€" U20AC    # [MNEM] Euro (mnemonic: ce)
-<Multi_key> <c> <p> : "£" U00A3    # [MNEM] Pound (mnemonic: cp)
-<Multi_key> <c> <y> : "¥" U00A5    # [MNEM] Yen (mnemonic: cy)
-<Multi_key> <c> <r> : "₹" U20B9    # [MNEM] Rupee (mnemonic: cr)
-<Multi_key> <c> <b> : "₿" U20BF    # [MNEM] Bitcoin (mnemonic: cb)
-<Multi_key> <c> <R> : "₽" U20BD    # [MNEM] Ruble (mnemonic: cR)
-<Multi_key> <c> <w> : "₩" U20A9    # [MNEM] Won (mnemonic: cw)
-<Multi_key> <c> <d> : "₫" U20AB    # [MNEM] Dong (mnemonic: cd)
-<Multi_key> <c> <s> : "₪" U20AA    # [MNEM] Shekel (mnemonic: cs)
-<Multi_key> <c> <t> : "₺" U20BA    # [MNEM] Turkish lira (mnemonic: ct)
-<Multi_key> <c> <f> : "₣" U20A3    # [MNEM] French franc (mnemonic: cf)
-<Multi_key> <c> <x> : "¤" U00A4    # [MNEM] Generic currency (mnemonic: cx)
+<Multi_key> <c> <e> : "€" U20AC    # [MNEMONIC] Euro (mnemonic: ce)
+<Multi_key> <c> <p> : "£" U00A3    # [MNEMONIC] Pound (mnemonic: cp)
+<Multi_key> <c> <y> : "¥" U00A5    # [MNEMONIC] Yen (mnemonic: cy)
+<Multi_key> <c> <r> : "₹" U20B9    # [MNEMONIC] Rupee (mnemonic: cr)
+<Multi_key> <c> <b> : "₿" U20BF    # [MNEMONIC] Bitcoin (mnemonic: cb)
+<Multi_key> <c> <R> : "₽" U20BD    # [MNEMONIC] Ruble (mnemonic: cR)
+<Multi_key> <c> <w> : "₩" U20A9    # [MNEMONIC] Won (mnemonic: cw)
+<Multi_key> <c> <d> : "₫" U20AB    # [MNEMONIC] Dong (mnemonic: cd)
+<Multi_key> <c> <s> : "₪" U20AA    # [MNEMONIC] Shekel (mnemonic: cs)
+<Multi_key> <c> <t> : "₺" U20BA    # [MNEMONIC] Turkish lira (mnemonic: ct)
+<Multi_key> <c> <f> : "₣" U20A3    # [MNEMONIC] French franc (mnemonic: cf)
+<Multi_key> <c> <x> : "¤" U00A4    # [MNEMONIC] Generic currency (mnemonic: cx)
 
 ########################################################################
-# LEGAL / DOCUMENT SYMBOLS (prefix: visual) — copyright/trademark/section/paragraph
+# LEGAL / DOCUMENT SYMBOLS (iconic shortcuts) — copyright/trademark/section/paragraph
 ########################################################################
 
-<Multi_key> <C> <C> : "©" U00A9    # [ALT] Copyright sign
-<Multi_key> <R> <R> : "®" U00AE    # [ALT] Registered trademark sign
-<Multi_key> <T> <M> : "™" U2122    # [ALT] Trademark sign (TM abbreviation)
-<Multi_key> <S> <S> : "§" U00A7    # [ALT] Section sign
-<Multi_key> <P> <P> : "¶" U00B6    # [ALT] Pilcrow sign (paragraph mark)
-<Multi_key> <D> <D> : "†" U2020    # [ALT] Dagger (footnote)
-<Multi_key> <F> <F> : "‡" U2021    # [ALT] Double dagger (footnote)
+<Multi_key> <C> <C> : "©" U00A9    # [MNEMONIC] Copyright sign
+<Multi_key> <R> <R> : "®" U00AE    # [MNEMONIC] Registered trademark sign
+<Multi_key> <T> <M> : "™" U2122    # [MNEMONIC] Trademark sign (TM abbreviation)
+<Multi_key> <S> <S> : "§" U00A7    # [MNEMONIC] Section sign
+<Multi_key> <P> <P> : "¶" U00B6    # [MNEMONIC] Pilcrow sign (paragraph mark)
+<Multi_key> <D> <D> : "†" U2020    # [MNEMONIC] Dagger (footnote)
+<Multi_key> <F> <F> : "‡" U2021    # [MNEMONIC] Double dagger (footnote)
 
 ########################################################################

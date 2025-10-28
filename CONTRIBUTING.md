@@ -1,4 +1,4 @@
-# Contributing to xcompose-stem
+# Contributing to XCompose-STEM
 
 Thank you for your interest in contributing! This guide will help you add new sequences or improve existing ones.
 
@@ -17,33 +17,32 @@ Thank you for your interest in contributing! This guide will help you add new se
 Add your sequence to the appropriate category in `XCompose`:
 
 ```
-<Multi_key> <h> <example> : "★" U2605  # [MNEM] Black star
+<Multi_key> <h> <example> : "★" U2605  # [MNEMONIC] Black star
 ```
 
 **Format requirements:**
 - Use `<Multi_key>` prefix
 - Include Unicode codepoint (U+XXXX format)
-- Add type tag: `[VISUAL]`, `[MNEM]`, or `[ALT]`
+- Add type tag: `[ICONIC]` or `[MNEMONIC]`
 - Write clear description
 
 ### 2. Choose the Right Type Tag
 
-**`[VISUAL]`** - Visual/ASCII shortcuts that look like the output:
+**`[ICONIC]`** - Sequences that visually resemble their output:
 ```
-<Multi_key> <minus> <greater> : "→" U2192  # [VISUAL] Rightwards arrow
-<Multi_key> <less> <equal> : "≤" U2264     # [VISUAL] Less than or equal
-```
-
-**`[MNEM]`** - Mnemonic sequences with letter prefixes:
-```
-<Multi_key> <h> <impl> : "⇒" U21D2        # [MNEM] Implies
-<Multi_key> <g> <a> : "α" U03B1            # [MNEM] Greek small letter alpha
+<Multi_key> <minus> <greater> : "→" U2192  # [ICONIC] Rightwards arrow
+<Multi_key> <less> <equal> : "≤" U2264     # [ICONIC] Less than or equal
 ```
 
-**`[ALT]`** - Alternative patterns or edge cases:
+**Characteristics:** Self-documenting, language-independent, typically 2-3 keys
+
+**`[MNEMONIC]`** - Sequences based on linguistic/semantic associations:
 ```
-<Multi_key> <exclam> <h> <e> : "∉" U2209  # [ALT] Not an element of
+<Multi_key> <h> <impl> : "⇒" U21D2        # [MNEMONIC] Implies
+<Multi_key> <g> <a> : "α" U03B1            # [MNEMONIC] Greek small letter alpha
 ```
+
+**Characteristics:** Abbreviations or names, systematic prefixes, discoverable patterns
 
 ### 3. Follow Prefix Conventions
 
@@ -187,4 +186,4 @@ By contributing, you agree that your contributions will be licensed under the MI
 
 ---
 
-**Thank you for helping make xcompose-stem better!**
+**Thank you for helping make XCompose-STEM better!**
